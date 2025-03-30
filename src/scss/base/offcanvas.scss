@@ -1,0 +1,123 @@
+@import "bootstrap/scss/offcanvas";
+
+// Переменные для оффканваса
+$offcanvas-padding-y: $spacer;
+$offcanvas-padding-x: $spacer;
+$offcanvas-horizontal-width: 90%;
+$offcanvas-transition-duration: .3s;
+$offcanvas-border-color: rgba(0, 0, 0, 0.1);
+$offcanvas-bg-color: #fff;
+$offcanvas-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+$offcanvas-backdrop-bg: rgba(0, 0, 0, 0.5);
+$offcanvas-backdrop-opacity: 1;
+$offcanvas-header-padding-y: $spacer * .625;
+$offcanvas-header-padding-x: $spacer;
+$offcanvas-body-padding-y: $spacer * 1.5;
+$offcanvas-body-padding-x: $spacer;
+
+// Улучшаем стили для оффканваса
+.offcanvas {
+  z-index: 1045;
+  background-color: $offcanvas-bg-color;
+  box-shadow: $offcanvas-box-shadow;
+
+  // Увеличиваем ширину для удобства
+  &.offcanvas-start {
+    width: $offcanvas-horizontal-width;
+  }
+
+  // Улучшаем анимацию
+  &.showing, &.show, &.hiding {
+    visibility: visible;
+  }
+
+  // Улучшаем стили заголовка
+  .offcanvas-header {
+    padding: $offcanvas-header-padding-y $offcanvas-header-padding-x;
+    border-bottom: 1px solid $offcanvas-border-color;
+    
+    .offcanvas-title {
+      font-weight: 600;
+      color: var(--bs-primary);
+    }
+  }
+
+  // Улучшаем стили содержимого
+  .offcanvas-body {
+    padding: $offcanvas-body-padding-y $offcanvas-body-padding-x;
+    .category-list {
+     .nav-link {
+      border-bottom: 1px solid #EDEDED;
+     }
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      font-size: 1.125rem;
+      margin-bottom: $spacer * .75;
+      color: var(--bs-primary);
+      i {
+        margin-right: $spacer;
+        min-width: 50px;
+        display: inline-flex;
+        justify-content: center;
+       
+      }
+      
+      &:hover {
+        color: var(--bs-primary);
+      }
+    }
+  }
+}
+
+// Добавляем улучшенные стили для бэкдропа
+.offcanvas-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: $offcanvas-backdrop-bg;
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  transition: opacity $offcanvas-transition-duration ease;
+  
+  &.show {
+    opacity: $offcanvas-backdrop-opacity;
+  }
+}
+
+// Улучшаем кнопку закрытия
+.btn-close {
+  z-index: 1050;
+  opacity: 0.8;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  
+  &:hover, &:focus {
+    box-shadow: none;
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+.offcanvas-menu {
+  .nav-link {
+    
+    i {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #E9E9E9;
+      border-radius: $border-radius-sm;
+      -webkit-border-radius: $border-radius-sm;
+      -moz-border-radius: $border-radius-sm;
+      -ms-border-radius: $border-radius-sm;
+      -o-border-radius: $border-radius-sm;
+    }
+  }
+}
+

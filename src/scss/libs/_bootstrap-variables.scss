@@ -1,0 +1,92 @@
+// Переопределение переменных Bootstrap
+// Documentation: https://getbootstrap.com/docs/5.3/customize/sass/
+
+// Переменные цветов со скриншота
+$primary: #331B63;     // Основной цвет бренда
+$secondary: #5CCDF8;   // Дополнительный цвет
+$success: #00BB27;     // Для позитивных действий/подтверждений
+$warning: #FFBF00;     // Для предупреждений
+$danger: #DB0000;      // Для ошибок/небезопасных действий
+$light: #f8f9fa;
+$dark: #343a40;
+$gray: #505050;
+$gray-2: #D7D7D7;
+$gray-3: #EAEAEA;
+
+// Переопределение переменных типографики
+$font-family-sans-serif: 'Rubik', sans-serif;
+$font-family-base: $font-family-sans-serif;
+$line-height-base: 1.5;
+
+// Размеры заголовков со скриншота
+
+// $display-font-sizes: (
+//   1: 1.375rem,
+//   2: 1.25rem,
+//   3: 1.125rem,
+//   4: 1rem,
+//   5: .875rem,
+//   6: .75rem
+// );
+
+$font-sizes: (
+  1: clamp(1.2rem, 3vw, 1.375rem),
+  2: clamp(1.1rem, 2.5vw, 1.25rem),
+  3: clamp(1rem, 2vw, 1.125rem),
+  4: clamp(0.9rem, 1.5vw, 1rem),
+  5: clamp(0.8rem, 1.2vw, .875rem),
+  6: clamp(0.7rem, 1vw, .75rem)
+);
+
+// Настройка контейнеров
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1141px,
+);
+
+// Настройка брейкпоинтов
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+// Настройка отступов
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+);
+
+$border-radius:               .375rem;
+$border-radius-sm:            .25rem;
+$border-radius-lg:            .5rem;
+$border-radius-xl:            .75rem;
+$border-radius-2xl:           16px;
+$border-radius-pill:          50rem;
+
+$enable-caret: true;
+$enable-rounded: true;
+$enable-shadows: false;
+$enable-gradients: false;
+$enable-transitions: true;
+$enable-reduced-motion: true;
+$enable-smooth-scroll: true;
+$enable-grid-classes: true;
+$enable-cssgrid: true;
+$enable-button-pointers: true;
+$enable-rfs: true;
+$enable-validation-icons: true;
+$enable-negative-margins: false;
+$enable-deprecation-messages: true;
+$enable-important-utilities: true;
+

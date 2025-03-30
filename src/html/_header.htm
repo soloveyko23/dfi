@@ -1,0 +1,461 @@
+<header class="header">
+	<div class="header-top">
+    <div class="container">
+      <nav class="navbar navbar-expand-xl w-100 d-block">
+        <div class="row">
+          <!-- Кнопка мобильного меню, скрыта на xl и больше, а также на sm -->
+          <div class="col-md-1 col-auto d-xl-none d-sm-block d-none  align-self-center">
+            <div class="d-flex align-items-center justify-content-start justify-content-md-center">
+              <button class="icon-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-expanded="false" aria-controls="mobileMenu">
+                <span></span>
+              </button>
+            </div>
+          </div>
+          <div class="col-xl-auto col-md-3 col-2">
+            <a class="navbar-brand me-0" href="#">
+              <img src="@img/logo.png" alt="LOGO DFI">
+            </a>
+          </div>
+          <div class="col-xl col-md-8 col align-self-center">
+            <div class="d-flex justify-content-end align-items-center">
+              <!-- Меню видно до 1200px (75rem) -->
+              <ul class="navbar-nav d-flex flex-row align-items-center gap-3 me-2 d-none d-xl-flex">
+                <li class="nav-item">
+                  <a class="nav-link animate-hover" href="#">Оплата і доставка</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active animate-hover" aria-current="page" href="#">Про компанію</a>
+                </li>
+              
+                <li class="nav-item">
+                  <a class="nav-link animate-hover" href="#">Інформація</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link animate-hover" href="#">Контакти</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link animate-hover" href="#">Блог</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link animate-hover" href="#">Гарантія</a>
+                </li>
+               
+              </ul>
+              <!-- Кнопка "Стати партнером", скрыта на md и меньше -->
+              <div class="me-2 d-none d-md-block">
+                <a class="btn btn-sm btn-secondary" href="#">Стати партнером</a>
+              </div>
+              <!-- Переключатель языка, скрыт на мобильных устройствах -->
+              <div class="lang-switcher d-flex me-2 d-none d-md-flex">
+                <a href="#" class="lang-btn active" aria-current="language">UA</a>
+                <a href="#" class="lang-btn">RU</a>
+              </div>
+              <div class="dropdown">
+                <button class="dropdown-toggle btn p-0 d-flex align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <h4 class="fw-medium mb-0">067 707 00 22</h4>
+                </button>
+                <div class="dropdown-menu dropdown-menu-end">
+                  <ul class="phone-list mb-0 list-unstyled">
+                    <li><a class="dropdown-item fs-3 mb-2" href="tel:0677070022"><span class="_icon-phone color-gray-2"></span> 067 707 00 22</a></li>
+                    <li><a class="dropdown-item fs-3 mb-2" href="tel:0935150022"><span class="_icon-phone color-gray-2"></span> 093 515 00 22</a></li>
+                    <li><p class="dropdown-item fs-3 mb-0" href="#"><span class="_icon-time color-gray-2"></span> Пн - пт: 09:00 - 17:30</p></li>
+                  </ul>
+                  <hr class="dropdown-divider">
+                  <div class="callback-section px-3 py-2">
+                    <h5 class="divider-header text-primary mb-1 fs-2">Є ПИТАННЯ?</h5>
+                    <p class="fs-5 mb-2">Заповніть, і ми вам передзвонимо!</p>
+                    <form class="">
+                      <div class="mb-2">
+                        <label for="callbackName" class="form-label">Ваше ім'я<span>*</span></label>
+                        <input type="text" class="form-control" id="callbackName" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="callbackPhone" class="form-label">Ваш номер телефона<span>*</span></label>
+                        <input type="tel" class="form-control" id="callbackPhone" required>
+                      </div>
+                      <button type="submit" class="btn btn-secondary btn-lg w-100 fw-bold">НАДІСЛАТИ</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="header-bottom bg-primary py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-4 d-none d-sm-block">
+          <button class="btn btn-category btn-secondary btn-lg w-100">
+            <i class="_icon-catalog fs-5"></i>
+            <span class="fw-semibold fs-3">КАТЕГОРІЇ</span>
+          </button>
+        </div>
+        <div class="d-sm-none col-md-2 col-2 align-self-center">
+          <button class="icon-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-expanded="false" aria-controls="mobileMenu">
+            <span></span>
+          </button>
+        </div>
+        <div class="col-lg col-md-8 col-sm-8 col-10">
+          <div class="search-wrapper position-relative">
+            <input class="form-control ps-4 pe-5 rounded-md-4 rounded-4" type="search" placeholder="Пошук..." aria-label="Пошук">
+            <button class="btn btn-search rounded-md-4 rounded-4 btn-secondary position-absolute rounded-3 w-5 px-2" type="submit">
+              <i class="_icon-search text-white fs-4"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Блок скрыт на экранах меньше 992px и переносится в моб меню -->
+        <div class="col-lg-auto d-none d-lg-block">
+          <div class="user-actions d-flex align-items-center justify-content-end gap-4">
+            <div class="dropdown">
+              <button class="btn btn-icon btn-lg rounded-md-4 rounded-4 dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="_icon-user fs-2"></i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                <div class="py-2 px-2">
+                  <div class="d-flex flex-column gap-2">
+                    <a class="btn btn-lg justify-content-start gap-2 btn-outline color-gray" href="#">
+                      <i class="_icon-arrow-history "></i> 
+                      ІСТОРІЯ ЗАМОВЛЕНЬ
+                    </a>
+                    <a class="btn btn-lg justify-content-start gap-2 btn-outline color-gray" href="#"><i class="_icon-cart"></i> ОБРАНІ ТОВАРИ</a>
+              
+                    <a class=" btn btn-orange btn-lg display-6 text-center fw-bold" href="#">РЕЄСТРАЦІЯ</a>
+                    <a class=" btn btn-secondary btn-lg display-6 text-center fw-bold" href="#">ВВІЙТИ</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="btn btn-icon btn-lg rounded-md-4 rounded-4">
+              <i class="_icon-favorite fs-1"></i>
+              <span class="badge position-absolute fw-medium top-0 start-100 translate-middle p-1 fs-6 text-primary bg-white bg-opacity-50 rounded-circle">
+                <span>1</span>
+              </span>
+            </a>
+            <a href="#" class="btn btn-icon btn-lg rounded-md-4 rounded-4">
+              <i class="_icon-cart fs-1"></i>
+              <span class="badge position-absolute fw-medium top-0 start-100 translate-middle p-1 fs-6 text-primary bg-white bg-opacity-50 rounded-circle">
+                <span>1</span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="offcanvas offcanvas-start offcanvas-menu" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+  <div class="offcanvas-header bg-primary">
+    <div class="lang-switcher d-flex me-2 d-md-none d-flex">
+      <a href="#" class="lang-btn active" aria-current="language">UA</a>
+      <a href="#" class="lang-btn">RU</a>
+    </div>
+      <button type="button" class="btn btn-close opacity-100" data-bs-dismiss="offcanvas" aria-label="Close">
+        <img src="@img/icons/close-offcanvas.svg" alt="Close">
+      </button>
+  </div>
+  <div class="offcanvas-body">
+      <div class="user-actions-mobile mb-4 shadow-sm p-2 rounded-4">
+        <div class="d-flex gap-2 mt-2">
+          <a class="btn btn-secondary btn-lg display-6 w-50 text-center d-flex align-items-center text-center fw-bold" href="#">
+            УВІЙТИ
+          </a>
+          <a class="btn btn-outline-secondary btn-lg display-6 w-50 text-center d-flex align-items-center text-center fw-bold" href="#">
+            РЕЄСТРАЦІЯ
+          </a>
+        </div>
+      </div>
+      <ul class="list-unstyled">
+          <li><a class="nav-link" href="#"><i class="_icon-home text-primary display-6"></i> Головна</a></li>
+          <li><a class="nav-link" data-bs-toggle="offcanvas" href="#submenuCanvas" role="button" aria-controls="submenuCanvas"><i class="_icon-catalog-2 display-6"></i> Каталог</a></li>
+          <hr class="divider color-gray-3 my-3">
+          <li><a class="nav-link" href="#"><i class="_icon-shopping-cart text-primary display-5"></i> Кошик</a></li>
+          <li><a class="nav-link" href="#"><i class="_icon-favorite text-primary display-5"></i> Обране</a></li>
+          <li><a class="nav-link" href="tel:0677070022"><i class="_icon-phone text-primary display-6"></i> 067 707 00 22</a></li>
+          <li><a class="nav-link" href="tel:0935550022"><i class="_icon-phone text-primary display-6"></i> 093 555 00 22</a></li>
+          <li><a class="nav-link" href="#"><i class="_icon-clock text-primary display-6"></i> Понеділок - п'ятниця з 9:00 до 17:30</a></li>
+      </ul>
+      <hr class="divider color-gray-3 my-3">
+      <div class="social-links mt-3">
+          <span class="text-primary fs-3">Зв'язатись з нами:</span>
+          <div class="d-flex gap-2 mt-2">
+              <a href="#" class="rounded-circle">
+                <img src="@img/socials/telegram.svg" alt="Telegram">
+              </a>
+              <a href="#" class="rounded-circle">
+                <img src="@img/socials/viber.svg" alt="Viber">
+              </a>
+          </div>
+      </div>
+      <hr class="divider color-gray-3 my-3">
+      <div class="mt-4">
+          <a href="#" class="nav-link">Оплата і доставка</a>
+          <a href="#" class="nav-link">Про компанію</a>
+          <a class="nav-link nav-link-dropdown dropdown-toggle d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#infoSubmenu" role="button" aria-expanded="false" aria-controls="infoSubmenu">
+            Інформація 
+          </a>
+          <div class="collapse" id="infoSubmenu">
+            <div class="ps-3">
+              <a href="#" class="nav-link">Умови використання</a>
+              <a href="#" class="nav-link">Політика конфіденційності</a>
+              <a href="#" class="nav-link">Часті питання</a>
+            </div>
+          </div>
+          <a href="#" class="nav-link">Контакти</a>
+          <a href="#" class="nav-link">Блог</a>
+          <a href="#" class="nav-link">Гарантія</a>
+      </div>
+      <div class="mt-4">
+          <a href="#" class="btn btn-secondary btn-sm">Стати партнером</a>
+      </div>
+  </div>
+</div>
+
+<!-- Меню каталогу -->
+<div class="offcanvas offcanvas-start catalog-menu" tabindex="-1" id="submenuCanvas" aria-labelledby="submenuCanvasLabel">
+  <div class="offcanvas-header bg-primary">
+    <h5 class="offcanvas-title text-white" id="submenuCanvasLabel">Каталог</h5>
+    <button type="button" class="btn btn-close opacity-100" data-bs-dismiss="offcanvas" aria-label="Close">
+      <img src="@img/icons/close-offcanvas.svg" alt="Close">
+    </button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="category-list list-unstyled m-0 ">
+      <li>
+        <a class="nav-link nav-link-dropdown fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+          <div class="d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
+              <img src="@img/category-icons/laptop.svg" alt="Notebook">
+            </div>
+            Запчастини для ноутбуків
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="nav-link nav-link-dropdown fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+          <div class="d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
+              <img src="@img/category-icons/smartphone.svg" alt="Phone">
+            </div>
+            Запчастини для смартфонів
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="nav-link nav-link-dropdown fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+          <div class="d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
+              <img src="@img/category-icons/charge.svg" alt="Phone">
+            </div>
+            Акумулятори і батарейки
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="nav-link nav-link-dropdown fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+          <div class="d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
+              <img src="@img/category-icons/electric-generator.svg" alt="Phone">
+            </div>
+            Устаткування
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="nav-link nav-link-dropdown fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+          <div class="d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
+              <img src="@img/category-icons/ethernet.svg" alt="Phone">
+            </div>
+            Витратні матеріали
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="nav-link nav-link-dropdown fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+          <div class="d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
+              <img src="@img/category-icons/videogame.svg" alt="Phone">
+            </div>
+            Гаджети
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="nav-link nav-link-dropdown fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+          <div class="d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
+              <img src="@img/category-icons/thermometer-gun.svg" alt="Phone">
+            </div>
+            Прилади для вимірювання
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="nav-link nav-link-dropdown fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+          <div class="d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
+              <img src="@img/category-icons/screwdriver.svg" alt="Phone">
+            </div>
+            Інструменти
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="nav-link fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+          <div class="d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
+              <img src="@img/category-icons/battery.svg" alt="Phone">
+            </div>
+            Акумулятори для ДБЖ
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="nav-link fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+          <div class="d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
+              <img src="@img/category-icons/battery-2.svg" alt="Phone">
+            </div>
+            Інвертори
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="nav-link fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+          <div class="d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
+              <img src="@img/category-icons/electric-generator.svg" alt="Phone">
+            </div>
+            Генератори
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="nav-link fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+          <div class="d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
+              <img src="@img/category-icons/battery-status.svg" alt="Phone">
+            </div>
+            Акумулятори дл гібридних інверторів
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="nav-link fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+          <div class="d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
+              <img src="@img/category-icons/vent.svg" alt="Phone">
+            </div>
+            Вітрогеноратори
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="nav-link fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+          <div class="d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
+              <img src="@img/category-icons/batteries.svg" alt="Phone">
+            </div>
+            Гібридні інвертори
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="nav-link fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+          <div class="d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
+              <img src="@img/category-icons/solar-panel.svg" alt="Phone">
+            </div>
+            Сонячні панелі
+          </div>
+        </a>
+      </li>
+    </ul> 
+    <div class="offcanvas-footer">
+      <button class="btn btn-secondary w-100" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">Назад</button>
+    </div>
+  </div>
+</div>
+
+<!-- Пример подменю для ноутбуков (нужно создать для каждой категории) -->
+<div class="offcanvas offcanvas-start subcategory-menu" tabindex="-1" id="notebookCanvas" aria-labelledby="notebookCanvasLabel">
+  <div class="offcanvas-header bg-primary w-100">
+    <h5 class="offcanvas-title text-white" id="notebookCanvasLabel">Запчастини для ноутбуків</h5>
+    <button type="button" class="btn btn-close opacity-100" data-bs-dismiss="offcanvas" aria-label="Close">
+      <img src="@img/icons/close-offcanvas.svg" alt="Close">
+    </button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="category-list list-unstyled m-0">
+      <li>
+        <a class="nav-link fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+          <div class="d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
+              <img src="@img/category-icons/solar-panel.svg" alt="Phone">
+            </div>
+            Сонячні панелі
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="nav-link fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+          <div class="d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
+              <img src="@img/category-icons/solar-panel.svg" alt="Phone">
+            </div>
+            Сонячні панелі
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="nav-link fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+          <div class="d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
+              <img src="@img/category-icons/solar-panel.svg" alt="Phone">
+            </div>
+            Сонячні панелі
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="nav-link fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+          <div class="d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
+              <img src="@img/category-icons/solar-panel.svg" alt="Phone">
+            </div>
+            Сонячні панелі
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="nav-link fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+          <div class="d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
+              <img src="@img/category-icons/solar-panel.svg" alt="Phone">
+            </div>
+            Сонячні панелі
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="nav-link fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+          <div class="d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
+              <img src="@img/category-icons/solar-panel.svg" alt="Phone">
+            </div>
+            Сонячні панелі
+          </div>
+        </a>
+      </li>
+    </ul>
+    <div class="offcanvas-footer">
+      <button class="btn btn-secondary w-100" data-bs-toggle="offcanvas" data-bs-target="#submenuCanvas">Назад</button>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,25 @@
+@use "sass:math";
+
+// Подключение шрифта Rubik
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+// Подключение миксинов
+@import "base/mixins";
+@import "fonts/fonts";
+@import "fonts/icons";
+// Импорт кастомизированного Bootstrap
+@import "libs/bootstrap";
+
+
+// Подключение базовых стилей
+@import "base";
+
+// Подключение стилей общих элементов
+@import "common";
+
+// Подключение стилей блоков
+@import "header";
+@import "footer";
+
+// Подключение стилей страниц
+@import "home";

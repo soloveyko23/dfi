@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+	"title":"Демонстрация кастомизации Bootstrap"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+        <div class="container py-5">
+          <!-- Типографика -->
+          <section class="mb-5">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h2 class="mb-4">Типографика</h2>
+                <h1>H1 - Заголовок первого уровня (2.5rem)</h1>
+                <p class="text-primary mb-4">Основной шрифт: Rubik</p>
+                
+                <h2>H2 - Заголовок второго уровня (2rem)</h2>
+                <p class="text-primary mb-4">Основной шрифт: Rubik</p>
+                
+                <h3>H3 - Заголовок третьего уровня (1.375rem)</h3>
+                <p class="text-primary mb-4">Основной шрифт: Rubik</p>
+                
+                <h4>H4 - Заголовок четвертого уровня (1.125rem)</h4>
+                <p class="text-primary mb-4">Основной шрифт: Rubik</p>
+                
+                <h5>H5 - Заголовок пятого уровня (1rem)</h5>
+                <p class="text-primary mb-4">Основной шрифт: Rubik</p>
+                
+                <h6>H6 - Заголовок шестого уровня (0.875rem)</h6>
+                <p class="text-primary mb-4">Основной шрифт: Rubik</p>
+              </div>
+            </div>
+            
+            <div class="card">
+              <div class="card-body">
+                <h3 class="mb-4">Веса шрифта</h3>
+                <p class="fw-light mb-3">Light (300) - Rubik Light</p>
+                <p class="fw-normal mb-3">Normal (400) - Rubik Regular</p>
+                <p class="fw-medium mb-3">Medium (500) - Rubik Medium</p>
+                <p class="fw-bold mb-3">Bold (700) - Rubik Bold</p>
+              </div>
+            </div>
+          </section>
+          
+          <!-- Цвета -->
+          <section class="mb-5">
+            <div class="card">
+              <div class="card-body">
+                <h2 class="mb-4">Цветовая схема</h2>
+                
+                <div class="d-flex flex-wrap gap-3 mb-4">
+                  <div class="color-sample">
+                    <div class="color-box bg-primary"></div>
+                    <div class="mt-2">
+                      <p class="mb-0">Primary</p>
+                      <p class="small text-muted">#331B63</p>
+                    </div>
+                  </div>
+                  
+                  <div class="color-sample">
+                    <div class="color-box bg-secondary"></div>
+                    <div class="mt-2">
+                      <p class="mb-0">Secondary</p>
+                      <p class="small text-muted">#5CCDF8</p>
+                    </div>
+                  </div>
+                  
+                  <div class="color-sample">
+                    <div class="color-box bg-success"></div>
+                    <div class="mt-2">
+                      <p class="mb-0">Success</p>
+                      <p class="small text-muted">#00BB27</p>
+                    </div>
+                  </div>
+                  
+                  <div class="color-sample">
+                    <div class="color-box bg-warning"></div>
+                    <div class="mt-2">
+                      <p class="mb-0">Warning</p>
+                      <p class="small text-muted">#FFBF00</p>
+                    </div>
+                  </div>
+                  
+                  <div class="color-sample">
+                    <div class="color-box bg-danger"></div>
+                    <div class="mt-2">
+                      <p class="mb-0">Danger</p>
+                      <p class="small text-muted">#DB0000</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <h4 class="mb-3">Применение цветов в тексте</h4>
+                <p class="text-primary">Текст основного цвета (Primary)</p>
+                <p class="text-secondary">Текст дополнительного цвета (Secondary)</p>
+                <p class="text-success">Текст успешного действия (Success)</p>
+                <p class="text-warning">Текст предупреждения (Warning)</p>
+                <p class="text-danger">Текст опасного действия (Danger)</p>
+              </div>
+            </div>
+          </section>
+          
+          <!-- Кнопки -->
+          <section class="mb-5">
+            <div class="card">
+              <div class="card-body">
+                <h2 class="mb-4">Кнопки</h2>
+                
+                <div class="mb-4">
+                  <h4 class="mb-3">Основные стили</h4>
+                  <div class="d-flex flex-wrap gap-2 mb-3">
+                    <button class="btn btn-primary">Primary</button>
+                    <button class="btn btn-secondary">Secondary</button>
+                    <button class="btn btn-success">Success</button>
+                    <button class="btn btn-warning">Warning</button>
+                    <button class="btn btn-danger">Danger</button>
+                  </div>
+                </div>
+                
+                <div class="mb-4">
+                  <h4 class="mb-3">Обводка</h4>
+                  <div class="d-flex flex-wrap gap-2 mb-3">
+                    <button class="btn btn-outline-primary">Primary</button>
+                    <button class="btn btn-outline-secondary">Secondary</button>
+                    <button class="btn btn-outline-success">Success</button>
+                    <button class="btn btn-outline-warning">Warning</button>
+                    <button class="btn btn-outline-danger">Danger</button>
+                  </div>
+                </div>
+                
+                <div>
+                  <h4 class="mb-3">Размеры</h4>
+                  <div class="d-flex flex-wrap gap-2 align-items-center">
+                    <button class="btn btn-primary btn-sm">Маленькая</button>
+                    <button class="btn btn-primary">Стандартная</button>
+                    <button class="btn btn-primary btn-lg">Большая</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <!-- Карточки -->
+          <section class="mb-5">
+            <h2 class="mb-4">Карточки</h2>
+            
+            <div class="row g-4">
+              <div class="col-md-4">
+                <div class="card h-100">
+                  <div class="card-header bg-primary text-white">
+                    Заголовок карточки
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Название карточки</h5>
+                    <p class="card-text">Это базовый пример карточки с заголовком, текстом и кнопкой.</p>
+                    <button class="btn btn-primary">Подробнее</button>
+                  </div>
+                  <div class="card-footer text-muted">
+                    Дополнительная информация
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-4">
+                <div class="card h-100">
+                  <div class="card-header bg-secondary text-dark">
+                    Заголовок карточки
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Название карточки</h5>
+                    <p class="card-text">Это базовый пример карточки с другим цветовым стилем.</p>
+                    <button class="btn btn-secondary">Подробнее</button>
+                  </div>
+                  <div class="card-footer text-muted">
+                    Дополнительная информация
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-4">
+                <div class="card h-100">
+                  <div class="card-header bg-success text-white">
+                    Заголовок карточки
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Название карточки</h5>
+                    <p class="card-text">Это базовый пример карточки с успешным статусом.</p>
+                    <button class="btn btn-success">Подробнее</button>
+                  </div>
+                  <div class="card-footer text-muted">
+                    Дополнительная информация
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <!-- Формы -->
+          <section class="mb-5">
+            <div class="card">
+              <div class="card-body">
+                <h2 class="mb-4">Формы</h2>
+                
+                <form>
+                  <div class="mb-3">
+                    <label for="exampleInput1" class="form-label">Текстовое поле</label>
+                    <input type="text" class="form-control" id="exampleInput1" placeholder="Введите текст">
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="exampleSelect1" class="form-label">Выпадающий список</label>
+                    <select class="form-select" id="exampleSelect1">
+                      <option selected>Выберите опцию</option>
+                      <option value="1">Опция 1</option>
+                      <option value="2">Опция 2</option>
+                      <option value="3">Опция 3</option>
+                    </select>
+                  </div>
+                  
+                  <div class="mb-3">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">
+                        Чекбокс
+                      </label>
+                    </div>
+                  </div>
+                  
+                  <div class="mb-3">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Радио кнопка 1
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Радио кнопка 2
+                      </label>
+                    </div>
+                  </div>
+                  
+                  <button type="submit" class="btn btn-primary">Отправить</button>
+                </form>
+              </div>
+            </div>
+          </section>
+          
+          <!-- Алерты -->
+          <section class="mb-5">
+            <div class="card">
+              <div class="card-body">
+                <h2 class="mb-4">Алерты</h2>
+                
+                <div class="alert alert-primary" role="alert">
+                  Это информационное сообщение с использованием основного цвета.
+                </div>
+                
+                <div class="alert alert-secondary" role="alert">
+                  Это информационное сообщение с использованием дополнительного цвета.
+                </div>
+                
+                <div class="alert alert-success" role="alert">
+                  Это сообщение об успешном действии.
+                </div>
+                
+                <div class="alert alert-warning" role="alert">
+                  Это предупреждающее сообщение.
+                </div>
+                
+                <div class="alert alert-danger" role="alert">
+                  Это сообщение об ошибке или опасном действии.
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>  
+    @@include('html/_js.htm',{})
+  </body>
+</html>
