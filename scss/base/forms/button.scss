@@ -1,0 +1,105 @@
+// Основные настройки кнопок
+$btn-focus-box-shadow: none;
+$btn-focus-outline: none;
+$btn-border-width: 0;
+
+$btn-padding-y-lg:            .625rem;
+$btn-padding-x-lg:            .625rem;
+$btn-transition: all .3s ease-in-out;
+$btn-font-size-lg:            null;
+
+
+// Импорт стилей Bootstrap
+@import "bootstrap/scss/button-group";
+@import "bootstrap/scss/buttons";
+
+.btn-lg {
+  min-height: 3.125rem;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-outline-secondary {
+  --bs-btn-border-width: 1px;
+}
+
+.btn-secondary {
+  --bs-btn-color: #fff;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-active-color: #fff;
+  --bs-btn-hover-bg: #3BAEDA;
+  --bs-btn-active-bg: #5CCDF8;
+  &:active {
+    box-shadow: 0 4px 15px 0 rgba(#2689AF, 0.4);
+  }
+}
+
+.btn-category {
+  position: relative;
+  i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.btn-orange {
+  --bs-btn-color: #fff;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-active-color: #fff;
+  --bs-btn-bg: #FF893A;
+  --bs-btn-hover-bg: #fa7a25;
+  --bs-btn-active-bg: #f57017;
+  &:hover {
+    box-shadow: 0 4px 15px 0 rgba(#f57017, 0.4);
+  }
+}
+
+.btn-icon {
+  --bs-btn-active-color: #fff;
+  &::after {
+    display: none !important;
+  }
+  &:active {
+    color: var(--bs-btn-active-color);
+  }
+  
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #DFD4D4;
+  font-size: 1rem;
+  gap: .375rem;
+  --bs-btn-hover-border-color: var(--bs-primary);
+  --bs-btn-active-bg: var(--bs-primary);
+  --bs-btn-active-color: #fff;
+  &:hover {
+    border-color: var(--bs-btn-hover-border-color);
+  }
+  &:active {
+    color: var(--bs-btn-active-color);
+    background-color: var(--bs-btn-active-bg);
+  }
+  i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EDEDED;
+    width: 1.6875rem;
+    height: 1.6875rem;
+    color: var(--bs-primary);
+    border-radius: var(--bs-border-radius);
+    -webkit-border-radius: var(--bs-border-radius);
+    -moz-border-radius: var(--bs-border-radius);
+    -ms-border-radius: var(--bs-border-radius);
+    -o-border-radius: var(--bs-border-radius);
+}
+}

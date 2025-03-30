@@ -1,0 +1,54 @@
+// Кастомные переменные
+$dropdown-indicator-icon: url("data:image/svg+xml,%3Csvg ... fill='%23383838'/%3E%3C/svg%3E");
+$dropdown-box-shadow: 0 20px 35px 0 rgba(#000, 0.2);
+$dropdown-border-radius: .9375rem;
+$dropdown-border-color: transparent;
+$dropdown-divider-bg: #E4E4E4;
+$dropdown-item-padding-x: .75rem;
+
+@import "bootstrap/scss/dropdown";
+
+.dropdown-item {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.dropdown-toggle:not(.nav-link-dropdown, .btn-icon) {
+  &::after {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    border: none;
+    background-image: $dropdown-indicator-icon;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.nav-link-dropdown {
+  gap: .625rem;
+  &::after {
+    content: "";
+    border: none;
+    width: .5rem;
+    height: .875rem;
+    transition: transform 0.3s ease;
+    background-image: url("../img/icons/arrow-dropdown.svg"); // Уточнить путь
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform-origin: center center;
+  }
+  &.dropdown-toggle:not(.collapsed) {
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.dropdown-menu {
+  min-width: 16.25rem;
+  box-shadow: $dropdown-box-shadow;
+  border-radius: $dropdown-border-radius;
+  border-color: $dropdown-border-color;
+}
