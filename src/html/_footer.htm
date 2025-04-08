@@ -1,41 +1,147 @@
-<footer class="footer bg-dark text-white py-4 mt-5">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6">
-				<h5 class="mb-3">Bootstrap UI</h5>
-				<p>Демонстрация кастомизации Bootstrap 5 с использованием Sass-переменных.</p>
-				<p>Основной шрифт: Rubik</p>
-			</div>
-			<div class="col-md-3">
-				<h5 class="mb-3">Ссылки</h5>
-				<ul class="list-unstyled">
-					<li><a href="#" class="text-white-50">Главная</a></li>
-					<li><a href="#" class="text-white-50">Компоненты</a></li>
-					<li><a href="#" class="text-white-50">Документация</a></li>
-					<li><a href="#" class="text-white-50">О проекте</a></li>
-				</ul>
-			</div>
-			<div class="col-md-3">
-				<h5 class="mb-3">Цвета</h5>
-				<div class="d-flex gap-2 mb-2">
-					<div class="bg-primary rounded" style="width: 20px; height: 20px;"></div>
-					<span class="text-white-50">Primary: #331B63</span>
-				</div>
-				<div class="d-flex gap-2 mb-2">
-					<div class="bg-secondary rounded" style="width: 20px; height: 20px;"></div>
-					<span class="text-white-50">Secondary: #5CCDF8</span>
-				</div>
-				<div class="d-flex gap-2 mb-2">
-					<div class="bg-success rounded" style="width: 20px; height: 20px;"></div>
-					<span class="text-white-50">Success: #00BB27</span>
-				</div>
-			</div>
-		</div>
-		<hr class="my-4 bg-secondary">
-		<div class="row">
-			<div class="col-12 text-center text-white-50">
-				<small>&copy; 2023 Bootstrap UI. Все права защищены.</small>
-			</div>
-		</div>
-	</div>
+<!-- Секция футера -->
+<footer class="bg-primary pt-4 pb-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-3">
+                <!-- Пустая колонка для логотипа или дополнительной информации -->
+            </div>
+            
+            <!-- Колонки с меню -->
+            <div class="col-12 col-md-9">
+                <div class="row">
+                    <!-- Аккордион для мобильной версии -->
+                    <div class="accordion d-md-none" id="footerAccordion">
+                        <!-- Информация -->
+                        <div class="accordion-item bg-transparent border-0 border-bottom border-white border-opacity-25">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button bg-transparent text-white collapsed px-0 py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInfo" aria-expanded="false" aria-controls="collapseInfo">
+                                    <span class="text-uppercase fw-semibold letter-spacing-1">ІНФОРМАЦІЯ</span>
+                                </button>
+                            </h2>
+                            <div id="collapseInfo" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+                                <div class="accordion-body px-0 pt-0 pb-3">
+                                    <nav class="nav flex-column">
+                                        <a class="nav-link text-gray-3 animate-hover animate-to-white text-decoration-none ps-0 pb-2" href="#">Повернення товару</a>
+                                        <a class="nav-link text-gray-3 animate-hover animate-to-white text-decoration-none ps-0 pb-2" href="#">Про нас</a>
+                                        <a class="nav-link text-gray-3 animate-hover animate-to-white text-decoration-none ps-0 pb-2" href="#">Оплата та доставка</a>
+                                        <a class="nav-link text-gray-3 animate-hover animate-to-white text-decoration-none ps-0 pb-2" href="#">Умови використання сайту</a>
+                                        <a class="nav-link text-gray-3 animate-hover animate-to-white text-decoration-none ps-0 pb-2" href="#">Зв'язатися з нами</a>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Кабинет покупателя -->
+                        <div class="accordion-item bg-transparent border-0 border-bottom border-white border-opacity-25">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button bg-transparent text-white collapsed px-0 py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAccount" aria-expanded="false" aria-controls="collapseAccount">
+                                    <span class="text-uppercase fw-semibold letter-spacing-1">КАБІНЕТ ПОКУПЦЯ</span>
+                                </button>
+                            </h2>
+                            <div id="collapseAccount" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+                                <div class="accordion-body px-0 pt-0 pb-3">
+                                    <nav class="nav flex-column">
+                                        <a class="nav-link text-gray-3 animate-hover animate-to-white text-decoration-none ps-0 pb-2" href="#">Особистий кабінет</a>
+                                        <a class="nav-link text-gray-3 animate-hover animate-to-white text-decoration-none ps-0 pb-2" href="#">Історія замовлення</a>
+                                        <a class="nav-link text-gray-3 animate-hover animate-to-white text-decoration-none ps-0 pb-2" href="#">Закладки</a>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Контакты -->
+                        <div class="accordion-item bg-transparent border-0 border-bottom border-white border-opacity-25">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button bg-transparent text-white collapsed px-0 py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseContacts" aria-expanded="false" aria-controls="collapseContacts">
+                                    <span class="text-uppercase fw-semibold letter-spacing-1">КОНТАКТИ</span>
+                                </button>
+                            </h2>
+                            <div id="collapseContacts" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+                                <div class="accordion-body px-0 pt-0 pb-3">
+                                    <ul class="list-unstyled text-gray-3">
+                                        <li class="d-flex align-items-start mb-2">
+                                            <i class="_icon-time me-2 text-white"></i>
+                                            <span>Понеділок - п'ятниця з 9:00 до 17:30</span>
+                                        </li>
+                                        <li class="d-flex align-items-start mb-2">
+                                            <i class="_icon-phone me-2 text-white"></i>
+                                            <a href="tel:+380677070022" class="text-gray-3 animate-hover animate-to-white text-decoration-none">(067) 707-00-22</a>
+                                        </li>
+                                        <li class="d-flex align-items-start mb-2">
+                                            <i class="_icon-phone me-2 text-white"></i>
+                                            <a href="tel:+380935150022" class="text-gray-3 animate-hover animate-to-white text-decoration-none">(093) 515-00-22</a>
+                                        </li>
+                                        <li class="d-flex align-items-start mb-2">
+                                            <i class="_icon-location me-2 text-white"></i>
+                                            <span>Точки видачі інтернет-замовлень:</span>
+                                        </li>
+                                        <li class="ps-4">
+                                            Україна, м.Київ, вул. Успішна, 101
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Десктопная версия меню -->
+                    <div class="col-md-4 d-none d-md-block">
+                        <h5 class="text-uppercase fw-semibold mb-3 text-white letter-spacing-1">ІНФОРМАЦІЯ</h5>
+                        <nav class="nav flex-column">
+                            <a class="nav-link text-gray-3 animate-hover animate-to-white text-decoration-none ps-0 pb-2" href="#">Повернення товару</a>
+                            <a class="nav-link text-gray-3 animate-hover animate-to-white text-decoration-none ps-0 pb-2" href="#">Про нас</a>
+                            <a class="nav-link text-gray-3 animate-hover animate-to-white text-decoration-none ps-0 pb-2" href="#">Оплата та доставка</a>
+                            <a class="nav-link text-gray-3 animate-hover animate-to-white text-decoration-none ps-0 pb-2" href="#">Умови використання сайту</a>
+                            <a class="nav-link text-gray-3 animate-hover animate-to-white text-decoration-none ps-0 pb-2" href="#">Зв'язатися з нами</a>
+                        </nav>
+                    </div>
+                    
+                    <div class="col-md-4 d-none d-md-block">
+                        <h5 class="text-uppercase fw-semibold mb-3 text-white">КАБІНЕТ ПОКУПЦЯ</h5>
+                        <nav class="nav flex-column">
+                            <a class="nav-link text-gray-3 animate-hover animate-to-white text-decoration-none ps-0 pb-2" href="#">Особистий кабінет</a>
+                            <a class="nav-link text-gray-3 animate-hover animate-to-white text-decoration-none ps-0 pb-2" href="#">Історія замовлення</a>
+                            <a class="nav-link text-gray-3 animate-hover animate-to-white text-decoration-none ps-0 pb-2" href="#">Закладки</a>
+                        </nav>
+                    </div>
+                    
+                    <div class="col-md-4 d-none d-md-block">
+                        <h5 class="text-uppercase fw-semibold mb-3 text-white">КОНТАКТИ</h5>
+                        <ul class="list-unstyled text-gray-3">
+                            <li class="d-flex align-items-start mb-2">
+                                <i class="_icon-time me-2 text-white"></i>
+                                <span>Понеділок - п'ятниця з 9:00 до 17:30</span>
+                            </li>
+                            <li class="d-flex align-items-start mb-2">
+                                <i class="_icon-phone me-2 text-white"></i>
+                                <a href="tel:+380677070022" class="text-gray-3 animate-hover animate-to-white text-decoration-none">(067) 707-00-22</a>
+                            </li>
+                            <li class="d-flex align-items-start mb-2">
+                                <i class="_icon-phone me-2 text-white"></i>
+                                <a href="tel:+380935150022" class="text-gray-3 animate-hover animate-to-white text-decoration-none">(093) 515-00-22</a>
+                            </li>
+                            <li class="d-flex align-items-start mb-2">
+                                <i class="_icon-location me-2 text-white"></i>
+                                <span>Точки видачі інтернет-замовлень:</span>
+                            </li>
+                            <li class="ps-4">
+                                Україна, м.Київ, вул. Успішна, 101
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Нижняя часть футера -->
+    <div class="border-top border-sm-top-0 border-white border-opacity-25 py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center text-gray-3">
+                    <p class="fs-6 mb-0">SITE.UA © 2024</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>

@@ -1,16 +1,51 @@
-
 @import "bootstrap/scss/functions";
-
-
 @import "bootstrap-variables";
-
 @import "bootstrap/scss/variables";
-@import "bootstrap/scss/variables-dark";
 @import "bootstrap/scss/maps";
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/utilities";
 
-// Макет и компоненты
+$utilities: map-merge(
+  $utilities,
+  (
+    "line-clamp": (
+      property: -webkit-line-clamp,
+      class: line-clamp,
+      values: (
+        1: 1,
+        2: 2,
+        3: 3,
+        4: 4,
+        5: 5
+      )
+    ),
+    "text-truncate": (
+      responsive: true,
+      property: none,
+      class: text-truncate,
+      values: (
+        1: null,
+        2: null,
+        3: null,
+        4: null,
+        5: null
+      )
+    )
+  )
+);
+
+.letter-spacing-1 {
+  letter-spacing: 0.05em;
+}
+
+// Создаём соответствующие стили для обратной совместимости
+.line-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 @import "bootstrap/scss/root";
 @import "bootstrap/scss/reboot";
 @import "bootstrap/scss/type";
@@ -19,10 +54,10 @@
 @import "bootstrap/scss/grid";
 
 @import "bootstrap/scss/transitions";
+@import "bootstrap/scss/dropdown";
 @import "bootstrap/scss/card";
 @import "bootstrap/scss/alert";
 
-// Утилиты
 @import "bootstrap/scss/helpers";
-@import "bootstrap/scss/utilities/api";
 
+@import "bootstrap/scss/utilities/api";

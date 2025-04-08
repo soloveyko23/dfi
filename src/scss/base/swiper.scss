@@ -36,3 +36,15 @@
 .swiper-button-lock {
 	display: none !important;
 }
+
+
+.slider-type-categories.swiper:has(.swiper-slide-active) .swiper-slide {
+  opacity: 0;
+  &.swiper-slide-visible {
+    opacity: 1 !important;
+  }
+}
+
+.swiper-pagination-lock {
+  display: none !important;
+}

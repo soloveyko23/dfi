@@ -1,0 +1,13 @@
+// Настройка переменных аккордиона
+$accordion-padding-y: 1rem;
+$accordion-padding-x: 1.25rem;
+$accordion-button-icon: url("@img/icons/accodrion-arrow.svg");
+$accordion-button-active-icon: url("@img/icons/accodrion-arrow.svg");
+$accordion-button-active-bg: transparent;
+$accordion-button-active-color: $white;
+$accordion-icon-width:                    12px;
+$accordion-button-focus-box-shadow: none;
+$accordion-bg: transparent;
+$accordion-border-radius: 0;
+
+@import "bootstrap/scss/accordion";

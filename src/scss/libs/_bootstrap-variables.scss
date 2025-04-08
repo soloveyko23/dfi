@@ -12,48 +12,54 @@ $dark: #343a40;
 $gray: #505050;
 $gray-2: #D7D7D7;
 $gray-3: #EAEAEA;
+$gray-4: #F5F5F5;
+$purple-900: #331B63;  // Для использования в кастомизации футера
+
+
+
+
+
+// Дополнительные классы утилиты
+.letter-spacing-1 {
+  letter-spacing: 1px;
+}
+
 
 // Переопределение переменных типографики
 $font-family-sans-serif: 'Rubik', sans-serif;
 $font-family-base: $font-family-sans-serif;
 $line-height-base: 1.5;
 
-// Размеры заголовков со скриншота
-
-// $display-font-sizes: (
-//   1: 1.375rem,
-//   2: 1.25rem,
-//   3: 1.125rem,
-//   4: 1rem,
-//   5: .875rem,
-//   6: .75rem
-// );
-
-$font-sizes: (
-  1: clamp(1.2rem, 3vw, 1.375rem),
-  2: clamp(1.1rem, 2.5vw, 1.25rem),
-  3: clamp(1rem, 2vw, 1.125rem),
-  4: clamp(0.9rem, 1.5vw, 1rem),
-  5: clamp(0.8rem, 1.2vw, .875rem),
-  6: clamp(0.7rem, 1vw, .75rem)
-);
+// Адаптивная типография с calc для обеспечения min/max значений
+// Все минимальные значения уже отработаны до 480px
+$h1-font-size: calc(32px + (40 - 32) * ((100vw - 480px) / (1920 - 480)));
+$h2-font-size: calc(22px + (32 - 22) * ((100vw - 480px) / (1920 - 480)));
+$h3-font-size: calc(18px + (22 - 18) * ((100vw - 480px) / (1920 - 480)));
+$h4-font-size: calc(16px + (18 - 16) * ((100vw - 480px) / (1920 - 480)));
+$h5-font-size: calc(14px + (16 - 14) * ((100vw - 480px) / (1920 - 480)));
+$h6-font-size: calc(12px + (14 - 12) * ((100vw - 480px) / (1920 - 480)));
 
 // Настройка контейнеров
+.container-big {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 .9375rem;
+}
+
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
+  sm: 700px,
+  md: 950px,
+  lg: 1024px,
   xl: 1141px,
 );
 
 // Настройка брейкпоинтов
 $grid-breakpoints: (
   xs: 0,
-  sm: 576px,
+  sm: 500px,
   md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px
+  lg: 1024px,
+  xl: 1440px
 );
 
 // Настройка отступов
@@ -89,4 +95,61 @@ $enable-validation-icons: true;
 $enable-negative-margins: false;
 $enable-deprecation-messages: true;
 $enable-important-utilities: true;
+
+:root {
+  // Основные цвета
+  --bs-primary: #{$primary};
+  --bs-secondary: #{$secondary};
+  --bs-success: #{$success};
+  --bs-warning: #{$warning};
+  --bs-danger: #{$danger};
+  --bs-secondary-color: #252525 !important;
+  
+  --bs-gray: #{$gray};
+  --bs-gray-2: #{$gray-2};
+  --bs-gray-3: #{$gray-3};
+  --bs-gray-4: #{$gray-4};
+}
+
+// Утилитарные классы для использования цветов
+
+.text-gray {
+  color: $gray !important;
+}
+.text-gray-2 {
+  color: $gray-2 !important;
+}
+.text-gray-3 {
+  color: $gray-3 !important;
+}
+.text-gray-4 {
+  color: $gray-4 !important;
+}
+
+
+.bg-gray {
+  background-color: $gray !important;
+}
+.bg-gray-2 {
+  background-color: $gray-2 !important;
+}
+.bg-gray-3 {
+  background-color: $gray-3 !important;
+}
+.bg-gray-4 {
+  background-color: $gray-4 !important;
+}
+
+.border-gray {
+  border-color: $gray !important;
+}
+.border-gray-2 {
+  border-color: $gray-2 !important;
+}
+.border-gray-3 {
+  border-color: $gray-3 !important;
+}
+.border-gray-4 {
+  border-color: $gray-4 !important;
+}
 

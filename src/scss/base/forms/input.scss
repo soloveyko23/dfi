@@ -1,14 +1,20 @@
 $input-padding-y:                       .75rem;
 $input-padding-x:                       1rem;
-$input-border-color:                    #E4E4E4;
+$input-border-color:                    transparent;
 $input-border-radius:                   .375rem;
 $form-label-margin-bottom:              .375rem;
 $form-label-font-size:                  .8125rem;
 $form-label-color:                      #505050;
+$input-placeholder-color:               #9F9F9F;
+
 
 
 
 @import "bootstrap/scss/forms";
+
+.input-border {
+  border: 1px solid #EAEAEA;
+}
 
 .form-label {
   span {

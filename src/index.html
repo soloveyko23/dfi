@@ -7,9 +7,1229 @@
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
+        <section class="category-section py-5">
+          <div class="container">
+            <div class="category-section__content position-relative">
+              <div class="category-section__slider   slider-type-categories swiper">
+                <div class="category-section__wrapper swiper-wrapper">
+                  <div class="category-section__slide swiper-slide category-item">
+                    <a href="#" class="category-item__link">
+                      <div class="category-item__image">
+                        <img src="@img/categories/01.png" class="img-fluid" alt="Запчастини для ноутбуків">
+                      </div>
+                      <div class="category-item__title fs-5">Запчастини для ноутбуків</div>
+                    </a>
+                  </div>
+                  <div class="category-section__slide swiper-slide category-item">
+                    <a href="#" class="category-item__link">
+                      <div class="category-item__image">
+                        <img src="@img/categories/02.png" class="img-fluid" alt="Запчастини до смартфонів">
+                      </div>
+                      <div class="category-item__title fs-5">Запчастини до смартфонів</div>
+                    </a>
+                  </div>
+                  <div class="category-section__slide swiper-slide category-item">
+                    <a href="#" class="category-item__link">
+                      <div class="category-item__image">
+                        <img src="@img/categories/03.png" class="img-fluid" alt="Обладнання">
+                      </div>
+                      <div class="category-item__title fs-5">Обладнання</div>
+                    </a>
+                  </div>
+                  <div class="category-section__slide swiper-slide category-item">
+                    <a href="#" class="category-item__link">
+                      <div class="category-item__image">
+                        <img src="@img/categories/04.png" class="img-fluid" alt="Аксесуари">
+                      </div>
+                      <div class="category-item__title fs-5">Аксесуари</div>
+                    </a>
+                  </div>
+                  <div class="category-section__slide swiper-slide category-item">
+                    <a href="#" class="category-item__link">
+                      <div class="category-item__image">
+                        <img src="@img/categories/05.png" class="img-fluid" alt="Акумулятори і батарейки">
+                      </div>
+                      <div class="category-item__title">Акумулятори і батарейки</div>
+                    </a>
+                  </div>
+                  <div class="category-section__slide swiper-slide category-item">
+                    <a href="#" class="category-item__link">
+                      <div class="category-item__image">
+                        <img src="@img/categories/06.png" class="img-fluid" alt="Витратні матеріали">
+                      </div>
+                      <div class="category-item__title fs-5">Витратні матеріали</div>
+                    </a>
+                  </div>
+                  <div class="category-section__slide swiper-slide category-item">
+                    <a href="#" class="category-item__link">
+                      <div class="category-item__image">
+                        <img src="@img/categories/01.png" class="img-fluid" alt="Запчастини для ноутбуків">
+                      </div>
+                      <div class="category-item__title fs-5">Запчастини для ноутбуків</div>
+                    </a>
+                  </div>
+                  <div class="category-section__slide swiper-slide category-item">
+                    <a href="#" class="category-item__link">
+                      <div class="category-item__image">
+                        <img src="@img/categories/02.png" class="img-fluid" alt="Запчастини до смартфонів">
+                      </div>
+                      <div class="category-item__title fs-5">Запчастини до смартфонів</div>
+                    </a>
+                  </div>
+                  <div class="category-section__slide swiper-slide category-item">
+                    <a href="#" class="category-item__link">
+                      <div class="category-item__image">
+                        <img src="@img/categories/01.png" class="img-fluid" alt="Запчастини для ноутбуків">
+                      </div>
+                      <div class="category-item__title fs-5">Запчастини для ноутбуків</div>
+                    </a>
+                  </div>
+                  <div class="category-section__slide swiper-slide category-item">
+                    <a href="#" class="category-item__link">
+                      <div class="category-item__image">
+                        <img src="@img/categories/02.png" class="img-fluid" alt="Запчастини до смартфонів">
+                      </div>
+                      <div class="category-item__title fs-5">Запчастини до смартфонів</div>
+                    </a>
+                  </div>
+                </div>
+              
+              </div>
+              <div class="category-section__navigation slider-navigation slider-navigation--per-container">
+                <button type="button" class="slider-button-type-one btn swiper-button-prev position-absolute top-50 start-0 translate-middle-y">
+                  <i class="_icon-arrow-left"></i>
+                </button>
+                <button type="button" class="slider-button-type-one btn swiper-button-next position-absolute top-50 end-0 translate-middle-y">
+                  <i class="_icon-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+           
+          </div>
+        </section>
+        <!-- /.category-section -->
+
+        <section class="popular-products mb-5 mt-2">
+          <div class="container">
+            <div class="popular-products__content">
+              <div class="popular-products__header mb-md-4 md-3">
+                <h2 class="text-primary fw-semibold text-uppercase">Популярні товари</h2>
+              </div>
+              <div class="position-relative ">
+                <div class="popular-products__slider slider-type-products swiper">
+                  <div class="popular-products__wrapper swiper-wrapper">
+                    <div class="popular-products__slide swiper-slide product-item">
+                      <!-- Карточка товара из макета -->
+                      <div class="card product-card position-relative p-1">
+                        <div class="p-2">
+                         <!-- Иконка избранного (сердечко) -->
+                        <button type="button" class="btn btn-sm btn-favorite position-absolute top-0 end-0 m-2 z-1 rounded-4 p-1">
+                          <i class="_icon-add-favorite text-secondary fs-6"></i>
+                        </button>
+                        
+                        <!-- Изображение товара -->
+                        <a href="#" class="product-card__image-wrapper text-center py-2">
+                          <img src="@img/product-image/image.png" alt="Кабель ZYTER LM14" class="img-fluid product-image">
+                        </a>
+                        
+                        <!-- Информация о товаре -->
+                        <div class="card-body p-0 d-flex flex-column">
+                          <!-- Код товара -->
+                          <div class="product-card__code mb-3 small fw-light">
+                            Код товару: 465336
+                          </div>
+                          
+                          <!-- Название товара -->
+                          <h5 class="product-card__title fw-medium mb-3">
+                            <a href="#" class="text-decoration-none text-dark stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                          </h5>
+                          
+                          <!-- Блок цены и кнопки добавления в корзину -->
+                          <div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-3">
+                            <!-- Цена товара -->
+                            <div class="product-card__price fw-bold fs-5 text-primary lh-1">
+                              18 745 грн
+                            </div>
+                            
+                            <!-- Блок с количеством и кнопкой корзины -->
+                            <div class="product-card__add-to-cart d-flex align-items-center gap-2">
+                              <!-- Компонент управления количеством -->
+                              <div class="count-input border py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement>
+                                  -
+                                </button>
+                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none" value="1" min="1" max="5" readonly>
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment>
+  
+                                  +
+                                </button>
+                              </div>
+                              <button type="button" class="btn btn-secondary btn-sm btn-add-to-cart rounded-4">
+                                <i class="_icon-cart fs-4 d-flex align-items-center justify-content-center"></i>
+                              </button>
+                            </div>
+                          </div>
+                          
+                          <!-- Индикатор наличия -->
+                          <div class="product-card__availability text-success small mt-3">
+                             В наявності
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="popular-products__slide swiper-slide product-item">
+                      <!-- Карточка товара из макета -->
+                      <div class="card product-card position-relative p-1">
+                        <div class="p-2">
+                         <!-- Иконка избранного (сердечко) -->
+                        <button type="button" class="btn btn-sm btn-favorite position-absolute top-0 end-0 m-2 z-1 rounded-4 p-1">
+                          <i class="_icon-add-favorite text-secondary fs-6"></i>
+                        </button>
+                        
+                        <!-- Изображение товара -->
+                        <a href="#" class="product-card__image-wrapper text-center py-2">
+                          <img src="@img/product-image/image.png" alt="Кабель ZYTER LM14" class="img-fluid product-image">
+                        </a>
+                        
+                        <!-- Информация о товаре -->
+                        <div class="card-body p-0 d-flex flex-column">
+                          <!-- Код товара -->
+                          <div class="product-card__code mb-3 small fw-light">
+                            Код товару: 465336
+                          </div>
+                          
+                          <!-- Название товара -->
+                          <h5 class="product-card__title fw-medium mb-3">
+                            <a href="#" class="text-decoration-none text-dark stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                          </h5>
+                          
+                          <!-- Блок цены и кнопки добавления в корзину -->
+                          <div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-3">
+                            <!-- Цена товара -->
+                            <div class="product-card__price fw-bold fs-5 text-primary lh-1">
+                              18 745 грн
+                            </div>
+                            
+                            <!-- Блок с количеством и кнопкой корзины -->
+                            <div class="product-card__add-to-cart d-flex align-items-center gap-2">
+                              <!-- Компонент управления количеством -->
+                              <div class="count-input border py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement>
+                                  -
+                                </button>
+                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none" value="1" min="1" max="5" readonly>
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment>
+  
+                                  +
+                                </button>
+                              </div>
+                              <button type="button" class="btn btn-secondary btn-sm btn-add-to-cart rounded-4">
+                                <i class="_icon-cart fs-4 d-flex align-items-center justify-content-center"></i>
+                              </button>
+                            </div>
+                          </div>
+                          
+                          <!-- Индикатор наличия -->
+                          <div class="product-card__availability text-success small mt-3">
+                             В наявності
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="popular-products__slide swiper-slide product-item">
+                      <!-- Карточка товара из макета -->
+                      <div class="card product-card position-relative p-1">
+                        <div class="p-2">
+                         <!-- Иконка избранного (сердечко) -->
+                        <button type="button" class="btn btn-sm btn-favorite position-absolute top-0 end-0 m-2 z-1 rounded-4 p-1">
+                          <i class="_icon-add-favorite text-secondary fs-6"></i>
+                        </button>
+                        
+                        <!-- Изображение товара -->
+                        <a href="#" class="product-card__image-wrapper text-center py-2">
+                          <img src="@img/product-image/image.png" alt="Кабель ZYTER LM14" class="img-fluid product-image">
+                        </a>
+                        
+                        <!-- Информация о товаре -->
+                        <div class="card-body p-0 d-flex flex-column">
+                          <!-- Код товара -->
+                          <div class="product-card__code mb-3 small fw-light">
+                            Код товару: 465336
+                          </div>
+                          
+                          <!-- Название товара -->
+                          <h5 class="product-card__title fw-medium mb-3">
+                            <a href="#" class="text-decoration-none text-dark stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                          </h5>
+                          
+                          <!-- Блок цены и кнопки добавления в корзину -->
+                          <div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-3">
+                            <!-- Цена товара -->
+                            <div class="product-card__price fw-bold fs-5 text-primary lh-1">
+                              18 745 грн
+                            </div>
+                            
+                            <!-- Блок с количеством и кнопкой корзины -->
+                            <div class="product-card__add-to-cart d-flex align-items-center gap-2">
+                              <!-- Компонент управления количеством -->
+                              <div class="count-input border py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement>
+                                  -
+                                </button>
+                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none" value="1" min="1" max="5" readonly>
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment>
+  
+                                  +
+                                </button>
+                              </div>
+                              <button type="button" class="btn btn-secondary btn-sm btn-add-to-cart rounded-4">
+                                <i class="_icon-cart fs-4 d-flex align-items-center justify-content-center"></i>
+                              </button>
+                            </div>
+                          </div>
+                          
+                          <!-- Индикатор наличия -->
+                          <div class="product-card__availability text-success small mt-3">
+                             В наявності
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="popular-products__slide swiper-slide product-item">
+                      <!-- Карточка товара из макета -->
+                      <div class="card product-card position-relative p-1">
+                        <div class="p-2">
+                         <!-- Иконка избранного (сердечко) -->
+                        <button type="button" class="btn btn-sm btn-favorite position-absolute top-0 end-0 m-2 z-1 rounded-4 p-1">
+                          <i class="_icon-add-favorite text-secondary fs-6"></i>
+                        </button>
+                        
+                        <!-- Изображение товара -->
+                        <a href="#" class="product-card__image-wrapper text-center py-2">
+                          <img src="@img/product-image/image.png" alt="Кабель ZYTER LM14" class="img-fluid product-image">
+                        </a>
+                        
+                        <!-- Информация о товаре -->
+                        <div class="card-body p-0 d-flex flex-column">
+                          <!-- Код товара -->
+                          <div class="product-card__code mb-3 small fw-light">
+                            Код товару: 465336
+                          </div>
+                          
+                          <!-- Название товара -->
+                          <h5 class="product-card__title fw-medium mb-3">
+                            <a href="#" class="text-decoration-none text-dark stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                          </h5>
+                          
+                          <!-- Блок цены и кнопки добавления в корзину -->
+                          <div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-3">
+                            <!-- Цена товара -->
+                            <div class="product-card__price fw-bold fs-5 text-primary lh-1">
+                              18 745 грн
+                            </div>
+                            
+                            <!-- Блок с количеством и кнопкой корзины -->
+                            <div class="product-card__add-to-cart d-flex align-items-center gap-2">
+                              <!-- Компонент управления количеством -->
+                              <div class="count-input border py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement>
+                                  -
+                                </button>
+                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none" value="1" min="1" max="5" readonly>
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment>
+  
+                                  +
+                                </button>
+                              </div>
+                              <button type="button" class="btn btn-secondary btn-sm btn-add-to-cart rounded-4">
+                                <i class="_icon-cart fs-4 d-flex align-items-center justify-content-center"></i>
+                              </button>
+                            </div>
+                          </div>
+                          
+                          <!-- Индикатор наличия -->
+                          <div class="product-card__availability text-success small mt-3">
+                             В наявності
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="popular-products__slide swiper-slide product-item">
+                      <!-- Карточка товара из макета -->
+                      <div class="card product-card position-relative p-1">
+                        <div class="p-2">
+                         <!-- Иконка избранного (сердечко) -->
+                        <button type="button" class="btn btn-sm btn-favorite position-absolute top-0 end-0 m-2 z-1 rounded-4 p-1">
+                          <i class="_icon-add-favorite text-secondary fs-6"></i>
+                        </button>
+                        
+                        <!-- Изображение товара -->
+                        <a href="#" class="product-card__image-wrapper text-center py-2">
+                          <img src="@img/product-image/image.png" alt="Кабель ZYTER LM14" class="img-fluid product-image">
+                        </a>
+                        
+                        <!-- Информация о товаре -->
+                        <div class="card-body p-0 d-flex flex-column">
+                          <!-- Код товара -->
+                          <div class="product-card__code mb-3 small fw-light">
+                            Код товару: 465336
+                          </div>
+                          
+                          <!-- Название товара -->
+                          <h5 class="product-card__title fw-medium mb-3">
+                            <a href="#" class="text-decoration-none text-dark stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                          </h5>
+                          
+                          <!-- Блок цены и кнопки добавления в корзину -->
+                          <div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-3">
+                            <!-- Цена товара -->
+                            <div class="product-card__price fw-bold fs-5 text-primary lh-1">
+                              18 745 грн
+                            </div>
+                            
+                            <!-- Блок с количеством и кнопкой корзины -->
+                            <div class="product-card__add-to-cart d-flex align-items-center gap-2">
+                              <!-- Компонент управления количеством -->
+                              <div class="count-input border py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement>
+                                  -
+                                </button>
+                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none" value="1" min="1" max="5" readonly>
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment>
+  
+                                  +
+                                </button>
+                              </div>
+                              <button type="button" class="btn btn-secondary btn-sm btn-add-to-cart rounded-4">
+                                <i class="_icon-cart fs-4 d-flex align-items-center justify-content-center"></i>
+                              </button>
+                            </div>
+                          </div>
+                          
+                          <!-- Индикатор наличия -->
+                          <div class="product-card__availability text-success small mt-3">
+                             В наявності
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="category-section__navigation slider-navigation d-none d-lg-block slider-navigation--per-container">
+                  <button type="button" class="slider-button-type-one btn swiper-button-prev position-absolute top-50 start-0 translate-middle-y">
+                    <i class="_icon-arrow-left"></i>
+                  </button>
+                  <button type="button" class="slider-button-type-one btn swiper-button-next position-absolute top-50 end-0 translate-middle-y">
+                    <i class="_icon-arrow-right"></i>
+                  </button>
+                </div>
+               
+              </div>
+              <div class="d-flex justify-content-lg-center justify-content-between gap-2 flex-wrap align-items-center mt-lg-5 mt-3">
+                <div class="slider-actions slider-navigation d-flex  d-lg-none align-items-center gap-3">
+                  <button type="button" class="slider-button-type-one btn swiper-button-prev">
+                    <i class="_icon-arrow-left"></i>
+                    
+                  </button>
+                  <div class="slider-pagination-type-one">
+                    <div class="swiper-pagination">
+
+                    </div>
+                  </div>
+                  <button type="button" class="slider-button-type-one btn swiper-button-next">
+                    <i class="_icon-arrow-right"></i>
+                  </button>
+                </div>
+                <a href="#" class="btn btn-lg btn-lg-width btn-primary">
+                  <span class="text-uppercase fw-bold">Показати ще </span>
+                </a>
+              </div>
+              
+            </div>
+          </div>
+        </section>
+        <!-- /.popular-products -->
+        <section class="new-products mb-5 mt-2">
+          <div class="container">
+            <div class="new-products__content">
+              <div class="new-products__header mb-md-4 md-3">
+                <h2 class="text-primary fw-semibold text-uppercase">Нові надходження</h2>
+              </div>
+              <div class="position-relative">
+                <div class="new-products__slider slider-type-products swiper">
+                  <div class="new-products__wrapper swiper-wrapper">
+                    <div class="new-products__slide swiper-slide product-item">
+                      <!-- Карточка товара из макета -->
+                      <div class="card product-card position-relative p-1">
+                        <div class="p-2">
+                         <!-- Иконка избранного (сердечко) -->
+                        <button type="button" class="btn btn-sm btn-favorite position-absolute top-0 end-0 m-2 z-1 rounded-4 p-1">
+                          <i class="_icon-add-favorite text-secondary fs-6"></i>
+                        </button>
+                        
+                        <!-- Изображение товара -->
+                        <a href="#" class="product-card__image-wrapper text-center py-2">
+                          <img src="@img/product-image/image.png" alt="Кабель ZYTER LM14" class="img-fluid product-image">
+                        </a>
+                        
+                        <!-- Информация о товаре -->
+                        <div class="card-body p-0 d-flex flex-column">
+                          <!-- Код товара -->
+                          <div class="product-card__code mb-3 small fw-light">
+                            Код товару: 465336
+                          </div>
+                          
+                          <!-- Название товара -->
+                          <h5 class="product-card__title fw-medium mb-3">
+                            <a href="#" class="text-decoration-none text-dark stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                          </h5>
+                          
+                          <!-- Блок цены и кнопки добавления в корзину -->
+                          <div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-3">
+                            <!-- Цена товара -->
+                            <div class="product-card__price fw-bold fs-5 text-primary lh-1">
+                              18 745 грн
+                            </div>
+                            
+                            <!-- Блок с количеством и кнопкой корзины -->
+                            <div class="product-card__add-to-cart d-flex align-items-center gap-2">
+                              <!-- Компонент управления количеством -->
+                              <div class="count-input border py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement>
+                                  -
+                                </button>
+                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none" value="1" min="1" max="5" readonly>
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment>
+  
+                                  +
+                                </button>
+                              </div>
+                              <button type="button" class="btn btn-secondary btn-sm btn-add-to-cart rounded-4">
+                                <i class="_icon-cart fs-4 d-flex align-items-center justify-content-center"></i>
+                              </button>
+                            </div>
+                          </div>
+                          
+                          <!-- Индикатор наличия -->
+                          <div class="product-card__availability text-success small mt-3">
+                             В наявності
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="new-products__slide swiper-slide product-item">
+                      <!-- Карточка товара из макета -->
+                      <div class="card product-card position-relative p-1">
+                        <div class="p-2">
+                         <!-- Иконка избранного (сердечко) -->
+                        <button type="button" class="btn btn-sm btn-favorite position-absolute top-0 end-0 m-2 z-1 rounded-4 p-1">
+                          <i class="_icon-add-favorite text-secondary fs-6"></i>
+                        </button>
+                        
+                        <!-- Изображение товара -->
+                        <a href="#" class="product-card__image-wrapper text-center py-2">
+                          <img src="@img/product-image/image.png" alt="Кабель ZYTER LM14" class="img-fluid product-image">
+                        </a>
+                        
+                        <!-- Информация о товаре -->
+                        <div class="card-body p-0 d-flex flex-column">
+                          <!-- Код товара -->
+                          <div class="product-card__code mb-3 small fw-light">
+                            Код товару: 465336
+                          </div>
+                          
+                          <!-- Название товара -->
+                          <h5 class="product-card__title fw-medium mb-3">
+                            <a href="#" class="text-decoration-none text-dark stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                          </h5>
+                          
+                          <!-- Блок цены и кнопки добавления в корзину -->
+                          <div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-3">
+                            <!-- Цена товара -->
+                            <div class="product-card__price fw-bold fs-5 text-primary lh-1">
+                              18 745 грн
+                            </div>
+                            
+                            <!-- Блок с количеством и кнопкой корзины -->
+                            <div class="product-card__add-to-cart d-flex align-items-center gap-2">
+                              <!-- Компонент управления количеством -->
+                              <div class="count-input border py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement>
+                                  -
+                                </button>
+                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none" value="1" min="1" max="5" readonly>
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment>
+  
+                                  +
+                                </button>
+                              </div>
+                              <button type="button" class="btn btn-secondary btn-sm btn-add-to-cart rounded-4">
+                                <i class="_icon-cart fs-4 d-flex align-items-center justify-content-center"></i>
+                              </button>
+                            </div>
+                          </div>
+                          
+                          <!-- Индикатор наличия -->
+                          <div class="product-card__availability text-success small mt-3">
+                             В наявності
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="new-products__slide swiper-slide product-item">
+                      <!-- Карточка товара из макета -->
+                      <div class="card product-card position-relative p-1">
+                        <div class="p-2">
+                         <!-- Иконка избранного (сердечко) -->
+                        <button type="button" class="btn btn-sm btn-favorite position-absolute top-0 end-0 m-2 z-1 rounded-4 p-1">
+                          <i class="_icon-add-favorite text-secondary fs-6"></i>
+                        </button>
+                        
+                        <!-- Изображение товара -->
+                        <a href="#" class="product-card__image-wrapper text-center py-2">
+                          <img src="@img/product-image/image.png" alt="Кабель ZYTER LM14" class="img-fluid product-image">
+                        </a>
+                        
+                        <!-- Информация о товаре -->
+                        <div class="card-body p-0 d-flex flex-column">
+                          <!-- Код товара -->
+                          <div class="product-card__code mb-3 small fw-light">
+                            Код товару: 465336
+                          </div>
+                          
+                          <!-- Название товара -->
+                          <h5 class="product-card__title fw-medium mb-3">
+                            <a href="#" class="text-decoration-none text-dark stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                          </h5>
+                          
+                          <!-- Блок цены и кнопки добавления в корзину -->
+                          <div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-3">
+                            <!-- Цена товара -->
+                            <div class="product-card__price fw-bold fs-5 text-primary lh-1">
+                              18 745 грн
+                            </div>
+                            
+                            <!-- Блок с количеством и кнопкой корзины -->
+                            <div class="product-card__add-to-cart d-flex align-items-center gap-2">
+                              <!-- Компонент управления количеством -->
+                              <div class="count-input border py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement>
+                                  -
+                                </button>
+                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none" value="1" min="1" max="5" readonly>
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment>
+  
+                                  +
+                                </button>
+                              </div>
+                              <button type="button" class="btn btn-secondary btn-sm btn-add-to-cart rounded-4">
+                                <i class="_icon-cart fs-4 d-flex align-items-center justify-content-center"></i>
+                              </button>
+                            </div>
+                          </div>
+                          
+                          <!-- Индикатор наличия -->
+                          <div class="product-card__availability text-success small mt-3">
+                             В наявності
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="new-products__slide swiper-slide product-item">
+                      <!-- Карточка товара из макета -->
+                      <div class="card product-card position-relative p-1">
+                        <div class="p-2">
+                         <!-- Иконка избранного (сердечко) -->
+                        <button type="button" class="btn btn-sm btn-favorite position-absolute top-0 end-0 m-2 z-1 rounded-4 p-1">
+                          <i class="_icon-add-favorite text-secondary fs-6"></i>
+                        </button>
+                        
+                        <!-- Изображение товара -->
+                        <a href="#" class="product-card__image-wrapper text-center py-2">
+                          <img src="@img/product-image/image.png" alt="Кабель ZYTER LM14" class="img-fluid product-image">
+                        </a>
+                        
+                        <!-- Информация о товаре -->
+                        <div class="card-body p-0 d-flex flex-column">
+                          <!-- Код товара -->
+                          <div class="product-card__code mb-3 small fw-light">
+                            Код товару: 465336
+                          </div>
+                          
+                          <!-- Название товара -->
+                          <h5 class="product-card__title fw-medium mb-3">
+                            <a href="#" class="text-decoration-none text-dark stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                          </h5>
+                          
+                          <!-- Блок цены и кнопки добавления в корзину -->
+                          <div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-3">
+                            <!-- Цена товара -->
+                            <div class="product-card__price fw-bold fs-5 text-primary lh-1">
+                              18 745 грн
+                            </div>
+                            
+                            <!-- Блок с количеством и кнопкой корзины -->
+                            <div class="product-card__add-to-cart d-flex align-items-center gap-2">
+                              <!-- Компонент управления количеством -->
+                              <div class="count-input border py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement>
+                                  -
+                                </button>
+                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none" value="1" min="1" max="5" readonly>
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment>
+  
+                                  +
+                                </button>
+                              </div>
+                              <button type="button" class="btn btn-secondary btn-sm btn-add-to-cart rounded-4">
+                                <i class="_icon-cart fs-4 d-flex align-items-center justify-content-center"></i>
+                              </button>
+                            </div>
+                          </div>
+                          
+                          <!-- Индикатор наличия -->
+                          <div class="product-card__availability text-success small mt-3">
+                             В наявності
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="new-products__slide swiper-slide product-item">
+                      <!-- Карточка товара из макета -->
+                      <div class="card product-card position-relative p-1">
+                        <div class="p-2">
+                         <!-- Иконка избранного (сердечко) -->
+                        <button type="button" class="btn btn-sm btn-favorite position-absolute top-0 end-0 m-2 z-1 rounded-4 p-1">
+                          <i class="_icon-add-favorite text-secondary fs-6"></i>
+                        </button>
+                        
+                        <!-- Изображение товара -->
+                        <a href="#" class="product-card__image-wrapper text-center py-2">
+                          <img src="@img/product-image/image.png" alt="Кабель ZYTER LM14" class="img-fluid product-image">
+                        </a>
+                        
+                        <!-- Информация о товаре -->
+                        <div class="card-body p-0 d-flex flex-column">
+                          <!-- Код товара -->
+                          <div class="product-card__code mb-3 small fw-light">
+                            Код товару: 465336
+                          </div>
+                          
+                          <!-- Название товара -->
+                          <h5 class="product-card__title fw-medium mb-3">
+                            <a href="#" class="text-decoration-none text-dark stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                          </h5>
+                          
+                          <!-- Блок цены и кнопки добавления в корзину -->
+                          <div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-3">
+                            <!-- Цена товара -->
+                            <div class="product-card__price fw-bold fs-5 text-primary lh-1">
+                              18 745 грн
+                            </div>
+                            
+                            <!-- Блок с количеством и кнопкой корзины -->
+                            <div class="product-card__add-to-cart d-flex align-items-center gap-2">
+                              <!-- Компонент управления количеством -->
+                              <div class="count-input border py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement>
+                                  -
+                                </button>
+                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none" value="1" min="1" max="5" readonly>
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment>
+  
+                                  +
+                                </button>
+                              </div>
+                              <button type="button" class="btn btn-secondary btn-sm btn-add-to-cart rounded-4">
+                                <i class="_icon-cart fs-4 d-flex align-items-center justify-content-center"></i>
+                              </button>
+                            </div>
+                          </div>
+                          
+                          <!-- Индикатор наличия -->
+                          <div class="product-card__availability text-success small mt-3">
+                             В наявності
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="category-section__navigation slider-navigation d-none d-lg-block slider-navigation--per-container">
+                  <button type="button" class="slider-button-type-one btn swiper-button-prev position-absolute top-50 start-0 translate-middle-y">
+                    <i class="_icon-arrow-left"></i>
+                  </button>
+                  <button type="button" class="slider-button-type-one btn swiper-button-next position-absolute top-50 end-0 translate-middle-y">
+                    <i class="_icon-arrow-right"></i>
+                  </button>
+                </div>
+                <div class="d-flex justify-content-lg-center justify-content-between gap-2 flex-wrap align-items-center mt-lg-5 mt-3">
+                  <div class="slider-actions slider-navigation d-flex  d-lg-none align-items-center gap-3">
+                    <button type="button" class="slider-button-type-one btn swiper-button-prev">
+                      <i class="_icon-arrow-left"></i>
+                      
+                    </button>
+                    <div class="slider-pagination-type-one">
+                      <div class="swiper-pagination">
+  
+                      </div>
+                    </div>
+                    <button type="button" class="slider-button-type-one btn swiper-button-next">
+                      <i class="_icon-arrow-right"></i>
+                    </button>
+                  </div>
+                  <a href="#" class="btn btn-lg btn-lg-width btn-primary">
+                    <span class="text-uppercase fw-bold">Показати ще </span>
+                  </a>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </section>
+        <!-- /.new-products -->
+        <section class="recommendation mb-5 mt-2">
+          <div class="container">
+            <div class="recommendation__content">
+              <div class="recommendation__header mb-md-4 md-3">
+                <h2 class="text-primary fw-semibold text-uppercase">Рекомендації</h2>
+              </div>
+              <div class="position-relative">
+                <div class="recommendation__slider slider-type-products swiper">
+                  <div class="recommendation__wrapper swiper-wrapper">
+                    <div class="recommendation__slide swiper-slide product-item">
+                      <!-- Карточка товара из макета -->
+                      <div class="card product-card position-relative p-1">
+                        <div class="p-2">
+                         <!-- Иконка избранного (сердечко) -->
+                        <button type="button" class="btn btn-sm btn-favorite position-absolute top-0 end-0 m-2 z-1 rounded-4 p-1">
+                          <i class="_icon-add-favorite text-secondary fs-6"></i>
+                        </button>
+                        
+                        <!-- Изображение товара -->
+                        <a href="#" class="product-card__image-wrapper text-center py-2">
+                          <img src="@img/product-image/image.png" alt="Кабель ZYTER LM14" class="img-fluid product-image">
+                        </a>
+                        
+                        <!-- Информация о товаре -->
+                        <div class="card-body p-0 d-flex flex-column">
+                          <!-- Код товара -->
+                          <div class="product-card__code mb-3 small fw-light">
+                            Код товару: 465336
+                          </div>
+                          
+                          <!-- Название товара -->
+                          <h5 class="product-card__title fw-medium mb-3">
+                            <a href="#" class="text-decoration-none text-dark stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                          </h5>
+                          
+                          <!-- Блок цены и кнопки добавления в корзину -->
+                          <div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-3">
+                            <!-- Цена товара -->
+                            <div class="product-card__price fw-bold fs-5 text-primary lh-1">
+                              18 745 грн
+                            </div>
+                            
+                            <!-- Блок с количеством и кнопкой корзины -->
+                            <div class="product-card__add-to-cart d-flex align-items-center gap-2">
+                              <!-- Компонент управления количеством -->
+                              <div class="count-input border py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement>
+                                  -
+                                </button>
+                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none" value="1" min="1" max="5" readonly>
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment>
         
+                                  +
+                                </button>
+                              </div>
+                              <button type="button" class="btn btn-secondary btn-sm btn-add-to-cart rounded-4">
+                                <i class="_icon-cart fs-4 d-flex align-items-center justify-content-center"></i>
+                              </button>
+                            </div>
+                          </div>
+                          
+                          <!-- Индикатор наличия -->
+                          <div class="product-card__availability text-success small mt-3">
+                             В наявності
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="recommendation__slide swiper-slide product-item">
+                      <!-- Карточка товара из макета -->
+                      <div class="card product-card position-relative p-1">
+                        <div class="p-2">
+                         <!-- Иконка избранного (сердечко) -->
+                        <button type="button" class="btn btn-sm btn-favorite position-absolute top-0 end-0 m-2 z-1 rounded-4 p-1">
+                          <i class="_icon-add-favorite text-secondary fs-6"></i>
+                        </button>
+                        
+                        <!-- Изображение товара -->
+                        <a href="#" class="product-card__image-wrapper text-center py-2">
+                          <img src="@img/product-image/image.png" alt="Кабель ZYTER LM14" class="img-fluid product-image">
+                        </a>
+                        
+                        <!-- Информация о товаре -->
+                        <div class="card-body p-0 d-flex flex-column">
+                          <!-- Код товара -->
+                          <div class="product-card__code mb-3 small fw-light">
+                            Код товару: 465336
+                          </div>
+                          
+                          <!-- Название товара -->
+                          <h5 class="product-card__title fw-medium mb-3">
+                            <a href="#" class="text-decoration-none text-dark stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                          </h5>
+                          
+                          <!-- Блок цены и кнопки добавления в корзину -->
+                          <div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-3">
+                            <!-- Цена товара -->
+                            <div class="product-card__price fw-bold fs-5 text-primary lh-1">
+                              18 745 грн
+                            </div>
+                            
+                            <!-- Блок с количеством и кнопкой корзины -->
+                            <div class="product-card__add-to-cart d-flex align-items-center gap-2">
+                              <!-- Компонент управления количеством -->
+                              <div class="count-input border py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement>
+                                  -
+                                </button>
+                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none" value="1" min="1" max="5" readonly>
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment>
+        
+                                  +
+                                </button>
+                              </div>
+                              <button type="button" class="btn btn-secondary btn-sm btn-add-to-cart rounded-4">
+                                <i class="_icon-cart fs-4 d-flex align-items-center justify-content-center"></i>
+                              </button>
+                            </div>
+                          </div>
+                          
+                          <!-- Индикатор наличия -->
+                          <div class="product-card__availability text-success small mt-3">
+                             В наявності
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="recommendation__slide swiper-slide product-item">
+                      <!-- Карточка товара из макета -->
+                      <div class="card product-card position-relative p-1">
+                        <div class="p-2">
+                         <!-- Иконка избранного (сердечко) -->
+                        <button type="button" class="btn btn-sm btn-favorite position-absolute top-0 end-0 m-2 z-1 rounded-4 p-1">
+                          <i class="_icon-add-favorite text-secondary fs-6"></i>
+                        </button>
+                        
+                        <!-- Изображение товара -->
+                        <a href="#" class="product-card__image-wrapper text-center py-2">
+                          <img src="@img/product-image/image.png" alt="Кабель ZYTER LM14" class="img-fluid product-image">
+                        </a>
+                        
+                        <!-- Информация о товаре -->
+                        <div class="card-body p-0 d-flex flex-column">
+                          <!-- Код товара -->
+                          <div class="product-card__code mb-3 small fw-light">
+                            Код товару: 465336
+                          </div>
+                          
+                          <!-- Название товара -->
+                          <h5 class="product-card__title fw-medium mb-3">
+                            <a href="#" class="text-decoration-none text-dark stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                          </h5>
+                          
+                          <!-- Блок цены и кнопки добавления в корзину -->
+                          <div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-3">
+                            <!-- Цена товара -->
+                            <div class="product-card__price fw-bold fs-5 text-primary lh-1">
+                              18 745 грн
+                            </div>
+                            
+                            <!-- Блок с количеством и кнопкой корзины -->
+                            <div class="product-card__add-to-cart d-flex align-items-center gap-2">
+                              <!-- Компонент управления количеством -->
+                              <div class="count-input border py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement>
+                                  -
+                                </button>
+                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none" value="1" min="1" max="5" readonly>
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment>
+        
+                                  +
+                                </button>
+                              </div>
+                              <button type="button" class="btn btn-secondary btn-sm btn-add-to-cart rounded-4">
+                                <i class="_icon-cart fs-4 d-flex align-items-center justify-content-center"></i>
+                              </button>
+                            </div>
+                          </div>
+                          
+                          <!-- Индикатор наличия -->
+                          <div class="product-card__availability text-success small mt-3">
+                             В наявності
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="recommendation__slide swiper-slide product-item">
+                      <!-- Карточка товара из макета -->
+                      <div class="card product-card position-relative p-1">
+                        <div class="p-2">
+                         <!-- Иконка избранного (сердечко) -->
+                        <button type="button" class="btn btn-sm btn-favorite position-absolute top-0 end-0 m-2 z-1 rounded-4 p-1">
+                          <i class="_icon-add-favorite text-secondary fs-6"></i>
+                        </button>
+                        
+                        <!-- Изображение товара -->
+                        <a href="#" class="product-card__image-wrapper text-center py-2">
+                          <img src="@img/product-image/image.png" alt="Кабель ZYTER LM14" class="img-fluid product-image">
+                        </a>
+                        
+                        <!-- Информация о товаре -->
+                        <div class="card-body p-0 d-flex flex-column">
+                          <!-- Код товара -->
+                          <div class="product-card__code mb-3 small fw-light">
+                            Код товару: 465336
+                          </div>
+                          
+                          <!-- Название товара -->
+                          <h5 class="product-card__title fw-medium mb-3">
+                            <a href="#" class="text-decoration-none text-dark stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                          </h5>
+                          
+                          <!-- Блок цены и кнопки добавления в корзину -->
+                          <div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-3">
+                            <!-- Цена товара -->
+                            <div class="product-card__price fw-bold fs-5 text-primary lh-1">
+                              18 745 грн
+                            </div>
+                            
+                            <!-- Блок с количеством и кнопкой корзины -->
+                            <div class="product-card__add-to-cart d-flex align-items-center gap-2">
+                              <!-- Компонент управления количеством -->
+                              <div class="count-input border py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement>
+                                  -
+                                </button>
+                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none" value="1" min="1" max="5" readonly>
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment>
+        
+                                  +
+                                </button>
+                              </div>
+                              <button type="button" class="btn btn-secondary btn-sm btn-add-to-cart rounded-4">
+                                <i class="_icon-cart fs-4 d-flex align-items-center justify-content-center"></i>
+                              </button>
+                            </div>
+                          </div>
+                          
+                          <!-- Индикатор наличия -->
+                          <div class="product-card__availability text-success small mt-3">
+                             В наявності
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="recommendation__slide swiper-slide product-item">
+                      <!-- Карточка товара из макета -->
+                      <div class="card product-card position-relative p-1">
+                        <div class="p-2">
+                         <!-- Иконка избранного (сердечко) -->
+                        <button type="button" class="btn btn-sm btn-favorite position-absolute top-0 end-0 m-2 z-1 rounded-4 p-1">
+                          <i class="_icon-add-favorite text-secondary fs-6"></i>
+                        </button>
+                        
+                        <!-- Изображение товара -->
+                        <a href="#" class="product-card__image-wrapper text-center py-2">
+                          <img src="@img/product-image/image.png" alt="Кабель ZYTER LM14" class="img-fluid product-image">
+                        </a>
+                        
+                        <!-- Информация о товаре -->
+                        <div class="card-body p-0 d-flex flex-column">
+                          <!-- Код товара -->
+                          <div class="product-card__code mb-3 small fw-light">
+                            Код товару: 465336
+                          </div>
+                          
+                          <!-- Название товара -->
+                          <h5 class="product-card__title fw-medium mb-3">
+                            <a href="#" class="text-decoration-none text-dark stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                          </h5>
+                          
+                          <!-- Блок цены и кнопки добавления в корзину -->
+                          <div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-3">
+                            <!-- Цена товара -->
+                            <div class="product-card__price fw-bold fs-5 text-primary lh-1">
+                              18 745 грн
+                            </div>
+                            
+                            <!-- Блок с количеством и кнопкой корзины -->
+                            <div class="product-card__add-to-cart d-flex align-items-center gap-2">
+                              <!-- Компонент управления количеством -->
+                              <div class="count-input border py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement>
+                                  -
+                                </button>
+                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none" value="1" min="1" max="5" readonly>
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment>
+        
+                                  +
+                                </button>
+                              </div>
+                              <button type="button" class="btn btn-secondary btn-sm btn-add-to-cart rounded-4">
+                                <i class="_icon-cart fs-4 d-flex align-items-center justify-content-center"></i>
+                              </button>
+                            </div>
+                          </div>
+                          
+                          <!-- Индикатор наличия -->
+                          <div class="product-card__availability text-success small mt-3">
+                             В наявності
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="category-section__navigation slider-navigation d-none d-lg-block slider-navigation--per-container">
+                  <button type="button" class="slider-button-type-one btn swiper-button-prev position-absolute top-50 start-0 translate-middle-y">
+                    <i class="_icon-arrow-left"></i>
+                  </button>
+                  <button type="button" class="slider-button-type-one btn swiper-button-next position-absolute top-50 end-0 translate-middle-y">
+                    <i class="_icon-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="d-flex justify-content-lg-center justify-content-between gap-2 flex-wrap align-items-center mt-lg-5 mt-3">
+                <div class="slider-actions slider-navigation d-flex  d-lg-none align-items-center gap-3">
+                  <button type="button" class="slider-button-type-one btn swiper-button-prev">
+                    <i class="_icon-arrow-left"></i>
+                    
+                  </button>
+                  <div class="slider-pagination-type-one">
+                    <div class="swiper-pagination">
+
+                    </div>
+                  </div>
+                  <button type="button" class="slider-button-type-one btn swiper-button-next">
+                    <i class="_icon-arrow-right"></i>
+                  </button>
+                </div>
+                <a href="#" class="btn btn-lg btn-lg-width btn-primary">
+                  <span class="text-uppercase fw-bold">Показати ще </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- /.recommendation -->
+        <section class="blog-section py-5">
+          <div class="container">
+            <div class="blog-section__content">
+              <div class="blog-section__header mb-md-4 md-3">
+                <h2 class="text-primary fw-semibold text-uppercase">Популярні статті</h2>
+              </div>
+              <div class="blog-section__body">
+                <div class="blog-section__slider slider-type-blog swiper">
+                  <div class="blog-section__wrapper swiper-wrapper">
+                    <!-- Первая статья -->
+                    <div class="blog-section__slide swiper-slide">
+                      <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden p-1">
+                        <div class="position-relative">
+                          <img src="@img/blog/blog.jpg" class="card-img-top img-fluid rounded-3" alt="Название статьи">
+                          <!-- <div class="position-absolute bottom-0 start-0 p-3 text-white">
+                            <span class="badge bg-primary rounded-pill px-3 py-2">Новини</span>
+                          </div> -->
+                        </div>
+                        <div class="card-body py-2 px-3">
+                          <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="text-muted small">10.09.2023</span>
+                            <span class="text-muted small d-inline-flex align-items-center gap-1"><i class="_icon-views me-1 fs-6 text-primary"></i> 247</span>
+                          </div>
+                          <h5 class="card-title fw-medium mb-1 line-clamp line-clamp-2">Як подовжити термін служби акумулятора ноутбука</h5>
+                          <p class="card-text text-muted line-clamp line-clamp-4">Корисні поради з догляду за акумуляторами, які допоможуть зберегти ємність вашого пристрою.</p>
+                         
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="blog-section__slide swiper-slide">
+                      <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden p-1">
+                        <div class="position-relative">
+                          <img src="@img/blog/blog.jpg" class="card-img-top img-fluid rounded-3" alt="Название статьи">
+                          <!-- <div class="position-absolute bottom-0 start-0 p-3 text-white">
+                            <span class="badge bg-primary rounded-pill px-3 py-2">Новини</span>
+                          </div> -->
+                        </div>
+                        <div class="card-body py-2 px-3">
+                          <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="text-muted small">10.09.2023</span>
+                            <span class="text-muted small d-inline-flex align-items-center gap-1"><i class="_icon-views me-1 fs-6 text-primary"></i> 247</span>
+                          </div>
+                          <h5 class="card-title fw-medium mb-1 line-clamp line-clamp-2">Нові технології екранів для смартфонів 2023 року: огляд інновацій та тенденцій розвитку</h5>
+                          <p class="card-text text-muted line-clamp line-clamp-4">Детальний аналіз новітніх технологій дисплеїв для мобільних пристроїв, їх переваги та недоліки. Як нові розробки впливають на автономність роботи та якість зображення.</p>
+                         
+                        </div>
+                      </div>
+                    </div>
+                    <div class="blog-section__slide swiper-slide">
+                      <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden p-1">
+                        <div class="position-relative">
+                          <img src="@img/blog/blog.jpg" class="card-img-top img-fluid rounded-3" alt="Название статьи">
+                          <!-- <div class="position-absolute bottom-0 start-0 p-3 text-white">
+                            <span class="badge bg-primary rounded-pill px-3 py-2">Новини</span>
+                          </div> -->
+                        </div>
+                        <div class="card-body py-2 px-3">
+                          <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="text-muted small">10.09.2023</span>
+                            <span class="text-muted small d-inline-flex align-items-center gap-1"><i class="_icon-views me-1 fs-6 text-primary"></i> 247</span>
+                          </div>
+                          <h5 class="card-title fw-medium mb-1 line-clamp line-clamp-2">Топ-5 несправностей ноутбуків та як їх уникнути</h5>
+                          <p class="card-text text-muted line-clamp line-clamp-4">Розбираємо найпоширеніші проблеми з ноутбуками та даємо поради щодо їх профілактики. Як продовжити термін служби свого пристрою і зекономити на ремонті.</p>
+                         
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slider-pagination-type-two">
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center mt-sm-5 mt-3 align-items-center">
+                  <a href="#" class="btn btn-lg btn-lg-width btn-secondary px-4">
+                    <span class="text-uppercase fw-bold">Дивитись всі статті</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- /.blog-section -->
       </main>
       @@include('html/_footer.htm',{})
+      @@include('html/_popup.htm',{})
+      
+      
+      
     </div>  
     @@include('html/_js.htm',{})
   </body>

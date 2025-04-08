@@ -2,7 +2,7 @@
 .icon-menu {
 	display: none;
   span, &::before, &::after {
-    @media (max-width: 75rem) {
+    @media (max-width: 75rem) and (min-width: 576px) {
       background-color: var(--bs-primary);
     }
     @media (max-width: 576px) {

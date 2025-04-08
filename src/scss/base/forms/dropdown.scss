@@ -1,54 +1,345 @@
-// Кастомные переменные
-$dropdown-indicator-icon: url("data:image/svg+xml,%3Csvg ... fill='%23383838'/%3E%3C/svg%3E");
-$dropdown-box-shadow: 0 20px 35px 0 rgba(#000, 0.2);
-$dropdown-border-radius: .9375rem;
-$dropdown-border-color: transparent;
-$dropdown-divider-bg: #E4E4E4;
-$dropdown-item-padding-x: .75rem;
+// =============================================================================
+// Кастомизация дропдауна Bootstrap 5
+// Переопределяем переменные Bootstrap для стилизации дропдауна
+// =============================================================================
 
+// Проверка наличия переменной $primary, если не определена - используем значение по умолчанию
+$primary: #331B63 ;
+
+// Проверка наличия переменной $spacer, если не определена - используем значение по умолчанию
+$spacer: 1rem ;
+// Переменные для иконки дропдауна
+$dropdown-indicator-icon: url("@img/icons/arrow-bottom-dropdown.svg");
+$dropdown-indicator-icon-plus: url("@img/icons/plus.svg");
+$dropdown-indicator-icon-chevron: url("@img/icons/chevron-down.svg");
+$dropdown-indicator-width: 10px;
+$dropdown-indicator-height: 14px;
+$dropdown-indicator-spacing: 0.5rem;
+
+// Переменные Bootstrap 5 для дропдауна
+$dropdown-min-width:                  11.75rem ;
+$dropdown-padding-x:                  0 ;
+$dropdown-padding-y:                  0.5rem ;
+$dropdown-spacer:                     0.125rem ;
+$dropdown-font-size:                  15px ;
+$dropdown-color:                      $primary ;
+$dropdown-bg:                         #fff ;
+$dropdown-border-color:               $gray-4 ;
+$dropdown-border-radius:              10px ;
+$dropdown-border-width:               0 ;
+$dropdown-inner-border-radius:        10px ;
+$dropdown-divider-bg:                 $dropdown-border-color ;
+$dropdown-divider-margin-y:           $spacer * .5 ;
+$dropdown-box-shadow:                 -10px 10px 50px rgba(0, 0, 0, 0.15) ;
+
+
+$dropdown-link-color:                 $dropdown-color ;
+$dropdown-link-hover-color:           darken($dropdown-color, 5%) ;
+$dropdown-link-hover-bg:              rgba($primary, 0.05) ;
+
+$dropdown-link-active-color:          $dropdown-link-hover-color ;
+$dropdown-link-active-bg:             rgba($primary, 0.1) ;
+
+$dropdown-link-disabled-color:        #adb5bd ;
+
+$dropdown-item-padding-y:             0.5rem ;
+$dropdown-item-padding-x:             .75rem ;
+
+$dropdown-header-color:               #6c757d ;
+$dropdown-header-padding:             $dropdown-padding-y $dropdown-item-padding-x ;
+
+// Примечание: Оставшаяся часть файла сохраняет стандартные стили Bootstrap 5
+// Мы не переопределяем классы, а только настраиваем их через переменные
 @import "bootstrap/scss/dropdown";
 
-.dropdown-item {
-  display: inline-flex;
-  align-items: center;
-  gap: .5rem;
+header {
+  .dropdown .dropdown-item {
+    padding: $dropdown-item-padding-y calc($dropdown-item-padding-x * 1.670);
+  }
 }
 
-.dropdown-toggle:not(.nav-link-dropdown, .btn-icon) {
+.dropdown {
+  position: relative;
+  .dropdown-menu-md {
+    min-width: $dropdown-min-width * 1.4;
+  }
+}
+
+.dropdown-toggle {
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
   &::after {
+    display: inline-block;
+    margin-left: 0.255em;
     content: "";
-    width: 1rem;
-    height: 1rem;
-    border: none;
     background-image: $dropdown-indicator-icon;
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
+    width: $dropdown-indicator-width;
+    height: $dropdown-indicator-height;
+    margin-left: $dropdown-indicator-spacing;
+    border: none;
+    vertical-align: middle;
+    transition: transform 0.2s ease;
+  }
+
+  &:empty::after {
+    margin-left: 0;
+  }
+  
+  &.icon-no-spacing::after {
+    margin-left: 0;
+  }
+  
+  &.icon-sm::after {
+    width: calc($dropdown-indicator-width * 0.8);
+    height: calc($dropdown-indicator-height * 0.8);
+  }
+  
+  &.icon-lg::after {
+    width: calc($dropdown-indicator-width * 1.2);
+    height: calc($dropdown-indicator-height * 1.2);
+  }
+  
+  // Модификаторы для разных типов иконок
+  &.icon-plus::after {
+    background-image: $dropdown-indicator-icon-plus;
+  }
+  
+  &.icon-chevron::after {
+    background-image: $dropdown-indicator-icon-chevron;
+  }
+  
+  &.no-caret::after {
+    display: none;
   }
 }
 
-.nav-link-dropdown {
-  gap: .625rem;
-  &::after {
-    content: "";
-    border: none;
-    width: .5rem;
-    height: .875rem;
-    transition: transform 0.3s ease;
-    background-image: url("../img/icons/arrow-dropdown.svg"); // Уточнить путь
-    background-size: contain;
-    background-repeat: no-repeat;
-    transform-origin: center center;
-  }
-  &.dropdown-toggle:not(.collapsed) {
-    &::after {
-      transform: rotate(90deg);
+.dropdown-hover-css {
+  cursor: pointer;
+  @media (min-width: 992px) {
+    &:hover > .dropdown-menu {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    > .dropdown-menu {
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+      margin-top: 5px; /* Небольшой отступ от кнопки */
+      pointer-events: none; /* Отключаем события мыши на скрытом меню */
+      
+      /* Создаём дополнительную область для перекрытия, чтобы курсор не "ускользал" */
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -10px; /* Невидимая область выше меню */
+        height: 10px;
+        background: transparent;
+      }
+    }
+
+    /* Предотвращаем стандартное поведение Bootstrap на десктопах */
+    > .dropdown-toggle:hover {
+      cursor: default;
     }
   }
 }
 
-.dropdown-menu {
-  min-width: 16.25rem;
-  box-shadow: $dropdown-box-shadow;
-  border-radius: $dropdown-border-radius;
-  border-color: $dropdown-border-color;
+/* Стили для мобильных устройств */
+.dropdown-click-only {
+  .dropdown-menu {
+    display: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: none;
+    pointer-events: auto;
+    margin-top: 0.125rem;
+  }
+  
+  &.show > .dropdown-menu {
+    display: block;
+  }
 }
+
+.dropdown.show .dropdown-toggle::after {
+  transform: rotate(180deg);
+}
+
+.dropdown.show .dropdown-toggle.icon-plus::after {
+  transform: rotate(45deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  z-index: 1000;
+  display: none;
+  min-width: $dropdown-min-width;
+  padding: $dropdown-padding-y $dropdown-padding-x;
+  margin: $dropdown-spacer 0 0;
+  font-size: $dropdown-font-size;
+  color: $dropdown-color;
+  text-align: left;
+  list-style: none;
+  background-color: $dropdown-bg;
+  background-clip: padding-box;
+  border: $dropdown-border-width solid $dropdown-border-color;
+  border-radius: $dropdown-border-radius;
+  box-shadow: $dropdown-box-shadow;
+  &.show {
+    display: block;
+  }
+}
+
+.dropdown-menu-start {
+  --bs-position: start;
+  right: auto;
+  left: 0;
+}
+
+.dropdown-menu-end {
+  --bs-position: end;
+  right: 0;
+  left: auto;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+  clear: both;
+  font-size: $dropdown-font-size;
+  letter-spacing: 2%;
+  color: $dropdown-link-color;
+  text-align: inherit;
+  white-space: nowrap;
+  text-decoration: none;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $dropdown-link-hover-color;
+    background-color: $dropdown-link-hover-bg;
+  }
+
+  &.active,
+  &:active {
+    color: $dropdown-link-active-color;
+    text-decoration: none;
+    background-color: $dropdown-link-active-bg;
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $dropdown-link-disabled-color;
+    pointer-events: none;
+    background-color: transparent;
+  }
+}
+
+.dropdown-divider {
+  height: 0;
+  margin: $dropdown-divider-margin-y 0;
+  overflow: hidden;
+  border-top: 1px solid $dropdown-divider-bg;
+}
+
+.dropdown-header {
+  display: block;
+  padding: $dropdown-header-padding;
+  margin-bottom: 0;
+  font-size: 0.875rem;
+  color: $dropdown-header-color;
+  white-space: nowrap;
+}
+
+/* Решение проблемы с ховером для дропдаунов */
+.dropdown-toggle[data-bs-trigger="hover"],
+.dropdown-toggle[data-bs-trigger*="hover"] {
+  position: relative; // Для корректного позиционирования
+}
+
+
+
+
+// HTML-структура для использования (оригинальная структура Bootstrap 5):
+/*
+<!-- Стандартный дропдаун Bootstrap 5 с кастомной иконкой -->
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+</div>
+
+<!-- Пример с модификаторами для иконки -->
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle icon-lg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Большая иконка
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Пункт меню 1</a></li>
+    <li><a class="dropdown-item" href="#">Пункт меню 2</a></li>
+  </ul>
+</div>
+
+<!-- Пример без отступа иконки -->
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle icon-no-spacing" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Без отступа
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Пункт меню 1</a></li>
+    <li><a class="dropdown-item" href="#">Пункт меню 2</a></li>
+  </ul>
+</div>
+
+<!-- Пример с иконкой "plus" -->
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle icon-plus" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Иконка плюс
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Пункт меню 1</a></li>
+    <li><a class="dropdown-item" href="#">Пункт меню 2</a></li>
+  </ul>
+</div>
+
+<!-- Пример с иконкой "chevron" -->
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle icon-chevron" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Иконка шеврон
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Пункт меню 1</a></li>
+    <li><a class="dropdown-item" href="#">Пункт меню 2</a></li>
+  </ul>
+</div>
+
+<!-- Пример без иконки -->
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle no-caret" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Без иконки
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Пункт меню 1</a></li>
+    <li><a class="dropdown-item" href="#">Пункт меню 2</a></li>
+  </ul>
+</div>
+*/

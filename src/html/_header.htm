@@ -1,6 +1,6 @@
 <header class="header">
 	<div class="header-top">
-    <div class="container">
+    <div class="container-lg">
       <nav class="navbar navbar-expand-xl w-100 d-block">
         <div class="row">
           <!-- Кнопка мобильного меню, скрыта на xl и больше, а также на sm -->
@@ -19,7 +19,7 @@
           <div class="col-xl col-md-8 col align-self-center">
             <div class="d-flex justify-content-end align-items-center">
               <!-- Меню видно до 1200px (75rem) -->
-              <ul class="navbar-nav d-flex flex-row align-items-center gap-3 me-2 d-none d-xl-flex">
+              <ul class="navbar-nav d-flex flex-row align-items-center gap-4 me-2 d-none d-xl-flex">
                 <li class="nav-item">
                   <a class="nav-link animate-hover" href="#">Оплата і доставка</a>
                 </li>
@@ -27,8 +27,23 @@
                   <a class="nav-link active animate-hover" aria-current="page" href="#">Про компанію</a>
                 </li>
               
-                <li class="nav-item">
-                  <a class="nav-link animate-hover" href="#">Інформація</a>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle nav-link-dropdown d-flex align-items-center animate-hover" 
+                     href="#" 
+                     role="button" 
+                     data-bs-toggle="dropdown" 
+                     data-bs-trigger="hover"
+                     data-bs-auto-close="outside"
+                     aria-expanded="false">
+                    Інформація
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Дропшипінг</a></li>
+                    <li><a class="dropdown-item" href="#">Повернення товару</a></li>
+                    <li><a class="dropdown-item" href="#">Статті</a></li>
+                    <li><a class="dropdown-item" href="#">Додаткова гарантія</a></li>
+                    <li><a class="dropdown-item" href="#">FAQ</a></li>
+                  </ul>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link animate-hover" href="#">Контакти</a>
@@ -43,7 +58,7 @@
               </ul>
               <!-- Кнопка "Стати партнером", скрыта на md и меньше -->
               <div class="me-2 d-none d-md-block">
-                <a class="btn btn-sm btn-secondary" href="#">Стати партнером</a>
+                <a class="btn btn-sm btn-secondary text-primary" href="#" data-bs-toggle="modal" data-bs-target="#partnershipModal">Стати партнером</a>
               </div>
               <!-- Переключатель языка, скрыт на мобильных устройствах -->
               <div class="lang-switcher d-flex me-2 d-none d-md-flex">
@@ -51,30 +66,46 @@
                 <a href="#" class="lang-btn">RU</a>
               </div>
               <div class="dropdown">
-                <button class="dropdown-toggle btn p-0 d-flex align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <h4 class="fw-medium mb-0">067 707 00 22</h4>
+                <button class="dropdown-toggle btn p-0 d-flex align-items-center icon-lg" type="button" data-bs-toggle="dropdown" data-bs-trigger="hover" data-bs-auto-close="outside" aria-expanded="false">
+                  <h5 class="fw-medium mb-0 fs-3">067 707 00 22</h5>
                 </button>
-                <div class="dropdown-menu dropdown-menu-end">
-                  <ul class="phone-list mb-0 list-unstyled">
-                    <li><a class="dropdown-item fs-3 mb-2" href="tel:0677070022"><span class="_icon-phone color-gray-2"></span> 067 707 00 22</a></li>
-                    <li><a class="dropdown-item fs-3 mb-2" href="tel:0935150022"><span class="_icon-phone color-gray-2"></span> 093 515 00 22</a></li>
-                    <li><p class="dropdown-item fs-3 mb-0" href="#"><span class="_icon-time color-gray-2"></span> Пн - пт: 09:00 - 17:30</p></li>
-                  </ul>
-                  <hr class="dropdown-divider">
-                  <div class="callback-section px-3 py-2">
-                    <h5 class="divider-header text-primary mb-1 fs-2">Є ПИТАННЯ?</h5>
-                    <p class="fs-5 mb-2">Заповніть, і ми вам передзвонимо!</p>
-                    <form class="">
-                      <div class="mb-2">
-                        <label for="callbackName" class="form-label">Ваше ім'я<span>*</span></label>
-                        <input type="text" class="form-control" id="callbackName" required>
-                      </div>
-                      <div class="mb-3">
-                        <label for="callbackPhone" class="form-label">Ваш номер телефона<span>*</span></label>
-                        <input type="tel" class="form-control" id="callbackPhone" required>
-                      </div>
-                      <button type="submit" class="btn btn-secondary btn-lg w-100 fw-bold">НАДІСЛАТИ</button>
-                    </form>
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-md">
+                  <div class="px-1">
+                    <ul class="phone-list mb-0 list-unstyled px-2 py-0">
+                      <li><a class="fs-4 mb-2 text-reset fw-bold" href="tel:0677070022"><span class="_icon-phone color-gray-2"></span> 067 707 00 22</a></li>
+                      <li><a class="fs-4 mb-2 text-reset" href="tel:0935150022"><span class="_icon-phone color-gray-2"></span> 093 515 00 22</a></li>
+                      <li><p class="fs-4 mb-0" href="#"><span class="_icon-time color-gray-2"></span> Пн - пт: 09:00 - 17:30</p></li>
+                    </ul>
+                    <hr class="dropdown-divider mx-1">
+                    <div class="socials-block px-2">
+                      <ul class="list-unstyled d-flex gap-3 align-items-center">
+                        <li>
+                          <a href="#">
+                            <img src="@img/socials/telegram.svg" alt="Telegram">
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <img src="@img/socials/viber.svg" alt="Viber">
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="callback-section px-2 py-0">
+                      <h5 class="divider-header text-primary mb-1 fs-4">Є ПИТАННЯ?</h5>
+                      <p class="fs-6 mb-2">Заповніть, і ми вам передзвонимо!</p>
+                      <form class="">
+                        <div class="mb-2">
+                          <label for="callbackName" class="form-label">Ваше ім'я<span>*</span></label>
+                          <input type="text" class="form-control input-border" id="callbackName" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="callbackPhone" class="form-label">Ваш номер телефона<span>*</span></label>
+                          <input type="tel" class="form-control input-border input-phone" id="callbackPhone" required>
+                        </div>
+                        <button type="submit" class="btn btn-secondary btn-lg w-100 fw-bold">НАДІСЛАТИ</button>
+                      </form>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -85,12 +116,12 @@
     </div>
   </div>
   <div class="header-bottom bg-primary py-3">
-    <div class="container">
+    <div class="container-lg">
       <div class="row">
         <div class="col-lg-3 col-md-4 col-sm-4 d-none d-sm-block">
           <button class="btn btn-category btn-secondary btn-lg w-100">
             <i class="_icon-catalog fs-5"></i>
-            <span class="fw-semibold fs-3">КАТЕГОРІЇ</span>
+            <span class="fw-semibold fs-4">КАТЕГОРІЇ</span>
           </button>
         </div>
         <div class="d-sm-none col-md-2 col-2 align-self-center">
@@ -100,9 +131,9 @@
         </div>
         <div class="col-lg col-md-8 col-sm-8 col-10">
           <div class="search-wrapper position-relative">
-            <input class="form-control ps-4 pe-5 rounded-md-4 rounded-4" type="search" placeholder="Пошук..." aria-label="Пошук">
+            <input class="form-control ps-4 pe-5 rounded-md-4 rounded-4" type="search" placeholder="Пошук" aria-label="Пошук">
             <button class="btn btn-search rounded-md-4 rounded-4 btn-secondary position-absolute rounded-3 w-5 px-2" type="submit">
-              <i class="_icon-search text-white fs-4"></i>
+              <i class="_icon-search text-white fs-3"></i>
             </button>
           </div>
         </div>
@@ -110,10 +141,10 @@
         <div class="col-lg-auto d-none d-lg-block">
           <div class="user-actions d-flex align-items-center justify-content-end gap-4">
             <div class="dropdown">
-              <button class="btn btn-icon btn-lg rounded-md-4 rounded-4 dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="_icon-user fs-2"></i>
+              <button class="btn btn-icon btn-lg rounded-md-4 rounded-4 dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" data-bs-trigger="hover" data-bs-auto-close="outside" aria-expanded="false">
+                <i class="_icon-user fs-3"></i>
               </button>
-              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+              <div class="dropdown-menu dropdown-menu-end dropdown-menu-md" aria-labelledby="userDropdown">
                 <div class="py-2 px-2">
                   <div class="d-flex flex-column gap-2">
                     <a class="btn btn-lg justify-content-start gap-2 btn-outline color-gray" href="#">
@@ -122,21 +153,21 @@
                     </a>
                     <a class="btn btn-lg justify-content-start gap-2 btn-outline color-gray" href="#"><i class="_icon-cart"></i> ОБРАНІ ТОВАРИ</a>
               
-                    <a class=" btn btn-orange btn-lg display-6 text-center fw-bold" href="#">РЕЄСТРАЦІЯ</a>
-                    <a class=" btn btn-secondary btn-lg display-6 text-center fw-bold" href="#">ВВІЙТИ</a>
+                    <a class=" btn btn-orange btn-lg fs-4 text-center fw-bold" href="#">РЕЄСТРАЦІЯ</a>
+                    <a class=" btn btn-secondary btn-lg fs-4 text-center fw-bold" href="#">ВВІЙТИ</a>
                   </div>
                 </div>
               </div>
             </div>
             <a href="#" class="btn btn-icon btn-lg rounded-md-4 rounded-4">
-              <i class="_icon-favorite fs-1"></i>
-              <span class="badge position-absolute fw-medium top-0 start-100 translate-middle p-1 fs-6 text-primary bg-white bg-opacity-50 rounded-circle">
+              <i class="_icon-favorite fs-3"></i>
+              <span class="badge position-absolute fw-medium mt-1 ml-n2 top-0 start-100 translate-middle p-1 fs-6 text-primary bg-white bg-opacity-50 rounded-circle">
                 <span>1</span>
               </span>
             </a>
             <a href="#" class="btn btn-icon btn-lg rounded-md-4 rounded-4">
-              <i class="_icon-cart fs-1"></i>
-              <span class="badge position-absolute fw-medium top-0 start-100 translate-middle p-1 fs-6 text-primary bg-white bg-opacity-50 rounded-circle">
+              <i class="_icon-cart fs-3"></i>
+              <span class="badge position-absolute fw-medium mt-1 ml-n2 top-0 start-100 translate-middle p-1 fs-6 text-primary bg-white bg-opacity-50 rounded-circle">
                 <span>1</span>
               </span>
             </a>
@@ -195,6 +226,7 @@
       <div class="mt-4">
           <a href="#" class="nav-link">Оплата і доставка</a>
           <a href="#" class="nav-link">Про компанію</a>
+          
           <a class="nav-link nav-link-dropdown dropdown-toggle d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#infoSubmenu" role="button" aria-expanded="false" aria-controls="infoSubmenu">
             Інформація 
           </a>
@@ -205,12 +237,13 @@
               <a href="#" class="nav-link">Часті питання</a>
             </div>
           </div>
+          
           <a href="#" class="nav-link">Контакти</a>
           <a href="#" class="nav-link">Блог</a>
           <a href="#" class="nav-link">Гарантія</a>
       </div>
       <div class="mt-4">
-          <a href="#" class="btn btn-secondary btn-sm">Стати партнером</a>
+          <a href="#" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#partnershipModal">Стати партнером</a>
       </div>
   </div>
 </div>

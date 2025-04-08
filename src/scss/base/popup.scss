@@ -1,61 +1,39 @@
-body::after {
-	content: "";
-	background-color: rgba(0, 0, 0, 0.5);
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	opacity: 0;
-	transition: opacity 0.8s ease 0s;
-	pointer-events: none;
-	z-index: 149;
+// Переопределение переменных модальных окон Bootstrap 5
+$modal-content-bg: #fff;
+$modal-content-border-radius: 15px;
+$modal-content-box-shadow-xs: 0 20px 35px rgba(0, 0, 0, 0.2);
+$modal-content-box-shadow-sm-up: 0 20px 35px rgba(0, 0, 0, 0.2);
+$modal-content-inner-padding: 30px;
+
+$modal-backdrop-bg: #333333;
+$modal-backdrop-opacity: 0.5;
+$modal-inner-padding: 1rem 1.875rem 1.875rem;
+$modal-header-padding:              0 1.875rem;
+$modal-btn-close-padding: 1.875rem 1.875rem 0 1.875rem;
+$modal-md: 545px;
+@media (min-width: 768px) {
+  $modal-dialog-margin: 1.75rem;
 }
-.popup-show body::after {
-	opacity: 1;
+
+@import "bootstrap/scss/modal";
+
+.modal {
+  .btn-close {
+    padding: $modal-btn-close-padding;
+  }
 }
-.popup {
-	position: fixed;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	padding: 30px 10px;
-	transition: visibility 0.8s ease 0s;
-	visibility: hidden;
-	pointer-events: none;
-}
-.popup_show {
-	z-index: 150;
-	visibility: visible;
-	overflow: auto;
-	pointer-events: auto;
-}
-.popup_show .popup__content {
-	visibility: visible;
-	transform: scale(1);
-}
-.popup__wrapper {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	min-height: 100%;
-	flex: 1 1 auto;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.popup__content {
-	visibility: hidden;
-	transform: scale(0);
-	transition: transform 0.3s ease 0s;
-	background-color: #eee;
-	padding: 20px;
-	width: 100%;
-	max-width: 900px;
-	border-radius: 20px;
-	.lock & {
-		visibility: visible;
-	}
+
+// Кастомные стили для бэкдропа модальных окон
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1052;
+  width: 100vw;
+  min-height: 100dvh;
+  height: 100%;
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }

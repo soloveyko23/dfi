@@ -19,7 +19,12 @@ $btn-font-size-lg:            null;
 .btn {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center;  
+}
+.btn-lg-width {
+  @include media-breakpoint-up(sm) {
+    min-width: 12.5rem;
+  }
 }
 .btn-outline-secondary {
   --bs-btn-border-width: 1px;
@@ -33,6 +38,16 @@ $btn-font-size-lg:            null;
   --bs-btn-active-bg: #5CCDF8;
   &:active {
     box-shadow: 0 4px 15px 0 rgba(#2689AF, 0.4);
+  }
+}
+
+.btn-primary {
+  --bs-btn-border-color: #331B63;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #2b1754;
+  --bs-btn-active-bg: #29164f;
+  &:active {
+    box-shadow: 0 4px 15px 0 rgba(#331B63, 0.4);
   }
 }
 
