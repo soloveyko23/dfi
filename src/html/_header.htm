@@ -1,5 +1,5 @@
 <header class="header">
-	<div class="header-top">
+	<div class="header-top d-none d-sm-block">
     <div class="container-lg">
       <nav class="navbar navbar-expand-xl w-100 d-block">
         <div class="row">
@@ -11,6 +11,7 @@
               </button>
             </div>
           </div>
+        
           <div class="col-xl-auto col-md-3 col-2">
             <a class="navbar-brand me-0" href="#">
               <img src="@img/logo.png" alt="LOGO DFI">
@@ -124,12 +125,17 @@
             <span class="fw-semibold fs-4">КАТЕГОРІЇ</span>
           </button>
         </div>
-        <div class="d-sm-none col-md-2 col-2 align-self-center">
+        <div class="d-sm-none col-md-2 col-auto align-self-center">
           <button class="icon-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-expanded="false" aria-controls="mobileMenu">
             <span></span>
           </button>
         </div>
-        <div class="col-lg col-md-8 col-sm-8 col-10">
+        <div class="d-sm-none col-md-2 col-auto align-self-center">
+          <div class="d-flex align-items-center justify-content-start justify-content-md-center">
+            <img src="@img/logo-blue.svg" alt="Search">
+          </div>
+        </div>
+        <div class="col-lg col-md-8 col-sm-8 col">
           <div class="search-wrapper position-relative">
             <input class="form-control ps-4 pe-5 rounded-md-4 rounded-4" type="search" placeholder="Пошук" aria-label="Пошук">
             <button class="btn btn-search rounded-md-4 rounded-4 btn-secondary position-absolute rounded-3 w-5 px-2" type="submit">

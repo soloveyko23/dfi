@@ -6,13 +6,12 @@
 // Подключение миксинов
 @import "fonts/fonts";
 @import "fonts/icons";
+
 // Импорт кастомизированного Bootstrap
 @import "libs/bootstrap";
 
-
 // Подключение базовых стилей
 @import "base";
-
 
 // Подключение стилей общих элементов
 @import "common";
@@ -26,3 +25,4 @@
 
 // Подключение стилей страниц
 @import "home";
+@import "catalog"; // Стили для страницы каталога с фильтром OCFILTER

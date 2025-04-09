@@ -1,13 +1,69 @@
-// Настройка переменных аккордиона
+// Базовые переменные Bootstrap для аккордеона
 $accordion-padding-y: 1rem;
 $accordion-padding-x: 1.25rem;
+$accordion-button-icon-blue: url("@img/icons/accodrion-arrow-blue.svg");
 $accordion-button-icon: url("@img/icons/accodrion-arrow.svg");
 $accordion-button-active-icon: url("@img/icons/accodrion-arrow.svg");
 $accordion-button-active-bg: transparent;
-$accordion-button-active-color: $white;
-$accordion-icon-width:                    12px;
+$accordion-icon-width: 12px;
 $accordion-button-focus-box-shadow: none;
 $accordion-bg: transparent;
 $accordion-border-radius: 0;
 
+// Переменные для разных типов аккордеонов
+// Тип 2 - с другим фоном и границами
+$accordion-type-two-bg: rgba(0, 0, 0, 0.03);
+$accordion-type-two-active-bg: rgba(0, 0, 0, 0.05);
+$accordion-type-two-border-color: rgba(0, 0, 0, 0.1);
+$accordion-type-two-border-radius: 0.5rem;
+
+// Тип 3 - с плюсом/минусом
+$accordion-type-three-icon: none;
+$accordion-type-three-active-icon: none;
+
+// Импорт стилей аккордеона Bootstrap после переопределения переменных
 @import "bootstrap/scss/accordion";
+
+// Минимальные дополнительные стили для разных типов аккордеонов
+.accordion-type-one {
+  .accordion-button {
+    &::after {
+      background-image: $accordion-button-icon;
+    }
+    
+    &:not(.collapsed)::after {
+      background-image: $accordion-button-active-icon;
+    }
+  }
+}
+
+.accordion-type-two {
+  .accordion-button {
+    &::after {
+      background-image: $accordion-button-icon-blue;
+      background-size: contain;
+
+    }
+  }
+}
+
+.accordion-type-three {
+  .accordion-button {
+    &::after {
+      background-image: $accordion-type-three-icon;
+      content: "+";
+      font-size: 1.5rem;
+      margin-left: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+    
+    &:not(.collapsed)::after {
+      content: "−";
+      background-image: $accordion-type-three-active-icon;
+    }
+  }
+}

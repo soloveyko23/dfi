@@ -15,8 +15,8 @@
     border: none;
     background: transparent;
 		position: relative;
-		width: toRem(35);
-		height: toRem(25);
+		width: 2.1875rem;
+		height: 1.5625rem;
 		z-index: 5;
 		@media (any-hover: none) {
 			cursor: default;
@@ -29,10 +29,13 @@
 			right: 0;
 			position: absolute;
 			width: 100%;
-			height: toRem(3);
-			border-radius: toRem(10);
-			
-		}
+			height: .1875rem;
+			border-radius: .625rem;
+			-webkit-border-radius: .625rem;
+			-moz-border-radius: .625rem;
+			-ms-border-radius: .625rem;
+			-o-border-radius: .625rem;
+}
 		&::before {
 			top: 0;
 		}
@@ -40,7 +43,7 @@
 			bottom: 0;
 		}
 		span {
-			top: calc(50% - toRem(1));
+			top: calc(50% - .0625rem);
 		}
 		.menu-open & {
 			span {
@@ -50,11 +53,11 @@
 			&::after {
 			}
 			&::before {
-				top: calc(50% - toRem(1));
+				top: calc(50% - .0625rem);
 				transform: rotate(-45deg);
 			}
 			&::after {
-				bottom: calc(50% - toRem(1));
+				bottom: calc(50% - .0625rem);
 				transform: rotate(45deg);
 			}
 		}

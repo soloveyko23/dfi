@@ -30,12 +30,7 @@ class BootstrapManager {
     this.initDropdowns();
     this.initOffcanvas();
     this.initTooltips();
-    this.initPopovers();
-    this.initCollapses();
     this.initModals();
-    this.initTabs();
-    this.initToasts();
-    this.initCarousels();
     console.log('Инициализация компонентов Bootstrap завершена.', this.instances);
   }
 
@@ -276,19 +271,19 @@ class BootstrapManager {
   /**
    * Настройка кнопки категорий в хедере (если она есть)
    */
-  setupCategoryButton() {
-    const categoryBtn = document.querySelector('.btn-category');
-    if (categoryBtn) {
-      categoryBtn.addEventListener('click', function() {
-        const submenuCanvas = document.querySelector('#submenuCanvas');
-        if (submenuCanvas) {
-          const offcanvasInstance = bootstrap.Offcanvas.getInstance(submenuCanvas) || 
-                                 new bootstrap.Offcanvas(submenuCanvas, bootstrapConfig.offcanvas);
-          offcanvasInstance.show();
-        }
-      });
-    }
-  }
+  // setupCategoryButton() {
+  //   const categoryBtn = document.querySelector('.btn-category');
+  //   if (categoryBtn) {
+  //     categoryBtn.addEventListener('click', function() {
+  //       const submenuCanvas = document.querySelector('#submenuCanvas');
+  //       if (submenuCanvas) {
+  //         const offcanvasInstance = bootstrap.Offcanvas.getInstance(submenuCanvas) || 
+  //                                new bootstrap.Offcanvas(submenuCanvas, bootstrapConfig.offcanvas);
+  //         offcanvasInstance.show();
+  //       }
+  //     });
+  //   }
+  // }
 
   /**
    * Инициализация Tooltips
@@ -305,26 +300,12 @@ class BootstrapManager {
    * Инициализация Popovers
    * Находит [data-bs-toggle="popover"] и инициализирует с настройками из bootstrapConfig.popover
    */
-  initPopovers() {
-    const elements = document.querySelectorAll('[data-bs-toggle="popover"]');
-    this.instances.popovers = [...elements].map(el => 
-      new bootstrap.Popover(el, bootstrapConfig.popover)
-    );
-  }
-  
+
   /**
    * Инициализация Collapses
    * Находит элементы .collapse и инициализирует с настройками из bootstrapConfig.collapse
    */
-  initCollapses() {
-    const elements = document.querySelectorAll('.collapse');
-    this.instances.collapses = [...elements].map(el => 
-      new bootstrap.Collapse(el, { 
-        ...bootstrapConfig.collapse,
-        toggle: false // Отключаем автоматическое открытие при инициализации
-      })
-    );
-  }
+
   
   /**
    * Инициализация Modals
@@ -491,34 +472,19 @@ class BootstrapManager {
    * Находит триггеры [data-bs-toggle="tab"], [data-bs-toggle="pill"], [data-bs-toggle="list"]
    * и инициализирует их.
    */
-  initTabs() {
-    const elements = document.querySelectorAll('[data-bs-toggle="tab"], [data-bs-toggle="pill"], [data-bs-toggle="list"]');
-    this.instances.tabs = [...elements].map(el => 
-      new bootstrap.Tab(el)
-    );
-  }
+
   
   /**
    * Инициализация Toasts
    * Находит элементы .toast и инициализирует с настройками из bootstrapConfig.toast
    */
-  initToasts() {
-    const elements = document.querySelectorAll('.toast');
-    this.instances.toasts = [...elements].map(el => 
-      new bootstrap.Toast(el, bootstrapConfig.toast)
-    );
-  }
+
   
   /**
    * Инициализация Carousels
    * Находит элементы .carousel и инициализирует с настройками из bootstrapConfig.carousel
    */
-  initCarousels() {
-    const elements = document.querySelectorAll('.carousel');
-    this.instances.carousels = [...elements].map(el => 
-      new bootstrap.Carousel(el, bootstrapConfig.carousel)
-    );
-  }
+
 }
 
 // Создаем и экспортируем единственный экземпляр

@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+	"title":"Демонстрация кастомизации Bootstrap"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+        <section class="breadcrumb-section py-3">
+          <div class="container">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Головна</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Категорії</li>
+              </ol>
+            </nav>
+          </div>
+        </section>
+        
+        <section class="catalog-section py-4">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 ">
+                <h2 class="text-primary fs-1 fw-semibold text-uppercase mb-4">Портативні гаджети</h2>
+              </div>
+            </div>
+            <div class="row g-4">
+              <!-- Боковая панель с фильтрами -->
+              <div class="col-lg-3">
+                <div class="accordion accordion-type-two d-flex flex-column gap-2" id="accordionExample">
+                  <div class="accordion-item shadow-lg border-0 bg-white rounded-2">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button text-primary  fs-4 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        ЦІНА
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="accordion-item shadow-lg border-0 bg-white rounded-2">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button text-primary  fs-4 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        ТИП
+                      </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <div class="filter-options">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="smartphone" id="typeSmartphone">
+                            <label class="form-check-label" for="typeSmartphone">
+                              Смартфон
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="tablet" id="typeTablet">
+                            <label class="form-check-label" for="typeTablet">
+                              Планшет
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="watch" id="typeWatch">
+                            <label class="form-check-label" for="typeWatch">
+                              Смарт-годинник
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="ebook" id="typeEbook">
+                            <label class="form-check-label" for="typeEbook">
+                              Електронна книга
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="accordion-item shadow-lg border-0 bg-white rounded-2">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button text-primary  fs-4 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        ДІАГОНАЛЬ ДИСПЛЕЯ
+                      </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <div class="filter-options">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="5-5.5" id="display5to55">
+                            <label class="form-check-label" for="display5to55">
+                              5" - 5.5"
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="5.6-6" id="display56to6">
+                            <label class="form-check-label" for="display56to6">
+                              5.6" - 6"
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="6.1-6.5" id="display61to65">
+                            <label class="form-check-label" for="display61to65">
+                              6.1" - 6.5"
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="6.6-7" id="display66to7">
+                            <label class="form-check-label" for="display66to7">
+                              6.6" - 7"
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="7plus" id="display7plus">
+                            <label class="form-check-label" for="display7plus">
+                              Більше 7"
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="accordion-item shadow-lg border-0 bg-white rounded-2">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button text-primary  fs-4 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        РОЗДІЛЬНА ЗДАТНІСТЬ
+                      </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <div class="filter-options">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="hd" id="resolutionHD">
+                            <label class="form-check-label" for="resolutionHD">
+                              HD (1280x720)
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="fullhd" id="resolutionFullHD">
+                            <label class="form-check-label" for="resolutionFullHD">
+                              Full HD (1920x1080)
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="2k" id="resolution2K">
+                            <label class="form-check-label" for="resolution2K">
+                              2K (2560x1440)
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="4k" id="resolution4K">
+                            <label class="form-check-label" for="resolution4K">
+                              4K (3840x2160)
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="accordion-item shadow-lg border-0 bg-white rounded-2">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button text-primary  fs-4 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        ПОВЕРХНЯ ЕКРАНУ
+                      </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <div class="filter-options">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="glossy" id="surfaceGlossy">
+                            <label class="form-check-label" for="surfaceGlossy">
+                              Глянцева
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="matte" id="surfaceMatte">
+                            <label class="form-check-label" for="surfaceMatte">
+                              Матова
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="oleophobic" id="surfaceOleophobic">
+                            <label class="form-check-label" for="surfaceOleophobic">
+                              Олеофобне покриття
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="accordion-item shadow-lg border-0 bg-white rounded-2">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button text-primary  fs-4 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        ТИП МАТРИЦІ
+                      </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <div class="filter-options">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="ips" id="matrixIPS">
+                            <label class="form-check-label" for="matrixIPS">
+                              IPS
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="amoled" id="matrixAmoled">
+                            <label class="form-check-label" for="matrixAmoled">
+                              AMOLED
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="oled" id="matrixOLED">
+                            <label class="form-check-label" for="matrixOLED">
+                              OLED
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="tn" id="matrixTN">
+                            <label class="form-check-label" for="matrixTN">
+                              TN
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="superamoled" id="matrixSuperAmoled">
+                            <label class="form-check-label" for="matrixSuperAmoled">
+                              Super AMOLED
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Основная область с товарами -->
+              <div class="col-lg-9">
+                <div class="d-flex justify-content-between mb-4 align-items-center">
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="me-2 text-primary fs-4 letter-spacing-1">Сортувати:</span>
+                    <div class="dropdown">
+                      <button class="btn btn-sort dropdown-toggle fs-4" type="button" data-bs-toggle="dropdown">
+                        Популярність
+                        <i class="_icon-arrow-bottom text-secondary fs-6"></i>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Популярність</a></li>
+                        <li><a class="dropdown-item" href="#">Новинки</a></li>
+                        <li><a class="dropdown-item" href="#">Від дешевих до дорогих</a></li>
+                        <li><a class="dropdown-item" href="#">Від дорогих до дешевих</a></li>
+                      </ul>
+                    </div>
+                    <div class="dropdown">
+                      <button class="btn btn-sort dropdown-toggle fs-4" type="button" data-bs-toggle="dropdown">
+                        Сортування за ціною
+                        <i class="_icon-arrow-bottom text-secondary fs-6"></i>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Популярність</a></li>
+                        <li><a class="dropdown-item" href="#">Новинки</a></li>
+                        <li><a class="dropdown-item" href="#">Від дешевих до дорогих</a></li>
+                        <li><a class="dropdown-item" href="#">Від дорогих до дешевих</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="view-switcher d-flex align-items-center gap-2">
+                    <button class="btn btn-sort p-0" data-view="grid"><i class="_icon-dots fs-4"></i></button>
+                    <button class="btn btn-sort p-0 active" data-view="list"><i class="_icon-groups fs-4"></i></button>
+                  </div>
+                </div>
+
+                <!-- Универсальный контейнер для карточек товара -->
+                <div class="products-container">
+                  <div class="row g-4" id="products-wrapper">
+                    <!-- Карточка товара 1 -->
+                    <div class="product-item col-12 col-md-4" data-view="list" data-product-id="465336">
+                      <div class="card product-card position-relative p-1">
+                        <div class="p-2 card-wrapper">
+
+                          <!-- Изображение товара -->
+                          <a href="#" class="product-card__image-wrapper text-center py-2">
+                            <img src="img/product-image/image.png" alt="Кабель ZYTER LM14" class="img-fluid product-image">
+                          </a>
+
+                          <!-- Информация о товаре -->
+                          <div class="card-body p-0 d-flex flex-column">
+                            <!-- Код товара -->
+                            <div class="product-card__code mb-3 small fw-light">
+                              Код товару: 465336
+                            </div>
+
+                            <!-- Название товара -->
+                            <h5 class="product-card__title fw-medium mb-3">
+                              <a href="#" class="text-decoration-none text- stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                            </h5>
+
+                            <!-- Блок цены и кнопки добавления в корзину -->
+                            <div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-sm-3 gap-1">
+                              <!-- Цена товара -->
+                              <div class="product-card__price fw-bold fs-5 text-primary lh-1">
+                                18 745 грн
+                              </div>
+
+                              <!-- Блок с количеством и кнопкой корзины -->
+                              <div class="product-card__add-to-cart d-flex align-items-center gap-2">
+                                <!-- Компонент управления количеством -->
+                                <div class="count-input border py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
+                                  <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement="" disabled="">
+                                    -
+                                  </button>
+                                  <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none fs-6" value="1" min="1" max="5" readonly="">
+                                  <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment="">
+                                    +
+                                  </button>
+                                </div>
+                                <button type="button" class="btn btn-sm btn-favorite position-absolute top-0 end-0 m-2 z-1 rounded-4 p-1">
+                                  <i class="_icon-add-favorite text-secondary fs-6"></i>
+                                </button>
+                                <button type="button" class="btn btn-secondary btn-sm btn-add-to-cart rounded-4">
+                                  <i class="_icon-cart fs-4 d-flex align-items-center justify-content-center"></i>
+                                  <span class="fs-5 text-uppercase fw-semibold">До кошика</span>
+                                </button>
+                              </div>
+                            </div>
+
+                            <!-- Индикатор наличия -->
+                            <div class="product-card__availability text-success small mt-3">
+                              В наявності
+                            </div>
+
+
+                          <!-- Дополнительная информация о товаре -->
+                          <div class="product-card__details d-none mt-3 d-flex flex-wrap row-gap-sm-3 row-gap-2 column-gap-4">
+                            <!-- Штрих-код -->
+                            <div class="d-flex align-items-center gap-2">
+                              <i class="_icon-check text-secondary fs-6 p-1 rounded-2 bg-gray-4 d-flex align-items-center justify-content-center min-w-25 min-h-25"></i>
+                              <div class="fs-5">
+                                <span>Код товару: </span>
+                                <span class="text-secondary">465289</span>
+                              </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                              <i class="_icon-check text-success fs-6 p-1 rounded-2 bg-gray-4 d-flex align-items-center justify-content-center min-w-25 min-h-25"></i>
+                              <div class="fs-5">
+                                <span>Доступність Одесса:  </span>
+                                <span class="text-success">В наяності</span>
+                              </div>
+                            </div>
+                            
+                            <div class="d-flex align-items-center gap-2 border rounded px-2 py-1 border-gray-2">
+                              <i class="_icon-barcode text-primary fs-4  d-flex align-items-center justify-content-center"></i>
+                              <div class="fs-5">
+                                <span>Бар-код:  </span>
+                                <span class="text-gray"> Док-станция для iPhone4/4S, белая</span>
+                              </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 border rounded px-2 py-1 border-gray-2">
+                              <i class="_icon-guarantee text-primary fs-4 d-flex align-items-center justify-content-center"></i>
+                              <div class="fs-5">
+                                <span>Гарантія:  </span>
+                                <span class="text-gray">1 мес.</span>
+                              </div>
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="product-item col-12 col-md-4" data-view="list" data-product-id="465337">
+                      <div class="card product-card position-relative p-1">
+                        <div class="p-2 card-wrapper">
+
+                          <!-- Изображение товара -->
+                          <a href="#" class="product-card__image-wrapper text-center py-2">
+                            <img src="img/product-image/image.png" alt="Кабель ZYTER LM14" class="img-fluid product-image">
+                          </a>
+
+                          <!-- Информация о товаре -->
+                          <div class="card-body p-0 d-flex flex-column">
+                            <!-- Код товара -->
+                            <div class="product-card__code mb-3 small fw-light">
+                              Код товару: 465337
+                            </div>
+
+                            <!-- Название товара -->
+                            <h5 class="product-card__title fw-medium mb-3">
+                              <a href="#" class="text-decoration-none text- stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                            </h5>
+
+                            <!-- Блок цены и кнопки добавления в корзину -->
+                            <div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-sm-3 gap-1">
+                              <!-- Цена товара -->
+                              <div class="product-card__price fw-bold fs-5 text-primary lh-1">
+                                18 745 грн
+                              </div>
+
+                              <!-- Блок с количеством и кнопкой корзины -->
+                              <div class="product-card__add-to-cart d-flex align-items-center gap-2">
+                                <!-- Компонент управления количеством -->
+                                <div class="count-input border py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
+                                  <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement="" disabled="">
+                                    -
+                                  </button>
+                                  <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none fs-6" value="1" min="1" max="5" readonly="">
+                                  <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment="">
+                                    +
+                                  </button>
+                                </div>
+                                <button type="button" class="btn btn-sm btn-favorite position-absolute top-0 end-0 m-2 z-1 rounded-4 p-1">
+                                  <i class="_icon-add-favorite text-secondary fs-6"></i>
+                                </button>
+                                <button type="button" class="btn btn-secondary btn-sm btn-add-to-cart rounded-4">
+                                  <i class="_icon-cart fs-4 d-flex align-items-center justify-content-center"></i>
+                                  <span class="fs-5 text-uppercase fw-semibold">До кошика</span>
+                                </button>
+                              </div>
+                            </div>
+
+                            <!-- Индикатор наличия -->
+                            <div class="product-card__availability text-success small mt-3">
+                              В наявності
+                            </div>
+
+
+                          <!-- Дополнительная информация о товаре -->
+                          <div class="product-card__details d-none mt-3 d-flex flex-wrap row-gap-sm-3 row-gap-2 column-gap-4">
+                            <!-- Штрих-код -->
+                            <div class="d-flex align-items-center gap-2">
+                              <i class="_icon-check text-secondary fs-6 p-1 rounded-2 bg-gray-4 d-flex align-items-center justify-content-center min-w-25 min-h-25"></i>
+                              <div class="fs-5">
+                                <span>Код товару: </span>
+                                <span class="text-secondary">465289</span>
+                              </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                              <i class="_icon-check text-success fs-6 p-1 rounded-2 bg-gray-4 d-flex align-items-center justify-content-center min-w-25 min-h-25"></i>
+                              <div class="fs-5">
+                                <span>Доступність Одесса:  </span>
+                                <span class="text-success">В наяності</span>
+                              </div>
+                            </div>
+                            
+                            <div class="d-flex align-items-center gap-2 border rounded px-2 py-1 border-gray-2">
+                              <i class="_icon-barcode text-primary fs-4  d-flex align-items-center justify-content-center"></i>
+                              <div class="fs-5">
+                                <span>Бар-код:  </span>
+                                <span class="text-gray"> Док-станция для iPhone4/4S, белая</span>
+                              </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 border rounded px-2 py-1 border-gray-2">
+                              <i class="_icon-guarantee text-primary fs-4 d-flex align-items-center justify-content-center"></i>
+                              <div class="fs-5">
+                                <span>Гарантія:  </span>
+                                <span class="text-gray">1 мес.</span>
+                              </div>
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-item col-12 col-md-4" data-view="list" data-product-id="465338">
+                      <div class="card product-card position-relative p-1">
+                        <div class="p-2 card-wrapper">
+
+                          <!-- Изображение товара -->
+                          <a href="#" class="product-card__image-wrapper text-center py-2">
+                            <img src="img/product-image/image.png" alt="Кабель ZYTER LM14" class="img-fluid product-image">
+                          </a>
+
+                          <!-- Информация о товаре -->
+                          <div class="card-body p-0 d-flex flex-column">
+                            <!-- Код товара -->
+                            <div class="product-card__code mb-3 small fw-light">
+                              Код товару: 465338
+                            </div>
+
+                            <!-- Название товара -->
+                            <h5 class="product-card__title fw-medium mb-3">
+                              <a href="#" class="text-decoration-none text- stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                            </h5>
+
+                            <!-- Блок цены и кнопки добавления в корзину -->
+                            <div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-sm-3 gap-1">
+                              <!-- Цена товара -->
+                              <div class="product-card__price fw-bold fs-5 text-primary lh-1">
+                                18 745 грн
+                              </div>
+
+                              <!-- Блок с количеством и кнопкой корзины -->
+                              <div class="product-card__add-to-cart d-flex align-items-center gap-2">
+                                <!-- Компонент управления количеством -->
+                                <div class="count-input border py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
+                                  <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement="" disabled="">
+                                    -
+                                  </button>
+                                  <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none fs-6" value="1" min="1" max="5" readonly="">
+                                  <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment="">
+                                    +
+                                  </button>
+                                </div>
+                                <button type="button" class="btn btn-sm btn-favorite position-absolute top-0 end-0 m-2 z-1 rounded-4 p-1">
+                                  <i class="_icon-add-favorite text-secondary fs-6"></i>
+                                </button>
+                                <button type="button" class="btn btn-secondary btn-sm btn-add-to-cart rounded-4">
+                                  <i class="_icon-cart fs-4 d-flex align-items-center justify-content-center"></i>
+                                  <span class="fs-5 text-uppercase fw-semibold">До кошика</span>
+                                </button>
+                              </div>
+                            </div>
+
+                            <!-- Индикатор наличия -->
+                            <div class="product-card__availability text-success small mt-3">
+                              В наявності
+                            </div>
+
+
+                          <!-- Дополнительная информация о товаре -->
+                          <div class="product-card__details d-none mt-3 d-flex flex-wrap row-gap-sm-3 row-gap-2 column-gap-4">
+                            <!-- Штрих-код -->
+                            <div class="d-flex align-items-center gap-2">
+                              <i class="_icon-check text-secondary fs-6 p-1 rounded-2 bg-gray-4 d-flex align-items-center justify-content-center min-w-25 min-h-25"></i>
+                              <div class="fs-5">
+                                <span>Код товару: </span>
+                                <span class="text-secondary">465289</span>
+                              </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                              <i class="_icon-check text-success fs-6 p-1 rounded-2 bg-gray-4 d-flex align-items-center justify-content-center min-w-25 min-h-25"></i>
+                              <div class="fs-5">
+                                <span>Доступність Одесса:  </span>
+                                <span class="text-success">В наяності</span>
+                              </div>
+                            </div>
+                            
+                            <div class="d-flex align-items-center gap-2 border rounded px-2 py-1 border-gray-2">
+                              <i class="_icon-barcode text-primary fs-4  d-flex align-items-center justify-content-center"></i>
+                              <div class="fs-5">
+                                <span>Бар-код:  </span>
+                                <span class="text-gray"> Док-станция для iPhone4/4S, белая</span>
+                              </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 border rounded px-2 py-1 border-gray-2">
+                              <i class="_icon-guarantee text-primary fs-4 d-flex align-items-center justify-content-center"></i>
+                              <div class="fs-5">
+                                <span>Гарантія:  </span>
+                                <span class="text-gray">1 мес.</span>
+                              </div>
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-item col-12 col-md-4" data-view="list" data-product-id="465339">
+                      <div class="card product-card position-relative p-1">
+                        <div class="p-2 card-wrapper">
+
+                          <!-- Изображение товара -->
+                          <a href="#" class="product-card__image-wrapper text-center py-2">
+                            <img src="img/product-image/image.png" alt="Кабель ZYTER LM14" class="img-fluid product-image">
+                          </a>
+
+                          <!-- Информация о товаре -->
+                          <div class="card-body p-0 d-flex flex-column">
+                            <!-- Код товара -->
+                            <div class="product-card__code mb-3 small fw-light">
+                              Код товару: 465339
+                            </div>
+
+                            <!-- Название товара -->
+                            <h5 class="product-card__title fw-medium mb-3">
+                              <a href="#" class="text-decoration-none text- stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                            </h5>
+
+                            <!-- Блок цены и кнопки добавления в корзину -->
+                            <div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-sm-3 gap-1">
+                              <!-- Цена товара -->
+                              <div class="product-card__price fw-bold fs-5 text-primary lh-1">
+                                18 745 грн
+                              </div>
+
+                              <!-- Блок с количеством и кнопкой корзины -->
+                              <div class="product-card__add-to-cart d-flex align-items-center gap-2">
+                                <!-- Компонент управления количеством -->
+                                <div class="count-input border py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
+                                  <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement="" disabled="">
+                                    -
+                                  </button>
+                                  <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none fs-6" value="1" min="1" max="5" readonly="">
+                                  <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment="">
+                                    +
+                                  </button>
+                                </div>
+                                <button type="button" class="btn btn-sm btn-favorite position-absolute top-0 end-0 m-2 z-1 rounded-4 p-1">
+                                  <i class="_icon-add-favorite text-secondary fs-6"></i>
+                                </button>
+                                <button type="button" class="btn btn-secondary btn-sm btn-add-to-cart rounded-4">
+                                  <i class="_icon-cart fs-4 d-flex align-items-center justify-content-center"></i>
+                                  <span class="fs-5 text-uppercase fw-semibold">До кошика</span>
+                                </button>
+                              </div>
+                            </div>
+
+                            <!-- Индикатор наличия -->
+                            <div class="product-card__availability text-success small mt-3">
+                              В наявності
+                            </div>
+
+
+                          <!-- Дополнительная информация о товаре -->
+                          <div class="product-card__details d-none mt-3 d-flex flex-wrap row-gap-sm-3 row-gap-2 column-gap-4">
+                            <!-- Штрих-код -->
+                            <div class="d-flex align-items-center gap-2">
+                              <i class="_icon-check text-secondary fs-6 p-1 rounded-2 bg-gray-4 d-flex align-items-center justify-content-center min-w-25 min-h-25"></i>
+                              <div class="fs-5">
+                                <span>Код товару: </span>
+                                <span class="text-secondary">465289</span>
+                              </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                              <i class="_icon-check text-success fs-6 p-1 rounded-2 bg-gray-4 d-flex align-items-center justify-content-center min-w-25 min-h-25"></i>
+                              <div class="fs-5">
+                                <span>Доступність Одесса:  </span>
+                                <span class="text-success">В наяності</span>
+                              </div>
+                            </div>
+                            
+                            <div class="d-flex align-items-center gap-2 border rounded px-2 py-1 border-gray-2">
+                              <i class="_icon-barcode text-primary fs-4  d-flex align-items-center justify-content-center"></i>
+                              <div class="fs-5">
+                                <span>Бар-код:  </span>
+                                <span class="text-gray"> Док-станция для iPhone4/4S, белая</span>
+                              </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 border rounded px-2 py-1 border-gray-2">
+                              <i class="_icon-guarantee text-primary fs-4 d-flex align-items-center justify-content-center"></i>
+                              <div class="fs-5">
+                                <span>Гарантія:  </span>
+                                <span class="text-gray">1 мес.</span>
+                              </div>
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-item col-12 col-md-4" data-view="list" data-product-id="465340">
+                      <div class="card product-card position-relative p-1">
+                        <div class="p-2 card-wrapper">
+
+                          <!-- Изображение товара -->
+                          <a href="#" class="product-card__image-wrapper text-center py-2">
+                            <img src="img/product-image/image.png" alt="Кабель ZYTER LM14" class="img-fluid product-image">
+                          </a>
+
+                          <!-- Информация о товаре -->
+                          <div class="card-body p-0 d-flex flex-column">
+                            <!-- Код товара -->
+                            <div class="product-card__code mb-3 small fw-light">
+                              Код товару: 465340
+                            </div>
+
+                            <!-- Название товара -->
+                            <h5 class="product-card__title fw-medium mb-3">
+                              <a href="#" class="text-decoration-none text- stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                            </h5>
+
+                            <!-- Блок цены и кнопки добавления в корзину -->
+                            <div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-sm-3 gap-1">
+                              <!-- Цена товара -->
+                              <div class="product-card__price fw-bold fs-5 text-primary lh-1">
+                                18 745 грн
+                              </div>
+
+                              <!-- Блок с количеством и кнопкой корзины -->
+                              <div class="product-card__add-to-cart d-flex align-items-center gap-2">
+                                <!-- Компонент управления количеством -->
+                                <div class="count-input border py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
+                                  <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement="" disabled="">
+                                    -
+                                  </button>
+                                  <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none fs-6" value="1" min="1" max="5" readonly="">
+                                  <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment="">
+                                    +
+                                  </button>
+                                </div>
+                                <button type="button" class="btn btn-sm btn-favorite position-absolute top-0 end-0 m-2 z-1 rounded-4 p-1">
+                                  <i class="_icon-add-favorite text-secondary fs-6"></i>
+                                </button>
+                                <button type="button" class="btn btn-secondary btn-sm btn-add-to-cart rounded-4">
+                                  <i class="_icon-cart fs-4 d-flex align-items-center justify-content-center"></i>
+                                  <span class="fs-5 text-uppercase fw-semibold">До кошика</span>
+                                </button>
+                              </div>
+                            </div>
+
+                            <!-- Индикатор наличия -->
+                            <div class="product-card__availability text-success small mt-3">
+                              В наявності
+                            </div>
+
+
+                          <!-- Дополнительная информация о товаре -->
+                          <div class="product-card__details d-none mt-3 d-flex flex-wrap row-gap-sm-3 row-gap-2 column-gap-4">
+                            <!-- Штрих-код -->
+                            <div class="d-flex align-items-center gap-2">
+                              <i class="_icon-check text-secondary fs-6 p-1 rounded-2 bg-gray-4 d-flex align-items-center justify-content-center min-w-25 min-h-25"></i>
+                              <div class="fs-5">
+                                <span>Код товару: </span>
+                                <span class="text-secondary">465289</span>
+                              </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                              <i class="_icon-check text-success fs-6 p-1 rounded-2 bg-gray-4 d-flex align-items-center justify-content-center min-w-25 min-h-25"></i>
+                              <div class="fs-5">
+                                <span>Доступність Одесса:  </span>
+                                <span class="text-success">В наяності</span>
+                              </div>
+                            </div>
+                            
+                            <div class="d-flex align-items-center gap-2 border rounded px-2 py-1 border-gray-2">
+                              <i class="_icon-barcode text-primary fs-4  d-flex align-items-center justify-content-center"></i>
+                              <div class="fs-5">
+                                <span>Бар-код:  </span>
+                                <span class="text-gray"> Док-станция для iPhone4/4S, белая</span>
+                              </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 border rounded px-2 py-1 border-gray-2">
+                              <i class="_icon-guarantee text-primary fs-4 d-flex align-items-center justify-content-center"></i>
+                              <div class="fs-5">
+                                <span>Гарантія:  </span>
+                                <span class="text-gray">1 мес.</span>
+                              </div>
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-item col-12 col-md-4" data-view="list" data-product-id="465341">
+                      <div class="card product-card position-relative p-1">
+                        <div class="p-2 card-wrapper">
+
+                          <!-- Изображение товара -->
+                          <a href="#" class="product-card__image-wrapper text-center py-2">
+                            <img src="img/product-image/image.png" alt="Кабель ZYTER LM14" class="img-fluid product-image">
+                          </a>
+
+                          <!-- Информация о товаре -->
+                          <div class="card-body p-0 d-flex flex-column">
+                            <!-- Код товара -->
+                            <div class="product-card__code mb-3 small fw-light">
+                              Код товару: 465341
+                            </div>
+
+                            <!-- Название товара -->
+                            <h5 class="product-card__title fw-medium mb-3">
+                              <a href="#" class="text-decoration-none text- stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                            </h5>
+
+                            <!-- Блок цены и кнопки добавления в корзину -->
+                            <div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-sm-3 gap-1">
+                              <!-- Цена товара -->
+                              <div class="product-card__price fw-bold fs-5 text-primary lh-1">
+                                18 745 грн
+                              </div>
+
+                              <!-- Блок с количеством и кнопкой корзины -->
+                              <div class="product-card__add-to-cart d-flex align-items-center gap-2">
+                                <!-- Компонент управления количеством -->
+                                <div class="count-input border py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
+                                  <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement="" disabled="">
+                                    -
+                                  </button>
+                                  <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none fs-6" value="1" min="1" max="5" readonly="">
+                                  <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment="">
+                                    +
+                                  </button>
+                                </div>
+                                <button type="button" class="btn btn-sm btn-favorite position-absolute top-0 end-0 m-2 z-1 rounded-4 p-1">
+                                  <i class="_icon-add-favorite text-secondary fs-6"></i>
+                                </button>
+                                <button type="button" class="btn btn-secondary btn-sm btn-add-to-cart rounded-4">
+                                  <i class="_icon-cart fs-4 d-flex align-items-center justify-content-center"></i>
+                                  <span class="fs-5 text-uppercase fw-semibold">До кошика</span>
+                                </button>
+                              </div>
+                            </div>
+
+                            <!-- Индикатор наличия -->
+                            <div class="product-card__availability text-success small mt-3">
+                              В наявності
+                            </div>
+
+
+                          <!-- Дополнительная информация о товаре -->
+                          <div class="product-card__details d-none mt-3 d-flex flex-wrap row-gap-sm-3 row-gap-2 column-gap-4">
+                            <!-- Штрих-код -->
+                            <div class="d-flex align-items-center gap-2">
+                              <i class="_icon-check text-secondary fs-6 p-1 rounded-2 bg-gray-4 d-flex align-items-center justify-content-center min-w-25 min-h-25"></i>
+                              <div class="fs-5">
+                                <span>Код товару: </span>
+                                <span class="text-secondary">465289</span>
+                              </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                              <i class="_icon-check text-success fs-6 p-1 rounded-2 bg-gray-4 d-flex align-items-center justify-content-center min-w-25 min-h-25"></i>
+                              <div class="fs-5">
+                                <span>Доступність Одесса:  </span>
+                                <span class="text-success">В наяності</span>
+                              </div>
+                            </div>
+                            
+                            <div class="d-flex align-items-center gap-2 border rounded px-2 py-1 border-gray-2">
+                              <i class="_icon-barcode text-primary fs-4  d-flex align-items-center justify-content-center"></i>
+                              <div class="fs-5">
+                                <span>Бар-код:  </span>
+                                <span class="text-gray"> Док-станция для iPhone4/4S, белая</span>
+                              </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 border rounded px-2 py-1 border-gray-2">
+                              <i class="_icon-guarantee text-primary fs-4 d-flex align-items-center justify-content-center"></i>
+                              <div class="fs-5">
+                                <span>Гарантія:  </span>
+                                <span class="text-gray">1 мес.</span>
+                              </div>
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+      </main>
+      @@include('html/_footer.htm',{})
+      @@include('html/_popup.htm',{})
+      
+      
+      
+    </div>  
+    @@include('html/_js.htm',{})
+  </body>
+</html>

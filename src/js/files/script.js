@@ -1,7 +1,6 @@
 import './bootstrap-init.js';
 import '../libs/inputmask.js';
 
-
 // Добавление класса loaded для HTML после полной загрузки страницы
 const addLoadedClass = () => {
 	if (!document.documentElement.classList.contains('loading')) {

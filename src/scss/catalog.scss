@@ -1,0 +1,84 @@
+.view-switcher {
+  .btn {
+    &.active {
+      background-color: var(--bs-primary);
+      color: white;
+      border-color: var(--bs-primary);
+    }
+  }
+}
+
+
+
+// Стили для режима списка
+.view-mode-list {
+  .product-item {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    .product-card__details {
+      display: flex !important;
+    }
+    .product-card__image-wrapper {
+      flex: 0 1 40%;
+      min-width: 8.75rem;
+      @include media-breakpoint-down(md) {
+        align-items: flex-start !important;
+      }
+    }
+    .count-input  {
+      display: flex !important;
+    }
+    .product-card {
+      flex-direction: row;
+      .card-wrapper{
+        width: 100%;
+        display: flex;
+        gap: .875rem;
+        .btn-favorite {
+          position: initial !important;
+          margin: 0;
+          min-height: 2.5rem;
+          min-width: 2.5rem;
+          i {
+            font-size: 1.25rem !important;
+          }
+        }
+        .product-card__availability  {
+          display: none !important;
+        }
+        .product-card__title {
+          margin-bottom: 0 !important;
+        }
+        .product-card__code {
+          display: none !important;
+        }
+        .product-card__action {
+          margin-top: .75rem !important;
+          @include media-breakpoint-down(sm) {
+            flex-direction: column;
+            align-items: flex-start !important;
+            order: 4;
+            margin-top: 1rem !important;
+          }
+        }
+        .btn-add-to-cart {
+         
+          @include media-breakpoint-up(lg) {
+            border-radius: 7px !important;
+            min-width: 12.5rem;
+            i {
+              display: none !important;
+            }
+            span {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+

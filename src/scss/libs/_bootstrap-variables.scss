@@ -8,16 +8,11 @@ $success: #00BB27;     // Для позитивных действий/подт�
 $warning: #FFBF00;     // Для предупреждений
 $danger: #DB0000;      // Для ошибок/небезопасных действий
 $light: #f8f9fa;
-$dark: #343a40;
+$dark: #000;
 $gray: #505050;
 $gray-2: #D7D7D7;
 $gray-3: #EAEAEA;
 $gray-4: #F5F5F5;
-$purple-900: #331B63;  // Для использования в кастомизации футера
-
-
-
-
 
 // Дополнительные классы утилиты
 .letter-spacing-1 {
@@ -29,6 +24,7 @@ $purple-900: #331B63;  // Для использования в кастомиз�
 $font-family-sans-serif: 'Rubik', sans-serif;
 $font-family-base: $font-family-sans-serif;
 $line-height-base: 1.5;
+$small-font-size:             .75rem;
 
 // Адаптивная типография с calc для обеспечения min/max значений
 // Все минимальные значения уже отработаны до 480px
@@ -38,12 +34,20 @@ $h3-font-size: calc(18px + (22 - 18) * ((100vw - 480px) / (1920 - 480)));
 $h4-font-size: calc(16px + (18 - 16) * ((100vw - 480px) / (1920 - 480)));
 $h5-font-size: calc(14px + (16 - 14) * ((100vw - 480px) / (1920 - 480)));
 $h6-font-size: calc(12px + (14 - 12) * ((100vw - 480px) / (1920 - 480)));
+// Изменяем глобальные цвета
+$body-bg: #ffffff;     
+$body-color: #000;      
 
-// Настройка контейнеров
-.container-big {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 .9375rem;
+
+.fz-4 {
+  font-size: 1rem;
+}
+
+.fz-5 {
+  font-size: .875rem;
+}
+.fz-6 {
+  font-size: .75rem;
 }
 
 $container-max-widths: (
@@ -56,7 +60,7 @@ $container-max-widths: (
 // Настройка брейкпоинтов
 $grid-breakpoints: (
   xs: 0,
-  sm: 500px,
+  sm: 576px,
   md: 768px,
   lg: 1024px,
   xl: 1440px
@@ -97,14 +101,7 @@ $enable-deprecation-messages: true;
 $enable-important-utilities: true;
 
 :root {
-  // Основные цвета
-  --bs-primary: #{$primary};
-  --bs-secondary: #{$secondary};
-  --bs-success: #{$success};
-  --bs-warning: #{$warning};
-  --bs-danger: #{$danger};
   --bs-secondary-color: #252525 !important;
-  
   --bs-gray: #{$gray};
   --bs-gray-2: #{$gray-2};
   --bs-gray-3: #{$gray-3};

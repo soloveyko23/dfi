@@ -1,0 +1,13 @@
+$breadcrumb-font-size:              null;
+$breadcrumb-padding-y:              0;
+$breadcrumb-padding-x:              0;
+$breadcrumb-item-padding-x:         .5rem;
+$breadcrumb-margin-bottom:          1rem;
+$breadcrumb-bg:                     null;
+$breadcrumb-divider-color:          var(--bs-primary);
+$breadcrumb-active-color:           var(--bs-primary);
+$breadcrumb-divider: url("data:image/svg+xml,%3Csvg width='5' height='7' viewBox='0 0 5 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.44414 3.22686L1.32905 0.111828C1.257 0.0397233 1.16083 0 1.05827 0C0.955721 0 0.859543 0.0397233 0.787495 0.111828L0.55809 0.341176C0.408815 0.490622 0.408815 0.733514 0.55809 0.882733L3.17391 3.49855L0.555188 6.11727C0.48314 6.18937 0.443359 6.28549 0.443359 6.38799C0.443359 6.4906 0.48314 6.58672 0.555188 6.65888L0.784592 6.88817C0.856697 6.96028 0.952819 7 1.05537 7C1.15792 7 1.2541 6.96028 1.32615 6.88817L4.44414 3.77029C4.51636 3.69796 4.55603 3.60139 4.5558 3.49872C4.55603 3.39566 4.51636 3.29914 4.44414 3.22686Z' fill='black'/%3E%3C/svg%3E%0A");
+$breadcrumb-divider-flipped:        $breadcrumb-divider;
+$breadcrumb-border-radius:          null;
+
+@import "bootstrap/scss/breadcrumb";

@@ -7,6 +7,20 @@
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
+        <section class="hero">
+          <div class="container">
+            <div class="hero__content">
+              <div class="row">
+                <div class="col-lg-9 offset-lg-3">
+                  1
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+        <!-- /.hero -->
+
         <section class="category-section py-5">
           <div class="container">
             <div class="category-section__content position-relative">
@@ -141,7 +155,7 @@
                           
                           <!-- Название товара -->
                           <h5 class="product-card__title fw-medium mb-3">
-                            <a href="#" class="text-decoration-none text-dark stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                            <a href="#" class="text-decoration-none text- stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
                           </h5>
                           
                           <!-- Блок цены и кнопки добавления в корзину -->
@@ -158,9 +172,189 @@
                                 <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement>
                                   -
                                 </button>
-                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none" value="1" min="1" max="5" readonly>
+                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none fs-6" value="1" min="1" max="5" readonly>
                                 <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment>
-  
+      
+                                  +
+                                </button>
+                              </div>
+                              <button type="button" class="btn btn-warning text-white btn-sm btn-add-to-cart rounded-4">
+                                <i class="_icon-time-2 fs-4 d-flex align-items-center justify-content-center"></i>
+                              </button>
+                            </div>
+                          </div>
+                          
+                          <!-- Индикатор наличия -->
+                          <div class="product-card__availability text-warning small mt-3">
+                            Очікується
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="popular-products__slide swiper-slide product-item">
+                      <!-- Карточка товара из макета -->
+                      <div class="card product-card position-relative p-1">
+                        <div class="p-2">
+                         <!-- Иконка избранного (сердечко) -->
+                        <button type="button" class="btn btn-sm btn-favorite position-absolute top-0 end-0 m-2 z-1 rounded-4 p-1">
+                          <i class="_icon-add-favorite text-secondary fs-6"></i>
+                        </button>
+                        
+                        <!-- Изображение товара -->
+                        <a href="#" class="product-card__image-wrapper text-center py-2">
+                          <img src="@img/product-image/image.png" alt="Кабель ZYTER LM14" class="img-fluid product-image">
+                        </a>
+                        
+                        <!-- Информация о товаре -->
+                        <div class="card-body p-0 d-flex flex-column">
+                          <!-- Код товара -->
+                          <div class="product-card__code mb-3 small fw-light">
+                            Код товару: 465336
+                          </div>
+                          
+                          <!-- Название товара -->
+                          <h5 class="product-card__title fw-medium mb-3">
+                            <a href="#" class="text-decoration-none text- stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                          </h5>
+                          
+                          <!-- Блок цены и кнопки добавления в корзину -->
+                          <div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-3">
+                            <!-- Цена товара -->
+                            <div class="product-card__price fw-bold fs-5 text-primary lh-1">
+                              18 745 грн
+                            </div>
+                            
+                            <!-- Блок с количеством и кнопкой корзины -->
+                            <div class="product-card__add-to-cart d-flex align-items-center gap-2">
+                              <!-- Компонент управления количеством -->
+                              <div class="count-input border py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement>
+                                  -
+                                </button>
+                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none fs-6" value="1" min="1" max="5" readonly>
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment>
+      
+                                  +
+                                </button>
+                              </div>
+                              <button type="button" class="btn btn-primary text-white btn-sm btn-add-to-cart rounded-4">
+                                <i class="_icon-list fs-3 d-flex align-items-center justify-content-center"></i>
+                              </button>
+                            </div>
+                          </div>
+                          
+                          <!-- Индикатор наличия -->
+                          <div class="product-card__availability text-primary small mt-3">
+                            Під замовлення
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="popular-products__slide swiper-slide product-item">
+                      <!-- Карточка товара из макета -->
+                      <div class="card product-card position-relative p-1">
+                        <div class="p-2">
+                         <!-- Иконка избранного (сердечко) -->
+                        <button type="button" class="btn btn-sm btn-favorite position-absolute top-0 end-0 m-2 z-1 rounded-4 p-1">
+                          <i class="_icon-add-favorite text-secondary fs-6"></i>
+                        </button>
+                        
+                        <!-- Изображение товара -->
+                        <a href="#" class="product-card__image-wrapper text-center py-2">
+                          <img src="@img/product-image/image.png" alt="Кабель ZYTER LM14" class="img-fluid product-image">
+                        </a>
+                        
+                        <!-- Информация о товаре -->
+                        <div class="card-body p-0 d-flex flex-column">
+                          <!-- Код товара -->
+                          <div class="product-card__code mb-3 small fw-light">
+                            Код товару: 465336
+                          </div>
+                          
+                          <!-- Название товара -->
+                          <h5 class="product-card__title fw-medium mb-3">
+                            <a href="#" class="text-decoration-none text- stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                          </h5>
+                          
+                          <!-- Блок цены и кнопки добавления в корзину -->
+                          <div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-3">
+                            <!-- Цена товара -->
+                            <div class="product-card__price fw-bold fs-5 text-primary lh-1">
+                              18 745 грн
+                            </div>
+                            
+                            <!-- Блок с количеством и кнопкой корзины -->
+                            <div class="product-card__add-to-cart d-flex align-items-center gap-2">
+                              <!-- Компонент управления количеством -->
+                              <div class="count-input border py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement>
+                                  -
+                                </button>
+                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none fs-6" value="1" min="1" max="5" readonly>
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment>
+      
+                                  +
+                                </button>
+                              </div>
+                              <button type="button" class="btn btn-outline color-gray btn-sm btn-add-to-cart rounded-4">
+                                <i class="_icon-mess fs-4 d-flex text-gray-2 align-items-center bg-transparent justify-content-center"></i>
+                              </button>
+                            </div>
+                          </div>
+                          
+                          <!-- Индикатор наличия -->
+                          <div class="product-card__availability text-gray small mt-3">
+                            Немає в наявності
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="popular-products__slide swiper-slide product-item">
+                      <!-- Карточка товара из макета -->
+                      <div class="card product-card position-relative p-1">
+                        <div class="p-2">
+                         <!-- Иконка избранного (сердечко) -->
+                        <button type="button" class="btn btn-sm btn-favorite position-absolute top-0 end-0 m-2 z-1 rounded-4 p-1">
+                          <i class="_icon-add-favorite text-secondary fs-6"></i>
+                        </button>
+                        
+                        <!-- Изображение товара -->
+                        <a href="#" class="product-card__image-wrapper text-center py-2">
+                          <img src="@img/product-image/image.png" alt="Кабель ZYTER LM14" class="img-fluid product-image">
+                        </a>
+                        
+                        <!-- Информация о товаре -->
+                        <div class="card-body p-0 d-flex flex-column">
+                          <!-- Код товара -->
+                          <div class="product-card__code mb-3 small fw-light">
+                            Код товару: 465336
+                          </div>
+                          
+                          <!-- Название товара -->
+                          <h5 class="product-card__title fw-medium mb-3">
+                            <a href="#" class="text-decoration-none text- stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                          </h5>
+                          
+                          <!-- Блок цены и кнопки добавления в корзину -->
+                          <div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-3">
+                            <!-- Цена товара -->
+                            <div class="product-card__price fw-bold fs-5 text-primary lh-1">
+                              18 745 грн
+                            </div>
+                            
+                            <!-- Блок с количеством и кнопкой корзины -->
+                            <div class="product-card__add-to-cart d-flex align-items-center gap-2">
+                              <!-- Компонент управления количеством -->
+                              <div class="count-input border py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement>
+                                  -
+                                </button>
+                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none fs-6" value="1" min="1" max="5" readonly>
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment>
+      
                                   +
                                 </button>
                               </div>
@@ -201,7 +395,7 @@
                           
                           <!-- Название товара -->
                           <h5 class="product-card__title fw-medium mb-3">
-                            <a href="#" class="text-decoration-none text-dark stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                            <a href="#" class="text-decoration-none text- stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
                           </h5>
                           
                           <!-- Блок цены и кнопки добавления в корзину -->
@@ -218,189 +412,9 @@
                                 <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement>
                                   -
                                 </button>
-                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none" value="1" min="1" max="5" readonly>
+                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none fs-6" value="1" min="1" max="5" readonly>
                                 <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment>
-  
-                                  +
-                                </button>
-                              </div>
-                              <button type="button" class="btn btn-secondary btn-sm btn-add-to-cart rounded-4">
-                                <i class="_icon-cart fs-4 d-flex align-items-center justify-content-center"></i>
-                              </button>
-                            </div>
-                          </div>
-                          
-                          <!-- Индикатор наличия -->
-                          <div class="product-card__availability text-success small mt-3">
-                             В наявності
-                          </div>
-                        </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="popular-products__slide swiper-slide product-item">
-                      <!-- Карточка товара из макета -->
-                      <div class="card product-card position-relative p-1">
-                        <div class="p-2">
-                         <!-- Иконка избранного (сердечко) -->
-                        <button type="button" class="btn btn-sm btn-favorite position-absolute top-0 end-0 m-2 z-1 rounded-4 p-1">
-                          <i class="_icon-add-favorite text-secondary fs-6"></i>
-                        </button>
-                        
-                        <!-- Изображение товара -->
-                        <a href="#" class="product-card__image-wrapper text-center py-2">
-                          <img src="@img/product-image/image.png" alt="Кабель ZYTER LM14" class="img-fluid product-image">
-                        </a>
-                        
-                        <!-- Информация о товаре -->
-                        <div class="card-body p-0 d-flex flex-column">
-                          <!-- Код товара -->
-                          <div class="product-card__code mb-3 small fw-light">
-                            Код товару: 465336
-                          </div>
-                          
-                          <!-- Название товара -->
-                          <h5 class="product-card__title fw-medium mb-3">
-                            <a href="#" class="text-decoration-none text-dark stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
-                          </h5>
-                          
-                          <!-- Блок цены и кнопки добавления в корзину -->
-                          <div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-3">
-                            <!-- Цена товара -->
-                            <div class="product-card__price fw-bold fs-5 text-primary lh-1">
-                              18 745 грн
-                            </div>
-                            
-                            <!-- Блок с количеством и кнопкой корзины -->
-                            <div class="product-card__add-to-cart d-flex align-items-center gap-2">
-                              <!-- Компонент управления количеством -->
-                              <div class="count-input border py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
-                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement>
-                                  -
-                                </button>
-                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none" value="1" min="1" max="5" readonly>
-                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment>
-  
-                                  +
-                                </button>
-                              </div>
-                              <button type="button" class="btn btn-secondary btn-sm btn-add-to-cart rounded-4">
-                                <i class="_icon-cart fs-4 d-flex align-items-center justify-content-center"></i>
-                              </button>
-                            </div>
-                          </div>
-                          
-                          <!-- Индикатор наличия -->
-                          <div class="product-card__availability text-success small mt-3">
-                             В наявності
-                          </div>
-                        </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="popular-products__slide swiper-slide product-item">
-                      <!-- Карточка товара из макета -->
-                      <div class="card product-card position-relative p-1">
-                        <div class="p-2">
-                         <!-- Иконка избранного (сердечко) -->
-                        <button type="button" class="btn btn-sm btn-favorite position-absolute top-0 end-0 m-2 z-1 rounded-4 p-1">
-                          <i class="_icon-add-favorite text-secondary fs-6"></i>
-                        </button>
-                        
-                        <!-- Изображение товара -->
-                        <a href="#" class="product-card__image-wrapper text-center py-2">
-                          <img src="@img/product-image/image.png" alt="Кабель ZYTER LM14" class="img-fluid product-image">
-                        </a>
-                        
-                        <!-- Информация о товаре -->
-                        <div class="card-body p-0 d-flex flex-column">
-                          <!-- Код товара -->
-                          <div class="product-card__code mb-3 small fw-light">
-                            Код товару: 465336
-                          </div>
-                          
-                          <!-- Название товара -->
-                          <h5 class="product-card__title fw-medium mb-3">
-                            <a href="#" class="text-decoration-none text-dark stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
-                          </h5>
-                          
-                          <!-- Блок цены и кнопки добавления в корзину -->
-                          <div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-3">
-                            <!-- Цена товара -->
-                            <div class="product-card__price fw-bold fs-5 text-primary lh-1">
-                              18 745 грн
-                            </div>
-                            
-                            <!-- Блок с количеством и кнопкой корзины -->
-                            <div class="product-card__add-to-cart d-flex align-items-center gap-2">
-                              <!-- Компонент управления количеством -->
-                              <div class="count-input border py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
-                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement>
-                                  -
-                                </button>
-                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none" value="1" min="1" max="5" readonly>
-                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment>
-  
-                                  +
-                                </button>
-                              </div>
-                              <button type="button" class="btn btn-secondary btn-sm btn-add-to-cart rounded-4">
-                                <i class="_icon-cart fs-4 d-flex align-items-center justify-content-center"></i>
-                              </button>
-                            </div>
-                          </div>
-                          
-                          <!-- Индикатор наличия -->
-                          <div class="product-card__availability text-success small mt-3">
-                             В наявності
-                          </div>
-                        </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="popular-products__slide swiper-slide product-item">
-                      <!-- Карточка товара из макета -->
-                      <div class="card product-card position-relative p-1">
-                        <div class="p-2">
-                         <!-- Иконка избранного (сердечко) -->
-                        <button type="button" class="btn btn-sm btn-favorite position-absolute top-0 end-0 m-2 z-1 rounded-4 p-1">
-                          <i class="_icon-add-favorite text-secondary fs-6"></i>
-                        </button>
-                        
-                        <!-- Изображение товара -->
-                        <a href="#" class="product-card__image-wrapper text-center py-2">
-                          <img src="@img/product-image/image.png" alt="Кабель ZYTER LM14" class="img-fluid product-image">
-                        </a>
-                        
-                        <!-- Информация о товаре -->
-                        <div class="card-body p-0 d-flex flex-column">
-                          <!-- Код товара -->
-                          <div class="product-card__code mb-3 small fw-light">
-                            Код товару: 465336
-                          </div>
-                          
-                          <!-- Название товара -->
-                          <h5 class="product-card__title fw-medium mb-3">
-                            <a href="#" class="text-decoration-none text-dark stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
-                          </h5>
-                          
-                          <!-- Блок цены и кнопки добавления в корзину -->
-                          <div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-3">
-                            <!-- Цена товара -->
-                            <div class="product-card__price fw-bold fs-5 text-primary lh-1">
-                              18 745 грн
-                            </div>
-                            
-                            <!-- Блок с количеством и кнопкой корзины -->
-                            <div class="product-card__add-to-cart d-flex align-items-center gap-2">
-                              <!-- Компонент управления количеством -->
-                              <div class="count-input border py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
-                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement>
-                                  -
-                                </button>
-                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none" value="1" min="1" max="5" readonly>
-                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment>
-  
+      
                                   +
                                 </button>
                               </div>
@@ -486,7 +500,7 @@
                           
                           <!-- Название товара -->
                           <h5 class="product-card__title fw-medium mb-3">
-                            <a href="#" class="text-decoration-none text-dark stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                            <a href="#" class="text-decoration-none text- stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
                           </h5>
                           
                           <!-- Блок цены и кнопки добавления в корзину -->
@@ -503,9 +517,9 @@
                                 <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement>
                                   -
                                 </button>
-                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none" value="1" min="1" max="5" readonly>
+                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none fs-6" value="1" min="1" max="5" readonly>
                                 <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment>
-  
+      
                                   +
                                 </button>
                               </div>
@@ -546,7 +560,7 @@
                           
                           <!-- Название товара -->
                           <h5 class="product-card__title fw-medium mb-3">
-                            <a href="#" class="text-decoration-none text-dark stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                            <a href="#" class="text-decoration-none text- stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
                           </h5>
                           
                           <!-- Блок цены и кнопки добавления в корзину -->
@@ -563,9 +577,9 @@
                                 <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement>
                                   -
                                 </button>
-                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none" value="1" min="1" max="5" readonly>
+                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none fs-6" value="1" min="1" max="5" readonly>
                                 <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment>
-  
+      
                                   +
                                 </button>
                               </div>
@@ -606,7 +620,7 @@
                           
                           <!-- Название товара -->
                           <h5 class="product-card__title fw-medium mb-3">
-                            <a href="#" class="text-decoration-none text-dark stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                            <a href="#" class="text-decoration-none text- stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
                           </h5>
                           
                           <!-- Блок цены и кнопки добавления в корзину -->
@@ -623,9 +637,9 @@
                                 <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement>
                                   -
                                 </button>
-                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none" value="1" min="1" max="5" readonly>
+                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none fs-6" value="1" min="1" max="5" readonly>
                                 <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment>
-  
+      
                                   +
                                 </button>
                               </div>
@@ -666,7 +680,7 @@
                           
                           <!-- Название товара -->
                           <h5 class="product-card__title fw-medium mb-3">
-                            <a href="#" class="text-decoration-none text-dark stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                            <a href="#" class="text-decoration-none text- stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
                           </h5>
                           
                           <!-- Блок цены и кнопки добавления в корзину -->
@@ -683,9 +697,9 @@
                                 <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement>
                                   -
                                 </button>
-                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none" value="1" min="1" max="5" readonly>
+                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none fs-6" value="1" min="1" max="5" readonly>
                                 <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment>
-  
+      
                                   +
                                 </button>
                               </div>
@@ -726,7 +740,7 @@
                           
                           <!-- Название товара -->
                           <h5 class="product-card__title fw-medium mb-3">
-                            <a href="#" class="text-decoration-none text-dark stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                            <a href="#" class="text-decoration-none text- stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
                           </h5>
                           
                           <!-- Блок цены и кнопки добавления в корзину -->
@@ -743,9 +757,9 @@
                                 <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement>
                                   -
                                 </button>
-                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none" value="1" min="1" max="5" readonly>
+                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none fs-6" value="1" min="1" max="5" readonly>
                                 <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment>
-  
+      
                                   +
                                 </button>
                               </div>
@@ -781,7 +795,7 @@
                     </button>
                     <div class="slider-pagination-type-one">
                       <div class="swiper-pagination">
-  
+
                       </div>
                     </div>
                     <button type="button" class="slider-button-type-one btn swiper-button-next">
@@ -793,7 +807,6 @@
                   </a>
                 </div>
               </div>
-              
             </div>
           </div>
         </section>
@@ -830,7 +843,7 @@
                           
                           <!-- Название товара -->
                           <h5 class="product-card__title fw-medium mb-3">
-                            <a href="#" class="text-decoration-none text-dark stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                            <a href="#" class="text-decoration-none text- stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
                           </h5>
                           
                           <!-- Блок цены и кнопки добавления в корзину -->
@@ -847,9 +860,9 @@
                                 <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement>
                                   -
                                 </button>
-                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none" value="1" min="1" max="5" readonly>
+                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none fs-6" value="1" min="1" max="5" readonly>
                                 <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment>
-        
+      
                                   +
                                 </button>
                               </div>
@@ -890,7 +903,7 @@
                           
                           <!-- Название товара -->
                           <h5 class="product-card__title fw-medium mb-3">
-                            <a href="#" class="text-decoration-none text-dark stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                            <a href="#" class="text-decoration-none text- stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
                           </h5>
                           
                           <!-- Блок цены и кнопки добавления в корзину -->
@@ -907,9 +920,9 @@
                                 <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement>
                                   -
                                 </button>
-                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none" value="1" min="1" max="5" readonly>
+                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none fs-6" value="1" min="1" max="5" readonly>
                                 <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment>
-        
+      
                                   +
                                 </button>
                               </div>
@@ -950,7 +963,7 @@
                           
                           <!-- Название товара -->
                           <h5 class="product-card__title fw-medium mb-3">
-                            <a href="#" class="text-decoration-none text-dark stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                            <a href="#" class="text-decoration-none text- stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
                           </h5>
                           
                           <!-- Блок цены и кнопки добавления в корзину -->
@@ -967,9 +980,9 @@
                                 <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement>
                                   -
                                 </button>
-                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none" value="1" min="1" max="5" readonly>
+                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none fs-6" value="1" min="1" max="5" readonly>
                                 <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment>
-        
+      
                                   +
                                 </button>
                               </div>
@@ -1010,7 +1023,7 @@
                           
                           <!-- Название товара -->
                           <h5 class="product-card__title fw-medium mb-3">
-                            <a href="#" class="text-decoration-none text-dark stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                            <a href="#" class="text-decoration-none text- stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
                           </h5>
                           
                           <!-- Блок цены и кнопки добавления в корзину -->
@@ -1027,9 +1040,9 @@
                                 <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement>
                                   -
                                 </button>
-                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none" value="1" min="1" max="5" readonly>
+                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none fs-6" value="1" min="1" max="5" readonly>
                                 <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment>
-        
+      
                                   +
                                 </button>
                               </div>
@@ -1070,7 +1083,7 @@
                           
                           <!-- Название товара -->
                           <h5 class="product-card__title fw-medium mb-3">
-                            <a href="#" class="text-decoration-none text-dark stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                            <a href="#" class="text-decoration-none text- stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
                           </h5>
                           
                           <!-- Блок цены и кнопки добавления в корзину -->
@@ -1087,9 +1100,69 @@
                                 <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement>
                                   -
                                 </button>
-                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none" value="1" min="1" max="5" readonly>
+                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none fs-6" value="1" min="1" max="5" readonly>
                                 <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment>
-        
+      
+                                  +
+                                </button>
+                              </div>
+                              <button type="button" class="btn btn-secondary btn-sm btn-add-to-cart rounded-4">
+                                <i class="_icon-cart fs-4 d-flex align-items-center justify-content-center"></i>
+                              </button>
+                            </div>
+                          </div>
+                          
+                          <!-- Индикатор наличия -->
+                          <div class="product-card__availability text-success small mt-3">
+                             В наявності
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="recommendation__slide swiper-slide product-item">
+                      <!-- Карточка товара из макета -->
+                      <div class="card product-card position-relative p-1">
+                        <div class="p-2">
+                         <!-- Иконка избранного (сердечко) -->
+                        <button type="button" class="btn btn-sm btn-favorite position-absolute top-0 end-0 m-2 z-1 rounded-4 p-1">
+                          <i class="_icon-add-favorite text-secondary fs-6"></i>
+                        </button>
+                        
+                        <!-- Изображение товара -->
+                        <a href="#" class="product-card__image-wrapper text-center py-2">
+                          <img src="@img/product-image/image.png" alt="Кабель ZYTER LM14" class="img-fluid product-image">
+                        </a>
+                        
+                        <!-- Информация о товаре -->
+                        <div class="card-body p-0 d-flex flex-column">
+                          <!-- Код товара -->
+                          <div class="product-card__code mb-3 small fw-light">
+                            Код товару: 465336
+                          </div>
+                          
+                          <!-- Название товара -->
+                          <h5 class="product-card__title fw-medium mb-3">
+                            <a href="#" class="text-decoration-none text- stretched-link animate-hover fs-5">Кабель ZYTER LM14 MicroUSB Interface (1to4)</a>
+                          </h5>
+                          
+                          <!-- Блок цены и кнопки добавления в корзину -->
+                          <div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-3">
+                            <!-- Цена товара -->
+                            <div class="product-card__price fw-bold fs-5 text-primary lh-1">
+                              18 745 грн
+                            </div>
+                            
+                            <!-- Блок с количеством и кнопкой корзины -->
+                            <div class="product-card__add-to-cart d-flex align-items-center gap-2">
+                              <!-- Компонент управления количеством -->
+                              <div class="count-input border py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement>
+                                  -
+                                </button>
+                                <input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none fs-6" value="1" min="1" max="5" readonly>
+                                <button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment>
+      
                                   +
                                 </button>
                               </div>
@@ -1161,11 +1234,11 @@
                         </div>
                         <div class="card-body py-2 px-3">
                           <div class="d-flex justify-content-between align-items-center mb-3">
-                            <span class="text-muted small">10.09.2023</span>
-                            <span class="text-muted small d-inline-flex align-items-center gap-1"><i class="_icon-views me-1 fs-6 text-primary"></i> 247</span>
+                            <span class="text-muted fs-6">10.09.2023</span>
+                            <span class="text-muted fs-6 d-inline-flex align-items-center gap-1"><i class="_icon-views me-1 fs-6 text-primary"></i> 247</span>
                           </div>
-                          <h5 class="card-title fw-medium mb-1 line-clamp line-clamp-2">Як подовжити термін служби акумулятора ноутбука</h5>
-                          <p class="card-text text-muted line-clamp line-clamp-4">Корисні поради з догляду за акумуляторами, які допоможуть зберегти ємність вашого пристрою.</p>
+                          <h5 class="fz-4 fw-medium mb-1 line-clamp line-clamp-2">Як подовжити термін служби акумулятора ноутбука</h5>
+                          <p class="fz-5 text-muted line-clamp line-clamp-4">Корисні поради з догляду за акумуляторами, які допоможуть зберегти ємність вашого пристрою.</p>
                          
                         </div>
                       </div>
@@ -1181,11 +1254,11 @@
                         </div>
                         <div class="card-body py-2 px-3">
                           <div class="d-flex justify-content-between align-items-center mb-3">
-                            <span class="text-muted small">10.09.2023</span>
-                            <span class="text-muted small d-inline-flex align-items-center gap-1"><i class="_icon-views me-1 fs-6 text-primary"></i> 247</span>
+                            <span class="text-muted fs-6">10.09.2023</span>
+                            <span class="text-muted fs-6 d-inline-flex align-items-center gap-1"><i class="_icon-views me-1 fs-6 text-primary"></i> 247</span>
                           </div>
-                          <h5 class="card-title fw-medium mb-1 line-clamp line-clamp-2">Нові технології екранів для смартфонів 2023 року: огляд інновацій та тенденцій розвитку</h5>
-                          <p class="card-text text-muted line-clamp line-clamp-4">Детальний аналіз новітніх технологій дисплеїв для мобільних пристроїв, їх переваги та недоліки. Як нові розробки впливають на автономність роботи та якість зображення.</p>
+                          <h5 class="fz-4 fw-medium mb-1 line-clamp line-clamp-2">Нові технології екранів для смартфонів 2023 року: огляд інновацій та тенденцій розвитку</h5>
+                          <p class="fz-5 text-muted line-clamp line-clamp-4">Детальний аналіз новітніх технологій дисплеїв для мобільних пристроїв, їх переваги та недоліки. Як нові розробки впливають на автономність роботи та якість зображення.</p>
                          
                         </div>
                       </div>
@@ -1200,11 +1273,11 @@
                         </div>
                         <div class="card-body py-2 px-3">
                           <div class="d-flex justify-content-between align-items-center mb-3">
-                            <span class="text-muted small">10.09.2023</span>
-                            <span class="text-muted small d-inline-flex align-items-center gap-1"><i class="_icon-views me-1 fs-6 text-primary"></i> 247</span>
+                            <span class="text-muted fs-6">10.09.2023</span>
+                            <span class="text-muted fs-6 d-inline-flex align-items-center gap-1"><i class="_icon-views me-1 fs-6 text-primary"></i> 247</span>
                           </div>
-                          <h5 class="card-title fw-medium mb-1 line-clamp line-clamp-2">Топ-5 несправностей ноутбуків та як їх уникнути</h5>
-                          <p class="card-text text-muted line-clamp line-clamp-4">Розбираємо найпоширеніші проблеми з ноутбуками та даємо поради щодо їх профілактики. Як продовжити термін служби свого пристрою і зекономити на ремонті.</p>
+                          <h5 class="fz-4 fw-medium mb-1 line-clamp line-clamp-2">Топ-5 несправностей ноутбуків та як їх уникнути</h5>
+                          <p class="fz-5 text-muted line-clamp line-clamp-4">Розбираємо найпоширеніші проблеми з ноутбуками та даємо поради щодо їх профілактики. Як продовжити термін служби свого пристрою і зекономити на ремонті.</p>
                          
                         </div>
                       </div>

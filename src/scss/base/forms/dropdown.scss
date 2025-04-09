@@ -118,7 +118,6 @@ header {
 }
 
 .dropdown-hover-css {
-  cursor: pointer;
   @media (min-width: 992px) {
     &:hover > .dropdown-menu {
       display: block;
@@ -149,9 +148,7 @@ header {
     }
 
     /* Предотвращаем стандартное поведение Bootstrap на десктопах */
-    > .dropdown-toggle:hover {
-      cursor: default;
-    }
+    
   }
 }
 
