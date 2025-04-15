@@ -889,7 +889,7 @@ progress {
 .container-md,
 .container-sm,
 .container-xl {
-  --bs-gutter-x: 1.5rem;
+  --bs-gutter-x: 2.5rem;
   --bs-gutter-y: 0;
   width: 100%;
   padding-right: calc(var(--bs-gutter-x)*.5);
@@ -5656,7 +5656,7 @@ header .dropdown .dropdown-item {
 .form-control:focus {
   color: var(--bs-body-color);
   background-color: var(--bs-body-bg);
-  border-color: transparent;
+  border-color: #eaeaea;
   outline: 0;
   box-shadow: 0 0 0 .25rem rgba(51,27,99,.25)
 }
@@ -6541,7 +6541,7 @@ textarea.form-control.is-invalid {
 .form-control:focus {
   color: var(--bs-body-color);
   background-color: var(--bs-body-bg);
-  border-color: transparent;
+  border-color: #eaeaea;
   outline: 0;
   box-shadow: 0 0 0 .25rem rgba(51,27,99,.25)
 }
@@ -8172,10 +8172,6 @@ textarea.form-control.is-invalid {
   -ms-transform: scale(1.1);
   -o-transform: scale(1.1)
 }
-.slider-type-categories {
-  padding: 1.875rem 1.25rem;
-  margin: -1.875rem -1.25rem
-}
 .min-w-25 {
   min-width: 1.5625rem
 }
@@ -8206,7 +8202,6 @@ textarea.form-control.is-invalid {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: -7px 10px 25px 0 rgba(0,0,0,.1);
   border-radius: 10px;
   padding: .625rem;
   height: 10.625rem;
@@ -11446,11 +11441,18 @@ body {
   .accordion-custom-indicator::after {
     width: .1875rem
   }
+  .slider-type-categories {
+    padding: 1.875rem 1.25rem;
+    margin: -1.875rem -1.25rem
+  }
   .icon-with-bg {
     min-width: 3.4375rem;
     min-height: 3.4375rem;
     max-width: 3.4375rem;
     max-height: 3.4375rem
+  }
+  .category-item__link {
+    box-shadow: -7px 10px 25px 0 rgba(0,0,0,.1)
   }
   .navbar-expand-md {
     flex-wrap: nowrap;
@@ -14291,11 +14293,18 @@ body {
   .accordion-custom-indicator::after {
     width: .125rem
   }
+  .slider-type-categories {
+    padding: .9375rem;
+    margin: -.9375rem
+  }
   .icon-with-bg {
     min-width: 2.75rem;
     min-height: 2.75rem;
     max-width: 2.75rem;
     max-height: 2.75rem
+  }
+  .category-item__link {
+    box-shadow: -3px 5px 10px 0 rgba(0,0,0,.15)
   }
   .article-section .article-image {
     border-radius: .5rem;
