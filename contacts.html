@@ -14,7 +14,7 @@
 			opacity: 1;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20250414154540">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250415143900">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -85,7 +85,7 @@
 										<a href="#" class="lang-btn">RU</a>
 									</div>
 									<div class="dropdown">
-										<button class="dropdown-toggle btn p-0 d-flex align-items-center icon-lg" type="button" data-bs-toggle="dropdown" data-bs-trigger="hover" data-bs-auto-close="outside" aria-expanded="false">
+										<button class="dropdown-toggle btn p-0 d-flex align-items-center icon-lg focus-visible-none focus-none border-0 border-transparent" type="button" data-bs-toggle="dropdown" data-bs-trigger="hover" data-bs-auto-close="outside" aria-expanded="false">
 											<h5 class="fw-medium mb-0 fs-3">067 707 00 22</h5>
 										</button>
 										<div class="dropdown-menu dropdown-menu-end dropdown-menu-md">
@@ -98,7 +98,7 @@
 													</li>
 												</ul>
 												<hr class="dropdown-divider mx-1">
-												<div class="socials-block px-2">
+												<div class="socials-block px-2 py-0">
 													<ul class="list-unstyled d-flex gap-3 align-items-center">
 														<li>
 															<a href="#">
@@ -173,11 +173,11 @@
 									<div class="dropdown-menu dropdown-menu-end dropdown-menu-md" aria-labelledby="userDropdown">
 										<div class="py-2 px-2">
 											<div class="d-flex flex-column gap-2">
-												<a class="btn btn-lg justify-content-start gap-2 btn-outline text-gray" href="#">
-													<i class="_icon-arrow-history "></i>
+												<a class="btn btn-lg  justify-content-start gap-2 btn-outline text-gray text-uppercase fs-5" href="#">
+													<i class="_icon-arrow-history mw-30 mh-30"></i>
 													ІСТОРІЯ ЗАМОВЛЕНЬ
 												</a>
-												<a class="btn btn-outline-gray btn-lg justify-content-start gap-2 text-gray" href="#"><i class="_icon-cart"></i> ОБРАНІ ТОВАРИ</a>
+												<a class="btn btn-outline btn-lg justify-content-start gap-2 text-gray fs-5" href="#"><i class="_icon-cart p-2 mw-30 mh-30"></i> ОБРАНІ ТОВАРИ</a>
 
 												<a class=" btn btn-orange btn-lg fs-4 text-center fw-bold" href="#">РЕЄСТРАЦІЯ</a>
 												<a class=" btn btn-secondary btn-lg fs-4 text-center fw-bold" href="#">ВВІЙТИ</a>
@@ -191,12 +191,175 @@
 										<span>1</span>
 									</span>
 								</a>
-								<a href="#" class="btn btn-icon btn-lg rounded-md-4 rounded-4">
-									<i class="_icon-cart fs-3"></i>
-									<span class="badge position-absolute fw-medium mt-1 ml-n2 top-0 start-100 translate-middle p-1 fs-6 text-primary bg-white bg-opacity-50 rounded-circle">
-										<span>1</span>
-									</span>
-								</a>
+								<div class="dropdown">
+									<button class="btn btn-icon btn-lg rounded-md-4 rounded-4 dropdown-toggle" type="button" id="cartDropdown" data-bs-toggle="dropdown" data-bs-trigger="hover" data-bs-auto-close="outside" aria-expanded="false">
+										<i class="_icon-cart fs-3"></i>
+										<span class="badge position-absolute fw-medium mt-1 ml-n2 top-0 start-100 translate-middle p-1 fs-6 text-primary bg-white bg-opacity-50 rounded-circle">
+											<span>1</span>
+										</span>
+									</button>
+									<div class="dropdown-menu dropdown-menu-end dropdown-menu-lg" aria-labelledby="cartDropdown">
+										<div class="px-3 py-2">
+											<div class="cart-items overflow-auto" style="max-height: 300px;">
+												<div class="cart-item d-flex py-2">
+													<a href="#" class="cart-item-img me-3 rounded-3 border border-gray-3 align-self-start">
+														<img src="img/product-image/image.webp" width="65" height="65" class="rounded-3" alt="Кабель ZNTER LM14 MicroUSB">
+													</a>
+													<div class="cart-item-details flex-grow-1">
+														<div class="d-flex justify-content-between">
+															<a href="#" class="mb-0 fs-6 text-dark text-decoration-none hover-to-secondary">Кабель ZNTER LM14 MicroUSB Interface (1to4)</a>
+
+														</div>
+														<div class="d-flex gap-3 align-items-center mt-1">
+															<span class="fs-6 text-muted">1 x 245 грн</span>
+															<div class="count-input border mh-40 py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
+																<button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement="" disabled="">
+																	-
+																</button>
+																<input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none fs-6" value="1" min="1" max="5" readonly="">
+																<button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment="">
+
+																	+
+																</button>
+															</div>
+
+															<button class="btn btn-outline-secondary mw-40 mh-40 text-secondary p-0 fs-4 rounded-4 fw-bold">
+																<i class="_icon-delete"></i>
+															</button>
+														</div>
+													</div>
+												</div>
+												<div class="cart-item d-flex py-2">
+													<a href="#" class="cart-item-img me-3 rounded-3 border border-gray-3 align-self-start">
+														<img src="img/product-image/image.webp" width="65" height="65" class="rounded-3" alt="Кабель ZNTER LM14 MicroUSB">
+													</a>
+													<div class="cart-item-details flex-grow-1">
+														<div class="d-flex justify-content-between">
+															<a href="#" class="mb-0 fs-6 text-dark text-decoration-none hover-to-secondary">Кабель ZNTER LM14 MicroUSB Interface (1to4)</a>
+
+														</div>
+														<div class="d-flex gap-3 align-items-center mt-1">
+															<span class="fs-6 text-muted">1 x 245 грн</span>
+															<div class="count-input border mh-40 py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
+																<button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement="" disabled="">
+																	-
+																</button>
+																<input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none fs-6" value="1" min="1" max="5" readonly="">
+																<button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment="">
+
+																	+
+																</button>
+															</div>
+
+															<button class="btn btn-outline-secondary mw-40 mh-40 text-secondary p-0 fs-4 rounded-4 fw-bold">
+																<i class="_icon-delete"></i>
+															</button>
+														</div>
+													</div>
+												</div>
+												<div class="cart-item d-flex py-2">
+													<a href="#" class="cart-item-img me-3 rounded-3 border border-gray-3 align-self-start">
+														<img src="img/product-image/image.webp" width="65" height="65" class="rounded-3" alt="Кабель ZNTER LM14 MicroUSB">
+													</a>
+													<div class="cart-item-details flex-grow-1">
+														<div class="d-flex justify-content-between">
+															<a href="#" class="mb-0 fs-6 text-dark text-decoration-none hover-to-secondary">Кабель ZNTER LM14 MicroUSB Interface (1to4)</a>
+
+														</div>
+														<div class="d-flex gap-3 align-items-center mt-1">
+															<span class="fs-6 text-muted">1 x 245 грн</span>
+															<div class="count-input border mh-40 py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
+																<button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement="" disabled="">
+																	-
+																</button>
+																<input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none fs-6" value="1" min="1" max="5" readonly="">
+																<button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment="">
+
+																	+
+																</button>
+															</div>
+
+															<button class="btn btn-outline-secondary mw-40 mh-40 text-secondary p-0 fs-4 rounded-4 fw-bold">
+																<i class="_icon-delete"></i>
+															</button>
+														</div>
+													</div>
+												</div>
+												<div class="cart-item d-flex py-2">
+													<a href="#" class="cart-item-img me-3 rounded-3 border border-gray-3 align-self-start">
+														<img src="img/product-image/image.webp" width="65" height="65" class="rounded-3" alt="Кабель ZNTER LM14 MicroUSB">
+													</a>
+													<div class="cart-item-details flex-grow-1">
+														<div class="d-flex justify-content-between">
+															<a href="#" class="mb-0 fs-6 text-dark text-decoration-none hover-to-secondary">Кабель ZNTER LM14 MicroUSB Interface (1to4)</a>
+
+														</div>
+														<div class="d-flex gap-3 align-items-center mt-1">
+															<span class="fs-6 text-muted">1 x 245 грн</span>
+															<div class="count-input border mh-40 py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
+																<button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement="" disabled="">
+																	-
+																</button>
+																<input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none fs-6" value="1" min="1" max="5" readonly="">
+																<button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment="">
+
+																	+
+																</button>
+															</div>
+
+															<button class="btn btn-outline-secondary mw-40 mh-40 text-secondary p-0 fs-4 rounded-4 fw-bold">
+																<i class="_icon-delete"></i>
+															</button>
+														</div>
+													</div>
+												</div>
+												<div class="cart-item d-flex py-2">
+													<a href="#" class="cart-item-img me-3 rounded-3 border border-gray-3 align-self-start">
+														<img src="img/product-image/image.webp" width="65" height="65" class="rounded-3" alt="Кабель ZNTER LM14 MicroUSB">
+													</a>
+													<div class="cart-item-details flex-grow-1">
+														<div class="d-flex justify-content-between">
+															<a href="#" class="mb-0 fs-6 text-dark text-decoration-none hover-to-secondary">Кабель ZNTER LM14 MicroUSB Interface (1to4)</a>
+
+														</div>
+														<div class="d-flex gap-3 align-items-center mt-1">
+															<span class="fs-6 text-muted">1 x 245 грн</span>
+															<div class="count-input border mh-40 py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
+																<button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement="" disabled="">
+																	-
+																</button>
+																<input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none fs-6" value="1" min="1" max="5" readonly="">
+																<button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment="">
+
+																	+
+																</button>
+															</div>
+
+															<button class="btn btn-outline-secondary mw-40 mh-40 text-secondary p-0 fs-4 rounded-4 fw-bold">
+																<i class="_icon-delete"></i>
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="cart-totals mt-2 rounded-4 border border-gray-3 border-opacity-50 text-dark">
+												<div class="d-flex justify-content-between p-2">
+													<span class="text-muted fs-5">Сумма:</span>
+													<span class="fw-medium fs-5">490 грн</span>
+												</div>
+												<div class="d-flex justify-content-between mt-2 bg-gray-4 p-2">
+													<span class="text-muted fs-5">Всего:</span>
+													<span class="fw-mediym fs-5">490 грн</span>
+												</div>
+											</div>
+											<div class="cart-actions mt-3">
+												<a href="#" class="btn btn-secondary btn-md w-100 text-uppercase py-2">
+													<span class="fs-5 py-1 fw-semibold">оформлення замовлення</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 
@@ -209,7 +372,7 @@
 			<div class="offcanvas-header bg-primary">
 				<div class="lang-switcher d-flex me-2 d-md-none d-flex">
 					<a href="#" class="lang-btn active" aria-current="language">UA</a>
-					<a href="#" class="lang-btn text-white">RU</a>
+					<a href="#" class="lang-btn text-dark bg-white">RU</a>
 				</div>
 				<button type="button" class="btn btn-close opacity-100" data-bs-dismiss="offcanvas" aria-label="Close">
 					<img src="img/icons/close-offcanvas.svg" alt="Close">
@@ -218,25 +381,25 @@
 			<div class="offcanvas-body">
 				<div class="user-actions-mobile mb-4 shadow-md p-2 rounded-4">
 					<div class="d-flex gap-2 mt-2 p-1">
-						<a class="btn btn-secondary btn-lg fs-5 w-50 text-center d-flex align-items-center text-center fw-bold" href="#">
+						<a class="btn btn-secondary btn-lg fs-6 w-50 text-center d-flex align-items-center text-center" href="#">
 							УВІЙТИ
 						</a>
-						<a class="btn btn-outline-secondary btn-lg fs-6 w-50 text-center d-flex align-items-center text-center fw-bold" href="#">
+						<a class="btn btn-outline-secondary btn-lg fs-6 w-50 text-center d-flex align-items-center text-center" href="#">
 							РЕЄСТРАЦІЯ
 						</a>
 					</div>
 				</div>
 				<ul class="list-unstyled">
-					<li><a class="nav-link" href="#"><i class="_icon-home text-primary display-6"></i> Головна</a></li>
-					<li><a class="nav-link" data-bs-toggle="offcanvas" href="#submenuCanvas" role="button" aria-controls="submenuCanvas"><i class="_icon-catalog-2 display-6"></i> Каталог</a></li>
-					<hr class="divider color-gray-3 my-3">
-					<li><a class="nav-link" href="#"><i class="_icon-shopping-cart text-primary display-5"></i> Кошик</a></li>
-					<li><a class="nav-link" href="#"><i class="_icon-favorite text-primary display-5"></i> Обране</a></li>
-					<li><a class="nav-link" href="tel:0677070022"><i class="_icon-phone text-primary display-6"></i> 067 707 00 22</a></li>
-					<li><a class="nav-link" href="tel:0935550022"><i class="_icon-phone text-primary display-6"></i> 093 555 00 22</a></li>
-					<li><a class="nav-link" href="#"><i class="_icon-clock text-primary display-6"></i> Понеділок - п'ятниця з 9:00 до 17:30</a></li>
+					<li><a class="nav-link letter-spacing-1" href="#"><i class="_icon-home text-primary display-6"></i> Головна</a></li>
+					<li><a class="nav-link letter-spacing-1" data-bs-toggle="offcanvas" href="#submenuCanvas" role="button" aria-controls="submenuCanvas"><i class="_icon-catalog-2 display-6"></i> Каталог</a></li>
+					<hr class="divider text-gray-2 my-3">
+					<li><a class="nav-link letter-spacing-1" data-bs-toggle="modal" data-bs-target="#cartModal" href="#"><i class="_icon-shopping-cart text-primary display-5"></i> Кошик</a></li>
+					<li><a class="nav-link letter-spacing-1" href="#"><i class="_icon-favorite text-primary display-5"></i> Обране</a></li>
+					<li><a class="nav-link letter-spacing-1" href="tel:0677070022"><i class="_icon-phone-1 text-primary display-6"></i> 067 707 00 22</a></li>
+					<li><a class="nav-link letter-spacing-1" href="tel:0935550022"><i class="_icon-phone-1 text-primary display-6"></i> 093 555 00 22</a></li>
+					<li><a class="nav-link letter-spacing-1" href="#"><i class="_icon-clock text-primary display-6"></i> Понеділок - п'ятниця з 9:00 до 17:30</a></li>
 				</ul>
-				<hr class="divider color-gray-3 my-3">
+				<hr class="divider text-gray-3 my-3">
 				<div class="social-links mt-3">
 					<span class="text-primary fs-4">Зв'язатись з нами:</span>
 					<div class="d-flex align-items-center gap-3 mt-2">
@@ -248,7 +411,7 @@
 						</a>
 					</div>
 				</div>
-				<hr class="divider color-gray-3 my-3">
+				<hr class="divider text-gray-3 my-3">
 				<ul class="mt-4 list-unstyled">
 					<li><a href="#" class="nav-link">Оплата і доставка</a></li>
 					<li><a href="#" class="nav-link">Про компанію</a></li>
@@ -287,7 +450,7 @@
 			<div class="offcanvas-body">
 				<ul class="category-list list-unstyled m-0 ">
 					<li>
-						<a class="nav-link nav-link-dropdown fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+						<a class="nav-link nav-link-dropdown fs-5 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
 							<div class="d-flex align-items-center gap-3">
 								<div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
 									<img src="img/category-icons/laptop.svg" alt="Notebook">
@@ -297,7 +460,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="nav-link nav-link-dropdown fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+						<a class="nav-link nav-link-dropdown fs-5 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
 							<div class="d-flex align-items-center gap-3">
 								<div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
 									<img src="img/category-icons/smartphone.svg" alt="Phone">
@@ -307,7 +470,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="nav-link nav-link-dropdown fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+						<a class="nav-link nav-link-dropdown fs-5 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
 							<div class="d-flex align-items-center gap-3">
 								<div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
 									<img src="img/category-icons/charge.svg" alt="Phone">
@@ -317,7 +480,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="nav-link nav-link-dropdown fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+						<a class="nav-link nav-link-dropdown fs-5 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
 							<div class="d-flex align-items-center gap-3">
 								<div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
 									<img src="img/category-icons/electric-generator.svg" alt="Phone">
@@ -327,7 +490,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="nav-link nav-link-dropdown fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+						<a class="nav-link nav-link-dropdown fs-5 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
 							<div class="d-flex align-items-center gap-3">
 								<div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
 									<img src="img/category-icons/ethernet.svg" alt="Phone">
@@ -337,7 +500,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="nav-link nav-link-dropdown fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+						<a class="nav-link nav-link-dropdown fs-5 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
 							<div class="d-flex align-items-center gap-3">
 								<div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
 									<img src="img/category-icons/videogame.svg" alt="Phone">
@@ -347,7 +510,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="nav-link nav-link-dropdown fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+						<a class="nav-link nav-link-dropdown fs-5 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
 							<div class="d-flex align-items-center gap-3">
 								<div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
 									<img src="img/category-icons/thermometer-gun.svg" alt="Phone">
@@ -357,7 +520,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="nav-link nav-link-dropdown fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+						<a class="nav-link nav-link-dropdown fs-5 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
 							<div class="d-flex align-items-center gap-3">
 								<div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
 									<img src="img/category-icons/screwdriver.svg" alt="Phone">
@@ -367,7 +530,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="nav-link fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+						<a class="nav-link fs-5 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
 							<div class="d-flex align-items-center gap-3">
 								<div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
 									<img src="img/category-icons/battery.svg" alt="Phone">
@@ -377,7 +540,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="nav-link fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+						<a class="nav-link fs-5 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
 							<div class="d-flex align-items-center gap-3">
 								<div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
 									<img src="img/category-icons/battery-2.svg" alt="Phone">
@@ -387,7 +550,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="nav-link fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+						<a class="nav-link fs-5 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
 							<div class="d-flex align-items-center gap-3">
 								<div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
 									<img src="img/category-icons/electric-generator.svg" alt="Phone">
@@ -397,7 +560,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="nav-link fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+						<a class="nav-link fs-5 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
 							<div class="d-flex align-items-center gap-3">
 								<div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
 									<img src="img/category-icons/battery-status.svg" alt="Phone">
@@ -407,7 +570,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="nav-link fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+						<a class="nav-link fs-5 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
 							<div class="d-flex align-items-center gap-3">
 								<div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
 									<img src="img/category-icons/vent.svg" alt="Phone">
@@ -417,7 +580,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="nav-link fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+						<a class="nav-link fs-5 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
 							<div class="d-flex align-items-center gap-3">
 								<div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
 									<img src="img/category-icons/batteries.svg" alt="Phone">
@@ -427,7 +590,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="nav-link fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+						<a class="nav-link fs-5 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
 							<div class="d-flex align-items-center gap-3">
 								<div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
 									<img src="img/category-icons/solar-panel.svg" alt="Phone">
@@ -454,7 +617,7 @@
 			<div class="offcanvas-body">
 				<ul class="category-list list-unstyled m-0">
 					<li>
-						<a class="nav-link fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+						<a class="nav-link fs-5 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
 							<div class="d-flex align-items-center gap-3">
 								<div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
 									<img src="img/category-icons/solar-panel.svg" alt="Phone">
@@ -464,7 +627,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="nav-link fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+						<a class="nav-link fs-5 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
 							<div class="d-flex align-items-center gap-3">
 								<div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
 									<img src="img/category-icons/solar-panel.svg" alt="Phone">
@@ -474,7 +637,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="nav-link fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+						<a class="nav-link fs-5 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
 							<div class="d-flex align-items-center gap-3">
 								<div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
 									<img src="img/category-icons/solar-panel.svg" alt="Phone">
@@ -484,7 +647,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="nav-link fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+						<a class="nav-link fs-5 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
 							<div class="d-flex align-items-center gap-3">
 								<div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
 									<img src="img/category-icons/solar-panel.svg" alt="Phone">
@@ -494,7 +657,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="nav-link fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+						<a class="nav-link fs-5 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
 							<div class="d-flex align-items-center gap-3">
 								<div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
 									<img src="img/category-icons/solar-panel.svg" alt="Phone">
@@ -504,7 +667,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="nav-link fs-3 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
+						<a class="nav-link fs-5 d-flex justify-content-between align-items-center pb-2" data-bs-toggle="offcanvas" href="#notebookCanvas" role="button" aria-controls="notebookCanvas">
 							<div class="d-flex align-items-center gap-3">
 								<div class="d-flex align-items-center justify-content-center p-2 rounded-2 border border-primary-50">
 									<img src="img/category-icons/solar-panel.svg" alt="Phone">
@@ -616,17 +779,17 @@
 
 		</main>
 		<!-- Секция футера -->
-		<footer class="bg-primary pt-4 pb-0">
+		<footer class="footer bg-primary pt-4 pb-0">
 			<div class="container">
 				<div class="row">
-					<div class="col-12 col-md-3">
+					<div class="col-md-3 col-12 ">
 						<div class="footer__logo mb-4 mb-md-0">
 							<img src="img/logo-white.webp" alt="logo">
 						</div>
 					</div>
 
 					<!-- Колонки с меню -->
-					<div class="col-12 col-md-9">
+					<div class="col-md-9 col-12 ">
 						<div class="row">
 							<!-- Аккордион для мобильной версии -->
 							<div class="accordion accordion-type-one d-md-none" id="footerAccordion">
@@ -641,11 +804,11 @@
 									<div id="collapseInfo" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
 										<div class="accordion-body px-0 pt-0 pb-3">
 											<nav class="nav flex-column">
-												<a class="nav-link text-gray-3 animate-hover animate-to-white text-decoration-none ps-0 pb-2" href="#">Повернення товару</a>
-												<a class="nav-link text-gray-3 animate-hover animate-to-white text-decoration-none ps-0 pb-2" href="#">Про нас</a>
-												<a class="nav-link text-gray-3 animate-hover animate-to-white text-decoration-none ps-0 pb-2" href="#">Оплата та доставка</a>
-												<a class="nav-link text-gray-3 animate-hover animate-to-white text-decoration-none ps-0 pb-2" href="#">Умови використання сайту</a>
-												<a class="nav-link text-gray-3 animate-hover animate-to-white text-decoration-none ps-0 pb-2" href="#">Зв'язатися з нами</a>
+												<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Повернення товару</a>
+												<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Про нас</a>
+												<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Оплата та доставка</a>
+												<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Умови використання сайту</a>
+												<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Зв'язатися з нами</a>
 											</nav>
 										</div>
 									</div>
@@ -662,9 +825,9 @@
 									<div id="collapseAccount" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
 										<div class="accordion-body px-0 pt-0 pb-3">
 											<nav class="nav flex-column">
-												<a class="nav-link text-gray-3 animate-hover animate-to-white text-decoration-none ps-0 pb-2" href="#">Особистий кабінет</a>
-												<a class="nav-link text-gray-3 animate-hover animate-to-white text-decoration-none ps-0 pb-2" href="#">Історія замовлення</a>
-												<a class="nav-link text-gray-3 animate-hover animate-to-white text-decoration-none ps-0 pb-2" href="#">Закладки</a>
+												<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Особистий кабінет</a>
+												<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Історія замовлення</a>
+												<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Закладки</a>
 											</nav>
 										</div>
 									</div>
@@ -687,14 +850,14 @@
 												</li>
 												<li class="d-flex align-items-start mb-2">
 													<i class="_icon-phone me-2 text-white"></i>
-													<a href="tel:+380677070022" class="text-gray-3 animate-hover animate-to-white text-decoration-none">(067) 707-00-22</a>
+													<a href="tel:+380677070022" class="text-gray-3  animate-to-white text-decoration-none">(067) 707-00-22</a>
 												</li>
 												<li class="d-flex align-items-start mb-2">
 													<i class="_icon-phone me-2 text-white"></i>
-													<a href="tel:+380935150022" class="text-gray-3 animate-hover animate-to-white text-decoration-none">(093) 515-00-22</a>
+													<a href="tel:+380935150022" class="text-gray-3  animate-to-white text-decoration-none">(093) 515-00-22</a>
 												</li>
 												<li class="d-flex align-items-start mb-2">
-													<i class="_icon-location me-2 text-white"></i>
+													<i class="_icon-location me-2 text-white mt-1"></i>
 													<span>Точки видачі інтернет-замовлень:</span>
 												</li>
 												<li class="ps-4">
@@ -710,20 +873,20 @@
 							<div class="col-md-4 d-none d-md-block">
 								<h5 class="text-uppercase fw-semibold mb-3 text-white letter-spacing-1">ІНФОРМАЦІЯ</h5>
 								<nav class="nav flex-column">
-									<a class="nav-link text-gray-3 animate-hover animate-to-white text-decoration-none ps-0 pb-2" href="#">Повернення товару</a>
-									<a class="nav-link text-gray-3 animate-hover animate-to-white text-decoration-none ps-0 pb-2" href="#">Про нас</a>
-									<a class="nav-link text-gray-3 animate-hover animate-to-white text-decoration-none ps-0 pb-2" href="#">Оплата та доставка</a>
-									<a class="nav-link text-gray-3 animate-hover animate-to-white text-decoration-none ps-0 pb-2" href="#">Умови використання сайту</a>
-									<a class="nav-link text-gray-3 animate-hover animate-to-white text-decoration-none ps-0 pb-2" href="#">Зв'язатися з нами</a>
+									<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Повернення товару</a>
+									<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Про нас</a>
+									<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Оплата та доставка</a>
+									<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Умови використання сайту</a>
+									<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Зв'язатися з нами</a>
 								</nav>
 							</div>
 
 							<div class="col-md-4 d-none d-md-block">
 								<h5 class="text-uppercase fw-semibold mb-3 text-white">КАБІНЕТ ПОКУПЦЯ</h5>
 								<nav class="nav flex-column">
-									<a class="nav-link text-gray-3 animate-hover animate-to-white text-decoration-none ps-0 pb-2" href="#">Особистий кабінет</a>
-									<a class="nav-link text-gray-3 animate-hover animate-to-white text-decoration-none ps-0 pb-2" href="#">Історія замовлення</a>
-									<a class="nav-link text-gray-3 animate-hover animate-to-white text-decoration-none ps-0 pb-2" href="#">Закладки</a>
+									<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Особистий кабінет</a>
+									<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Історія замовлення</a>
+									<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Закладки</a>
 								</nav>
 							</div>
 
@@ -736,14 +899,14 @@
 									</li>
 									<li class="d-flex align-items-start mb-2">
 										<i class="_icon-phone me-2 text-white"></i>
-										<a href="tel:+380677070022" class="text-gray-3 animate-hover animate-to-white text-decoration-none">(067) 707-00-22</a>
+										<a href="tel:+380677070022" class="text-gray-3  animate-to-white text-decoration-none">(067) 707-00-22</a>
 									</li>
 									<li class="d-flex align-items-start mb-2">
 										<i class="_icon-phone me-2 text-white"></i>
-										<a href="tel:+380935150022" class="text-gray-3 animate-hover animate-to-white text-decoration-none">(093) 515-00-22</a>
+										<a href="tel:+380935150022" class="text-gray-3  animate-to-white text-decoration-none">(093) 515-00-22</a>
 									</li>
 									<li class="d-flex align-items-start mb-2">
-										<i class="_icon-location me-2 text-white"></i>
+										<i class="_icon-location me-2 text-white mt-1"></i>
 										<span>Точки видачі інтернет-замовлень:</span>
 									</li>
 									<li class="ps-4">
@@ -757,7 +920,7 @@
 			</div>
 
 			<!-- Нижняя часть футера -->
-			<div class="border-top border-sm-top-0 border-white border-opacity-25 py-3">
+			<div class="footer-bottom py-3">
 				<div class="container">
 					<div class="row">
 						<div class="col-12 text-center text-gray-3">
@@ -816,10 +979,130 @@
 			</div>
 		</div>
 
+		<div class="modal fade cart-modal" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<!-- Кнопка закрытия в правом верхнем углу -->
+					<button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Закрыть">
+						<img src="img/icons/close-offcanvas.svg" alt="Закрыть">
+					</button>
+
+					<!-- Заголовок модального окна -->
+					<div class="modal-header border-bottom-0">
+						<h2 class="modal-title text-primary fw-semibold" id="cartModalLabel">КОШИК</h2>
+					</div>
+
+					<!-- Тело модального окна с товарами -->
+					<div class="modal-body">
+						<div class="cart-items overflow-auto" style="max-height: 50vh;">
+							<div class="cart-item d-flex py-2">
+								<a href="#" class="cart-item-img me-3 rounded-3 border border-gray-3 align-self-start">
+									<img src="img/product-image/image.webp" width="65" height="65" class="rounded-3" alt="Кабель ZNTER LM14 MicroUSB">
+								</a>
+								<div class="cart-item-details flex-grow-1">
+									<div class="d-flex justify-content-between">
+										<a href="#" class="mb-0 fs-6 text-dark text-decoration-none hover-to-secondary">Кабель ZNTER LM14 MicroUSB Interface (1to4)</a>
+									</div>
+									<div class="d-flex gap-3 align-items-center mt-1">
+										<span class="fs-6 text-muted">1 x 245 грн</span>
+										<div class="count-input border mh-40 py-1 px-2 border-secondary rounded-4 d-flex align-items-center">
+											<button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement="" disabled="">
+												-
+											</button>
+											<input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none fs-6" value="1" min="1" max="5" readonly="">
+											<button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment="">
+												+
+											</button>
+										</div>
+										<button class="btn btn-outline-secondary mw-40 mh-40 text-secondary p-0 fs-4 rounded-4 fw-bold">
+											<i class="_icon-delete"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="cart-item d-flex py-2">
+								<a href="#" class="cart-item-img me-3 rounded-3 border border-gray-3 align-self-start">
+									<img src="img/product-image/image.webp" width="65" height="65" class="rounded-3" alt="Кабель ZNTER LM14 MicroUSB">
+								</a>
+								<div class="cart-item-details flex-grow-1">
+									<div class="d-flex justify-content-between">
+										<a href="#" class="mb-0 fs-6 text-dark text-decoration-none hover-to-secondary">Кабель ZNTER LM14 MicroUSB Interface (1to4)</a>
+									</div>
+									<div class="d-flex gap-3 align-items-center mt-1">
+										<span class="fs-6 text-muted">1 x 245 грн</span>
+										<div class="count-input border mh-40 py-1 px-2 border-secondary rounded-4 d-flex align-items-center">
+											<button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement="" disabled="">
+												-
+											</button>
+											<input type="number" class="form-control text-center shadow-none border-0 fw-bold p-0 h-auto focus-visible-none focus-none fs-6" value="1" min="1" max="5" readonly="">
+											<button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-increment="">
+												+
+											</button>
+										</div>
+										<button class="btn btn-outline-secondary mw-40 mh-40 text-secondary p-0 fs-4 rounded-4 fw-bold">
+											<i class="_icon-delete"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="cart-totals mt-3 rounded-4 border border-gray-3 border-opacity-50 text-dark">
+							<div class="d-flex justify-content-between p-2">
+								<span class="text-muted fs-5">Сумма:</span>
+								<span class="fw-medium fs-5">490 грн</span>
+							</div>
+							<div class="d-flex justify-content-between mt-2 bg-gray-4 p-2">
+								<span class="text-muted fs-5">Всего:</span>
+								<span class="fw-mediym fs-5">490 грн</span>
+							</div>
+						</div>
+
+						<div class="cart-actions mt-3">
+							<a href="#" class="btn btn-secondary btn-md w-100 text-uppercase py-2">
+								<span class="fs-5 py-1 fw-semibold">оформлення замовлення</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade availability-modal" id="availabilityModal" tabindex="-1" aria-labelledby="availabilityModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<!-- Кнопка закрытия в правом верхнем углу -->
+					<button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Закрыть">
+						<img src="img/icons/close-offcanvas.svg" alt="Закрыть">
+					</button>
+
+					<!-- Заголовок модального окна -->
+					<div class="modal-header border-bottom-0">
+						<h2 class="modal-title text-primary fw-semibold" id="availabilityModalLabel">ПОВІДОМИТИ ПРО НАЯВНІСТЬ</h2>
+					</div>
+
+					<!-- Тело модального окна с формой -->
+					<div class="modal-body">
+						<p class="mb-3">Запишіть адресу своєї електронної пошти і ми повідомимо, коли товар буде в наявності</p>
+						<form id="availabilityForm">
+							<!-- Поле Ваш e-mail -->
+							<div class="form-group mb-4">
+								<label class="form-label" for="availabilityEmail">Ваш e-mail<span>*</span></label>
+								<input type="email" class="form-control mh-50 input-border" id="availabilityEmail" placeholder="Ваш e-mail" required>
+							</div>
+
+							<!-- Кнопка отправки формы -->
+							<button type="submit" class="btn btn-secondary w-100 text-white py-2 fw-semibold">НАДІСЛАТИ ЗАПИТ</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
 
 
 	</div>
-	<script src="js/app.min.js?_v=20250414154540"></script>
+	<script src="js/app.min.js?_v=20250415143900"></script>
 </body>
 
 </html>
