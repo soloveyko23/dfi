@@ -14,10 +14,11 @@
 			opacity: 1;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20250415150020">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250417101915">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 </head>
 
 <body>
@@ -180,7 +181,7 @@
 												<a class="btn btn-outline btn-lg justify-content-start gap-2 text-gray fs-5" href="#"><i class="_icon-cart p-2 mw-30 mh-30"></i> ОБРАНІ ТОВАРИ</a>
 
 												<a class=" btn btn-orange btn-lg fs-4 text-center fw-bold" href="#">РЕЄСТРАЦІЯ</a>
-												<a class=" btn btn-secondary btn-lg fs-4 text-center fw-bold" href="#">ВВІЙТИ</a>
+												<a class=" btn btn-secondary btn-lg fs-4 text-center fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#authModal">ВВІЙТИ</a>
 											</div>
 										</div>
 									</div>
@@ -381,10 +382,10 @@
 			<div class="offcanvas-body">
 				<div class="user-actions-mobile mb-4 shadow-md p-2 rounded-4">
 					<div class="d-flex gap-2 mt-2 p-1">
-						<a class="btn btn-secondary btn-lg fs-6 w-50 text-center d-flex align-items-center text-center" href="#">
+						<a class="btn btn-secondary btn-lg fs-6 w-50 text-center d-flex align-items-center text-center text-primary" href="#" data-bs-toggle="modal" data-bs-target="#authModal" data-bs-dismiss="offcanvas">
 							УВІЙТИ
 						</a>
-						<a class="btn btn-outline-secondary btn-lg fs-6 w-50 text-center d-flex align-items-center text-center" href="#">
+						<a class="btn btn-outline-secondary btn-lg fs-6 w-50 text-center d-flex align-items-center text-center text-primary" href="#">
 							РЕЄСТРАЦІЯ
 						</a>
 					</div>
@@ -684,6 +685,8 @@
 		</div>
 
 
+
+
 		<main class="page">
 			<section class="breadcrumb-section py-3">
 				<div class="container">
@@ -725,63 +728,100 @@
 									</button>
 								</div>
 								<div class="offcanvas-body">
-									<div class="accordion accordion-type-two d-flex flex-column gap-3">
+									<div class="accordion accordion-type-two d-flex flex-column gap-3 w-100">
 										<div class="accordion-item shadow-md border-0 bg-white rounded-3">
 											<h2 class="accordion-header">
-												<button class="accordion-button text-primary d-flex align-items-center justify-content-between w-100 fs-4 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+												<button class="accordion-button text-primary d-flex align-items-center justify-content-between w-100 fs-5 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 													<span>ЦІНА</span>
 													<i class="_icon-arrow-bottom text-secondary fs-6"></i>
 												</button>
 
 											</h2>
 											<div id="collapseOne" class="accordion-collapse collapse show">
-												<div class="accordion-body">
+												<div class="accordion-body pt-0">
+													<div class="price-filter d-flex flex-column gap-1">
 
+														<div class="price-inputs d-flex justify-content-between align-items-end gap-2">
+															<div class="input-group flex-column gap-1">
+																<label for="price-from" class="text-primary fs-6">Від</label>
+																<input type="text" class="form-control w-100 py-1 px-2 mh-40" placeholder="0" id="price-from" data-min="0">
+															</div>
+															<div class="input-group flex-column gap-1">
+																<label for="price-to" class="text-primary fs-6">До</label>
+																<input type="text" class="form-control w-100 py-1 px-2 mh-40" placeholder="10000" id="price-to" data-max="10000">
+															</div>
+															<button class="btn btn-secondary mh-40 px-2 fw-semibold fs-5">
+																<span>OK</span>
+															</button>
+														</div>
+														<div class="price-slider-wrapper">
+															<!-- Здесь будет сам слайдер (например, noUiSlider) -->
+															<div id="price-slider" class="price-slider mb-3"></div>
+														</div>
+													</div>
 												</div>
 											</div>
 										</div>
 
 										<div class="accordion-item shadow-md border-0 bg-white rounded-3">
 											<h2 class="accordion-header">
-												<button class="accordion-button text-primary d-flex align-items-center justify-content-between w-100 fs-4 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+												<button class="accordion-button text-primary d-flex align-items-center justify-content-between w-100 fs-5 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
 													<span>ТИП</span>
 													<i class="_icon-arrow-bottom text-secondary fs-6"></i>
 												</button>
 											</h2>
 											<div id="collapseTwo" class="accordion-collapse collapse">
-												<div class="accordion-body">
+												<div class="accordion-body pt-0">
+													<div class="search-wrapper position-relative mb-3">
+														<input class="form-control ps-2 mh-40 pe-5 fs-6 text-primary rounded-2 bg-gray-6 border-0" type="search" placeholder="Пошук" aria-label="Пошук">
+														<button class="btn-search btn position-absolute rounded-3  w-5 px-2" type="submit">
+															<i class="_icon-search text-secondary fs-4"></i>
+														</button>
+													</div>
 													<div class="filter-options">
 														<!-- Базові варіанти -->
 														<div class="form-check mb-2 d-flex align-items-center gap-2">
-															<input class="form-check-input" type="checkbox" value="smartphone" id="typeSmartphone">
-															<label class="form-check-label" for="typeSmartphone">Samsung</label>
+															<input class="form-check-input" type="checkbox" value="samsung" id="typeSamsung" checked>
+															<label class="form-check-label fs-5" for="typeSamsung">Samsung</label>
 														</div>
 														<div class="form-check mb-2 d-flex align-items-center gap-2">
-															<input class="form-check-input" type="checkbox" value="tablet" id="typeTablet">
-															<label class="form-check-label" for="typeTablet">LG</label>
+															<input class="form-check-input" type="checkbox" value="lg" id="typeLG">
+															<label class="form-check-label fs-5" for="typeLG">LG</label>
 														</div>
 														<div class="form-check mb-2 d-flex align-items-center gap-2">
-															<input class="form-check-input" type="checkbox" value="tablet" id="typeTablet">
-															<label class="form-check-label" for="typeTablet">Digital</label>
+															<input class="form-check-input" type="checkbox" value="apple" id="typeApple" checked>
+															<label class="form-check-label fs-5" for="typeApple">Apple</label>
 														</div>
 														<div class="form-check mb-2 d-flex align-items-center gap-2">
-															<input class="form-check-input" type="checkbox" value="tablet" id="typeTablet">
-															<label class="form-check-label" for="typeTablet">AEG</label>
+															<input class="form-check-input" type="checkbox" value="xiaomi" id="typeXiaomi" checked>
+															<label class="form-check-label fs-5" for="typeXiaomi">Xiaomi</label>
 														</div>
 														<div class="form-check mb-2 d-flex align-items-center gap-2">
-															<input class="form-check-input" type="checkbox" value="tablet" id="typeTablet">
-															<label class="form-check-label" for="typeTablet">Beko</label>
+															<input class="form-check-input" type="checkbox" value="huawei" id="typeHuawei">
+															<label class="form-check-label fs-5" for="typeHuawei">Huawei</label>
 														</div>
 
 														<!-- Сховані елементи -->
 														<div class="collapse" id="moreTypes">
 															<div class="form-check mb-2 d-flex align-items-center gap-2">
-																<input class="form-check-input" type="checkbox" value="watch" id="typeWatch">
-																<label class="form-check-label" for="typeWatch">Смарт-годинник</label>
+																<input class="form-check-input" type="checkbox" value="sony" id="typeSony">
+																<label class="form-check-label fs-5" for="typeSony">Sony</label>
 															</div>
 															<div class="form-check mb-2 d-flex align-items-center gap-2">
-																<input class="form-check-input" type="checkbox" value="ebook" id="typeEbook">
-																<label class="form-check-label" for="typeEbook">Електронна книга</label>
+																<input class="form-check-input" type="checkbox" value="google" id="typeGoogle">
+																<label class="form-check-label fs-5" for="typeGoogle">Google</label>
+															</div>
+															<div class="form-check mb-2 d-flex align-items-center gap-2">
+																<input class="form-check-input" type="checkbox" value="honor" id="typeHonor">
+																<label class="form-check-label fs-5" for="typeHonor">Honor</label>
+															</div>
+															<div class="form-check mb-2 d-flex align-items-center gap-2">
+																<input class="form-check-input" type="checkbox" value="nokia" id="typeNokia">
+																<label class="form-check-label fs-5" for="typeNokia">Nokia</label>
+															</div>
+															<div class="form-check mb-2 d-flex align-items-center gap-2">
+																<input class="form-check-input" type="checkbox" value="motorola" id="typeMotorola">
+																<label class="form-check-label fs-5" for="typeMotorola">Motorola</label>
 															</div>
 														</div>
 
@@ -798,41 +838,41 @@
 
 										<div class="accordion-item shadow-md border-0 bg-white rounded-3">
 											<h2 class="accordion-header">
-												<button class="accordion-button text-primary d-flex align-items-center justify-content-between w-100 fs-4 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+												<button class="accordion-button text-primary d-flex align-items-center justify-content-between w-100 fs-5 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
 													<span>ДІАГОНАЛЬ ДИСПЛЕЯ</span>
 													<i class="_icon-arrow-bottom text-secondary fs-6"></i>
 												</button>
 											</h2>
 											<div id="collapseThree" class="accordion-collapse collapse">
-												<div class="accordion-body">
+												<div class="accordion-body pt-0">
 													<div class="filter-options">
-														<div class="form-check">
-															<input class="form-check-input" type="checkbox" value="5-5.5" id="display5to55">
-															<label class="form-check-label" for="display5to55">
+														<div class="form-check mb-2 d-flex align-items-center gap-2">
+															<input class="form-check-input" type="checkbox" value="5-5.5" id="display5to55" checked>
+															<label class="form-check-label fs-5" for="display5to55">
 																5" - 5.5"
 															</label>
 														</div>
-														<div class="form-check">
-															<input class="form-check-input" type="checkbox" value="5.6-6" id="display56to6">
-															<label class="form-check-label" for="display56to6">
+														<div class="form-check mb-2 d-flex align-items-center gap-2">
+															<input class="form-check-input" type="checkbox" value="5.6-6" id="display56to6" checked>
+															<label class="form-check-label fs-5" for="display56to6">
 																5.6" - 6"
 															</label>
 														</div>
-														<div class="form-check">
+														<div class="form-check mb-2 d-flex align-items-center gap-2">
 															<input class="form-check-input" type="checkbox" value="6.1-6.5" id="display61to65">
-															<label class="form-check-label" for="display61to65">
+															<label class="form-check-label fs-5" for="display61to65">
 																6.1" - 6.5"
 															</label>
 														</div>
-														<div class="form-check">
+														<div class="form-check mb-2 d-flex align-items-center gap-2">
 															<input class="form-check-input" type="checkbox" value="6.6-7" id="display66to7">
-															<label class="form-check-label" for="display66to7">
+															<label class="form-check-label fs-5" for="display66to7">
 																6.6" - 7"
 															</label>
 														</div>
-														<div class="form-check">
+														<div class="form-check mb-2 d-flex align-items-center gap-2">
 															<input class="form-check-input" type="checkbox" value="7plus" id="display7plus">
-															<label class="form-check-label" for="display7plus">
+															<label class="form-check-label fs-5" for="display7plus">
 																Більше 7"
 															</label>
 														</div>
@@ -843,35 +883,35 @@
 
 										<div class="accordion-item shadow-md border-0 bg-white rounded-2">
 											<h2 class="accordion-header">
-												<button class="accordion-button text-primary d-flex align-items-center justify-content-between w-100 fs-4 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+												<button class="accordion-button text-primary d-flex align-items-center justify-content-between w-100 fs-5 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
 													<span>РОЗДІЛЬНА ЗДАТНІСТЬ</span>
 													<i class="_icon-arrow-bottom text-secondary fs-6"></i>
 												</button>
 											</h2>
 											<div id="collapseFour" class="accordion-collapse collapse">
-												<div class="accordion-body">
+												<div class="accordion-body pt-0">
 													<div class="filter-options">
-														<div class="form-check">
+														<div class="form-check mb-2 d-flex align-items-center gap-2">
 															<input class="form-check-input" type="checkbox" value="hd" id="resolutionHD">
-															<label class="form-check-label" for="resolutionHD">
+															<label class="form-check-label fs-5" for="resolutionHD">
 																HD (1280x720)
 															</label>
 														</div>
-														<div class="form-check">
-															<input class="form-check-input" type="checkbox" value="fullhd" id="resolutionFullHD">
-															<label class="form-check-label" for="resolutionFullHD">
+														<div class="form-check mb-2 d-flex align-items-center gap-2">
+															<input class="form-check-input" type="checkbox" value="fullhd" id="resolutionFullHD" checked>
+															<label class="form-check-label fs-5" for="resolutionFullHD">
 																Full HD (1920x1080)
 															</label>
 														</div>
-														<div class="form-check">
-															<input class="form-check-input" type="checkbox" value="2k" id="resolution2K">
-															<label class="form-check-label" for="resolution2K">
+														<div class="form-check mb-2 d-flex align-items-center gap-2">
+															<input class="form-check-input" type="checkbox" value="2k" id="resolution2K" checked>
+															<label class="form-check-label fs-5" for="resolution2K">
 																2K (2560x1440)
 															</label>
 														</div>
-														<div class="form-check">
+														<div class="form-check mb-2 d-flex align-items-center gap-2">
 															<input class="form-check-input" type="checkbox" value="4k" id="resolution4K">
-															<label class="form-check-label" for="resolution4K">
+															<label class="form-check-label fs-5" for="resolution4K">
 																4K (3840x2160)
 															</label>
 														</div>
@@ -882,29 +922,29 @@
 
 										<div class="accordion-item shadow-md border-0 bg-white rounded-3">
 											<h2 class="accordion-header">
-												<button class="accordion-button text-primary d-flex align-items-center justify-content-between w-100 fs-4 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+												<button class="accordion-button text-primary d-flex align-items-center justify-content-between w-100 fs-5 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
 													<span>ПОВЕРХНЯ ЕКРАНУ</span>
 													<i class="_icon-arrow-bottom text-secondary fs-6"></i>
 												</button>
 											</h2>
 											<div id="collapseFive" class="accordion-collapse collapse">
-												<div class="accordion-body">
+												<div class="accordion-body pt-0">
 													<div class="filter-options">
-														<div class="form-check">
+														<div class="form-check mb-2 d-flex align-items-center gap-2">
 															<input class="form-check-input" type="checkbox" value="glossy" id="surfaceGlossy">
-															<label class="form-check-label" for="surfaceGlossy">
+															<label class="form-check-label fs-5" for="surfaceGlossy">
 																Глянцева
 															</label>
 														</div>
-														<div class="form-check">
+														<div class="form-check mb-2 d-flex align-items-center gap-2">
 															<input class="form-check-input" type="checkbox" value="matte" id="surfaceMatte">
-															<label class="form-check-label" for="surfaceMatte">
+															<label class="form-check-label fs-5" for="surfaceMatte">
 																Матова
 															</label>
 														</div>
-														<div class="form-check">
-															<input class="form-check-input" type="checkbox" value="oleophobic" id="surfaceOleophobic">
-															<label class="form-check-label" for="surfaceOleophobic">
+														<div class="form-check mb-2 d-flex align-items-center gap-2">
+															<input class="form-check-input" type="checkbox" value="oleophobic" id="surfaceOleophobic" checked>
+															<label class="form-check-label fs-5" for="surfaceOleophobic">
 																Олеофобне покриття
 															</label>
 														</div>
@@ -915,41 +955,41 @@
 
 										<div class="accordion-item shadow-md border-0 bg-white rounded-3">
 											<h2 class="accordion-header">
-												<button class="accordion-button text-primary d-flex align-items-center justify-content-between w-100 fs-4 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+												<button class="accordion-button text-primary d-flex align-items-center justify-content-between w-100 fs-5 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
 													<span>ТИП МАТРИЦІ</span>
 													<i class="_icon-arrow-bottom text-secondary fs-6"></i>
 												</button>
 											</h2>
 											<div id="collapseSix" class="accordion-collapse collapse">
-												<div class="accordion-body">
+												<div class="accordion-body pt-0">
 													<div class="filter-options">
-														<div class="form-check">
-															<input class="form-check-input" type="checkbox" value="ips" id="matrixIPS">
-															<label class="form-check-label" for="matrixIPS">
+														<div class="form-check mb-2 d-flex align-items-center gap-2">
+															<input class="form-check-input" type="checkbox" value="ips" id="matrixIPS" checked>
+															<label class="form-check-label fs-5" for="matrixIPS">
 																IPS
 															</label>
 														</div>
-														<div class="form-check">
-															<input class="form-check-input" type="checkbox" value="amoled" id="matrixAmoled">
-															<label class="form-check-label" for="matrixAmoled">
+														<div class="form-check mb-2 d-flex align-items-center gap-2">
+															<input class="form-check-input" type="checkbox" value="amoled" id="matrixAmoled" checked>
+															<label class="form-check-label fs-5" for="matrixAmoled">
 																AMOLED
 															</label>
 														</div>
-														<div class="form-check">
+														<div class="form-check mb-2 d-flex align-items-center gap-2">
 															<input class="form-check-input" type="checkbox" value="oled" id="matrixOLED">
-															<label class="form-check-label" for="matrixOLED">
+															<label class="form-check-label fs-5" for="matrixOLED">
 																OLED
 															</label>
 														</div>
-														<div class="form-check">
+														<div class="form-check mb-2 d-flex align-items-center gap-2">
 															<input class="form-check-input" type="checkbox" value="tn" id="matrixTN">
-															<label class="form-check-label" for="matrixTN">
+															<label class="form-check-label fs-5" for="matrixTN">
 																TN
 															</label>
 														</div>
-														<div class="form-check">
+														<div class="form-check mb-2 d-flex align-items-center gap-2">
 															<input class="form-check-input" type="checkbox" value="superamoled" id="matrixSuperAmoled">
-															<label class="form-check-label" for="matrixSuperAmoled">
+															<label class="form-check-label fs-5" for="matrixSuperAmoled">
 																Super AMOLED
 															</label>
 														</div>
@@ -961,8 +1001,8 @@
 								</div>
 								<div class="offcanvas-footer d-lg-none bg-primary d-flex w-100 p-3">
 									<div class="d-flex align-items-center justify-content-between w-100 gap-2">
-										<button type="button" class="btn btn-primary">Застосувати фільтр</button>
-										<button type="button" class="btn btn-secondary px-3" data-bs-dismiss="offcanvas">Готово</button>
+										<button type="button" class="btn text-white text-uppercase p-0">Скинути</button>
+										<button type="button" class="btn btn-secondary px-4" data-bs-dismiss="offcanvas">Готово</button>
 									</div>
 								</div>
 							</div>
@@ -1051,14 +1091,14 @@
 													</h5>
 
 													<!-- Блок цены и кнопки добавления в корзину -->
-													<div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-sm-3 gap-1">
+													<div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-sm-3 gap-1 flex-wrap">
 														<!-- Цена товара -->
 														<div class="product-card__price fw-bold fs-5 text-primary lh-1">
 															18 745 грн
 														</div>
 
 														<!-- Блок с количеством и кнопкой корзины -->
-														<div class="product-card__add-to-cart d-flex align-items-center gap-2 flex-wrap">
+														<div class="product-card__add-to-cart d-flex align-items-center gap-2 flex-grow-1 flex-shrink-1 justify-content-sm-between justify-content-end">
 															<!-- Компонент управления количеством -->
 															<div class="count-input border py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
 																<button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement="" disabled="">
@@ -1070,7 +1110,7 @@
 																</button>
 															</div>
 															<button type="button" class="btn btn-sm btn-favorite position-absolute top-0 end-0 m-2 z-1 rounded-4 p-1">
-																<i class="_icon-add-favorite text-secondary fs-6"></i>
+																<img src="img/icons/favorite.svg" alt="favorite" width="20px">
 															</button>
 															<button type="button" class="btn btn-secondary btn-sm btn-add-to-cart rounded-4">
 																<i class="_icon-cart fs-4 d-flex align-items-center justify-content-center text-white"></i>
@@ -1145,14 +1185,14 @@
 													</h5>
 
 													<!-- Блок цены и кнопки добавления в корзину -->
-													<div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-sm-3 gap-1">
+													<div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-sm-3 gap-1 flex-wrap">
 														<!-- Цена товара -->
 														<div class="product-card__price fw-bold fs-5 text-primary lh-1">
 															18 745 грн
 														</div>
 
 														<!-- Блок с количеством и кнопкой корзины -->
-														<div class="product-card__add-to-cart d-flex align-items-center gap-2 flex-wrap">
+														<div class="product-card__add-to-cart d-flex align-items-center gap-2 flex-grow-1 flex-shrink-1 justify-content-sm-between justify-content-end">
 															<!-- Компонент управления количеством -->
 															<div class="count-input border py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
 																<button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement="" disabled="">
@@ -1164,7 +1204,7 @@
 																</button>
 															</div>
 															<button type="button" class="btn btn-sm btn-favorite position-absolute top-0 end-0 m-2 z-1 rounded-4 p-1">
-																<i class="_icon-add-favorite text-secondary fs-6"></i>
+																<img src="img/icons/favorite.svg" alt="favorite" width="20px">
 															</button>
 															<button type="button" class="btn btn-secondary btn-sm btn-add-to-cart rounded-4">
 																<i class="_icon-cart fs-4 d-flex align-items-center justify-content-center text-white"></i>
@@ -1238,14 +1278,14 @@
 													</h5>
 
 													<!-- Блок цены и кнопки добавления в корзину -->
-													<div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-sm-3 gap-1">
+													<div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-sm-3 gap-1 flex-wrap">
 														<!-- Цена товара -->
 														<div class="product-card__price fw-bold fs-5 text-primary lh-1">
 															18 745 грн
 														</div>
 
 														<!-- Блок с количеством и кнопкой корзины -->
-														<div class="product-card__add-to-cart d-flex align-items-center gap-2 flex-wrap">
+														<div class="product-card__add-to-cart d-flex align-items-center gap-2 flex-grow-1 flex-shrink-1 justify-content-sm-between justify-content-end">
 															<!-- Компонент управления количеством -->
 															<div class="count-input border py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
 																<button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement="" disabled="">
@@ -1257,7 +1297,7 @@
 																</button>
 															</div>
 															<button type="button" class="btn btn-sm btn-favorite position-absolute top-0 end-0 m-2 z-1 rounded-4 p-1">
-																<i class="_icon-add-favorite text-secondary fs-6"></i>
+																<img src="img/icons/favorite.svg" alt="favorite" width="20px">
 															</button>
 															<button type="button" class="btn btn-secondary btn-sm btn-add-to-cart rounded-4">
 																<i class="_icon-cart fs-4 d-flex align-items-center justify-content-center text-white"></i>
@@ -1331,14 +1371,14 @@
 													</h5>
 
 													<!-- Блок цены и кнопки добавления в корзину -->
-													<div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-sm-3 gap-1">
+													<div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-sm-3 gap-1 flex-wrap">
 														<!-- Цена товара -->
 														<div class="product-card__price fw-bold fs-5 text-primary lh-1">
 															18 745 грн
 														</div>
 
 														<!-- Блок с количеством и кнопкой корзины -->
-														<div class="product-card__add-to-cart d-flex align-items-center gap-2 flex-wrap">
+														<div class="product-card__add-to-cart d-flex align-items-center gap-2 flex-grow-1 flex-shrink-1 justify-content-sm-between justify-content-end">
 															<!-- Компонент управления количеством -->
 															<div class="count-input border py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
 																<button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement="" disabled="">
@@ -1350,7 +1390,7 @@
 																</button>
 															</div>
 															<button type="button" class="btn btn-sm btn-favorite position-absolute top-0 end-0 m-2 z-1 rounded-4 p-1">
-																<i class="_icon-add-favorite text-secondary fs-6"></i>
+																<img src="img/icons/favorite.svg" alt="favorite" width="20px">
 															</button>
 															<button type="button" class="btn btn-secondary btn-sm btn-add-to-cart rounded-4">
 																<i class="_icon-cart fs-4 d-flex align-items-center justify-content-center text-white"></i>
@@ -1424,14 +1464,14 @@
 													</h5>
 
 													<!-- Блок цены и кнопки добавления в корзину -->
-													<div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-sm-3 gap-1">
+													<div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-sm-3 gap-1 flex-wrap">
 														<!-- Цена товара -->
 														<div class="product-card__price fw-bold fs-5 text-primary lh-1">
 															18 745 грн
 														</div>
 
 														<!-- Блок с количеством и кнопкой корзины -->
-														<div class="product-card__add-to-cart d-flex align-items-center gap-2 flex-wrap">
+														<div class="product-card__add-to-cart d-flex align-items-center gap-2 flex-grow-1 flex-shrink-1 justify-content-sm-between justify-content-end">
 															<!-- Компонент управления количеством -->
 															<div class="count-input border py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
 																<button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement="" disabled="">
@@ -1443,7 +1483,7 @@
 																</button>
 															</div>
 															<button type="button" class="btn btn-sm btn-favorite position-absolute top-0 end-0 m-2 z-1 rounded-4 p-1">
-																<i class="_icon-add-favorite text-secondary fs-6"></i>
+																<img src="img/icons/favorite.svg" alt="favorite" width="20px">
 															</button>
 															<button type="button" class="btn btn-secondary btn-sm btn-add-to-cart rounded-4">
 																<i class="_icon-cart fs-4 d-flex align-items-center justify-content-center text-white"></i>
@@ -1517,14 +1557,14 @@
 													</h5>
 
 													<!-- Блок цены и кнопки добавления в корзину -->
-													<div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-sm-3 gap-1">
+													<div class="product-card__action mt-auto d-flex justify-content-between align-items-center gap-sm-3 gap-1 flex-wrap">
 														<!-- Цена товара -->
 														<div class="product-card__price fw-bold fs-5 text-primary lh-1">
 															18 745 грн
 														</div>
 
 														<!-- Блок с количеством и кнопкой корзины -->
-														<div class="product-card__add-to-cart d-flex align-items-center gap-2 flex-wrap">
+														<div class="product-card__add-to-cart d-flex align-items-center gap-2 flex-grow-1 flex-shrink-1 justify-content-sm-between justify-content-end">
 															<!-- Компонент управления количеством -->
 															<div class="count-input border py-1 px-2 border-secondary rounded-4 d-none align-items-center d-md-flex">
 																<button type="button" class="btn btn-icon text-secondary p-0 fs-4 fw-bold" data-decrement="" disabled="">
@@ -1536,7 +1576,7 @@
 																</button>
 															</div>
 															<button type="button" class="btn btn-sm btn-favorite position-absolute top-0 end-0 m-2 z-1 rounded-4 p-1">
-																<i class="_icon-add-favorite text-secondary fs-6"></i>
+																<img src="img/icons/favorite.svg" alt="favorite" width="20px">
 															</button>
 															<button type="button" class="btn btn-secondary btn-sm btn-add-to-cart rounded-4">
 																<i class="_icon-cart fs-4 d-flex align-items-center justify-content-center text-white"></i>
@@ -1676,11 +1716,11 @@
 									<div id="collapseInfo" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
 										<div class="accordion-body px-0 pt-0 pb-3">
 											<nav class="nav flex-column">
-												<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Повернення товару</a>
-												<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Про нас</a>
-												<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Оплата та доставка</a>
-												<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Умови використання сайту</a>
-												<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Зв'язатися з нами</a>
+												<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Повернення товару</a>
+												<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Про нас</a>
+												<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Оплата та доставка</a>
+												<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Умови використання сайту</a>
+												<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Зв'язатися з нами</a>
 											</nav>
 										</div>
 									</div>
@@ -1697,9 +1737,9 @@
 									<div id="collapseAccount" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
 										<div class="accordion-body px-0 pt-0 pb-3">
 											<nav class="nav flex-column">
-												<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Особистий кабінет</a>
-												<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Історія замовлення</a>
-												<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Закладки</a>
+												<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Особистий кабінет</a>
+												<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Історія замовлення</a>
+												<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Закладки</a>
 											</nav>
 										</div>
 									</div>
@@ -1745,20 +1785,20 @@
 							<div class="col-md-4 d-none d-md-block">
 								<h5 class="text-uppercase fw-semibold mb-3 text-white letter-spacing-1">ІНФОРМАЦІЯ</h5>
 								<nav class="nav flex-column">
-									<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Повернення товару</a>
-									<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Про нас</a>
-									<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Оплата та доставка</a>
-									<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Умови використання сайту</a>
-									<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Зв'язатися з нами</a>
+									<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Повернення товару</a>
+									<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Про нас</a>
+									<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Оплата та доставка</a>
+									<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Умови використання сайту</a>
+									<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Зв'язатися з нами</a>
 								</nav>
 							</div>
 
 							<div class="col-md-4 d-none d-md-block">
 								<h5 class="text-uppercase fw-semibold mb-3 text-white">КАБІНЕТ ПОКУПЦЯ</h5>
 								<nav class="nav flex-column">
-									<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Особистий кабінет</a>
-									<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Історія замовлення</a>
-									<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Закладки</a>
+									<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Особистий кабінет</a>
+									<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Історія замовлення</a>
+									<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Закладки</a>
 								</nav>
 							</div>
 
@@ -1844,7 +1884,7 @@
 							</div>
 
 							<!-- Кнопка отправки формы -->
-							<button type="submit" class="btn btn-secondary btn-lg w-100 fw-semibold fs-5">НАДІСЛАТИ ДАНІ</button>
+							<button type="submit" class="btn btn-secondary btn-lg w-100 fw-semibold fs-5 text-uppercase">НАДІСЛАТИ ДАНІ</button>
 						</form>
 					</div>
 				</div>
@@ -1964,7 +2004,231 @@
 							</div>
 
 							<!-- Кнопка отправки формы -->
-							<button type="submit" class="btn btn-secondary w-100 text-white py-2 fw-semibold">НАДІСЛАТИ ЗАПИТ</button>
+							<button type="submit" class="btn btn-secondary btn-lg w-100 text-white py-2 fw-semibold">НАДІСЛАТИ ЗАПИТ</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade found-cheaper-modal" id="foundCheaperModal" tabindex="-1" aria-labelledby="foundCheaperModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<!-- Кнопка закрытия в правом верхнем углу -->
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть">
+						<img src="img/icons/close-offcanvas.svg" alt="Закрыть">
+					</button>
+
+					<!-- Заголовок и описание модального окна -->
+					<div class="modal-header border-bottom-0">
+						<div>
+							<h2 class="modal-title text-primary fw-semibold" id="foundCheaperModalLabel">ЗНАЙШЛИ ДЕШЕВШЕ?</h2>
+							<p class="mb-2 text-primary fs-sm-4 fs-6">Знайшли в іншому магазині товар дешевше?<br>
+								Заишите заявку з посиланням на цей товар<br>
+								і ми запропонуємо вам аналогічну ціну.</p>
+						</div>
+					</div>
+
+					<!-- Тело модального окна с формой -->
+					<div class="modal-body">
+						<form id="foundCheaperForm">
+							<!-- Поле Ваше ім'я -->
+							<div class="form-group mb-3">
+								<label class="form-label" for="foundCheaperName">Ваше ім'я<span>*</span></label>
+								<input type="text" class="form-control mh-50 input-border" id="foundCheaperName" placeholder="" required>
+							</div>
+
+							<!-- Поле Ваш телефон -->
+							<div class="form-group mb-3">
+								<label class="form-label" for="foundCheaperPhone">Ваш телефон<span>*</span></label>
+								<input type="tel" class="form-control mh-50 input-phone input-border" id="foundCheaperPhone" placeholder="" required>
+							</div>
+
+							<!-- Поле Ваш e-mail -->
+							<div class="form-group mb-3">
+								<label class="form-label" for="foundCheaperEmail">Ваш e-mail</label>
+								<input type="email" class="form-control mh-50 input-email input-border" id="foundCheaperEmail" placeholder="">
+							</div>
+
+							<!-- Поле для ссылки -->
+							<div class="form-group mb-3">
+								<label class="form-label" for="foundCheaperLink">Посилання<span>*</span></label>
+								<input type="url" class="form-control mh-50 input-border" id="foundCheaperLink" placeholder="" required>
+							</div>
+
+							<!-- Поле для комментария -->
+							<div class="form-group mb-4">
+								<label class="form-label" for="foundCheaperComment">Залишити коментар</label>
+								<textarea class="form-control mh-50 input-border" id="foundCheaperComment" placeholder=""></textarea>
+							</div>
+
+							<!-- Кнопка отправки формы -->
+							<button type="submit" class="btn btn-secondary btn-lg w-100 fw-semibold fs-5 text-uppercase">НАДІСЛАТИ</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade contact-us-modal" id="contactUsModal" tabindex="-1" aria-labelledby="contactUsModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<!-- Кнопка закрытия в правом верхнем углу -->
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть">
+						<img src="img/icons/close-offcanvas.svg" alt="Закрыть">
+					</button>
+
+					<!-- Заголовок модального окна -->
+					<div class="modal-header border-bottom-0">
+						<h2 class="modal-title text-primary fw-semibold" id="contactUsModalLabel">ЗВ'ЯЗАТИСЯ З НАМИ</h2>
+					</div>
+
+					<!-- Тело модального окна с формой -->
+					<div class="modal-body">
+						<form id="contactUsForm">
+							<!-- Поле Ваш номер телефону -->
+							<div class="form-group mb-3">
+								<label class="form-label" for="contactUsPhone">Ваш номер телефону<span>*</span></label>
+								<input type="tel" class="form-control mh-50 input-phone input-border" id="contactUsPhone" placeholder="" required>
+							</div>
+
+							<!-- Поле Ваше ім'я -->
+							<div class="form-group mb-3">
+								<label class="form-label" for="contactUsName">Ваше ім'я<span>*</span></label>
+								<input type="text" class="form-control mh-50 input-border" id="contactUsName" placeholder="" required>
+							</div>
+
+							<!-- Поле Ваш e-mail -->
+							<div class="form-group mb-3">
+								<label class="form-label" for="contactUsEmail">Ваш e-mail</label>
+								<input type="email" class="form-control mh-50 input-email input-border" id="contactUsEmail" placeholder="">
+							</div>
+
+							<!-- Поле для комментария -->
+							<div class="form-group mb-4">
+								<label class="form-label" for="contactUsComment">Залишити коментар</label>
+								<textarea class="form-control mh-50 input-border" id="contactUsComment" placeholder=""></textarea>
+							</div>
+
+							<!-- Кнопка отправки формы -->
+							<button type="submit" class="btn btn-secondary btn-lg w-100 fw-semibold fs-5 text-uppercase">НАДІСЛАТИ</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade availability-notify-modal" id="availabilityNotifyModal" tabindex="-1" aria-labelledby="availabilityNotifyModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<!-- Кнопка закрытия в правом верхнем углу -->
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть">
+						<img src="img/icons/close-offcanvas.svg" alt="Закрыть">
+					</button>
+
+					<!-- Заголовок модального окна -->
+					<div class="modal-header border-bottom-0">
+						<h2 class="modal-title text-primary fw-semibold" id="availabilityNotifyModalLabel">ПОВІДОМИТИ ПРО НАЯВНІСТЬ</h2>
+					</div>
+
+					<!-- Тело модального окна с формой -->
+					<div class="modal-body">
+						<p class="mb-3 fs-sm-4 fs-6 text-primary">Залиште адресу своєї електронної пошти і ми повідомимо, коли товар буде в наявності</p>
+						<form id="availabilityNotifyForm">
+							<!-- Поле Ваш e-mail -->
+							<div class="form-group mb-4">
+								<label class="form-label" for="availabilityNotifyEmail">Ваш e-mail<span>*</span></label>
+								<input type="email" class="form-control mh-50 input-border" id="availabilityNotifyEmail" placeholder="" required>
+							</div>
+
+							<!-- Кнопка отправки формы -->
+							<button type="submit" class="btn btn-secondary btn-lg w-100 text-white py-2 fw-semibold text-uppercase">НАДІСЛАТИ ЗАПИТ</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Модальное окно оформления заказа -->
+		<div class="modal fade order-modal" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<!-- Кнопка закрытия в правом верхнем углу -->
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть">
+						<img src="img/icons/close-offcanvas.svg" alt="Закрыть">
+					</button>
+
+					<!-- Заголовок модального окна -->
+					<div class="modal-header border-bottom-0">
+						<h2 class="modal-title text-primary fw-semibold" id="orderModalLabel">ОФОРМИТИ ЗАМОВЛЕННЯ</h2>
+					</div>
+
+					<!-- Тело модального окна с формой -->
+					<div class="modal-body">
+						<form id="orderForm">
+							<!-- Поле Ваше ім'я -->
+							<div class="form-group mb-3">
+								<label class="form-label" for="orderName">Ваше ім'я<span>*</span></label>
+								<input type="text" class="form-control mh-50 input-border" id="orderName" placeholder="" required>
+							</div>
+
+							<!-- Поле Ваш телефон -->
+							<div class="form-group mb-3">
+								<label class="form-label" for="orderPhone">Ваш телефон<span>*</span></label>
+								<input type="tel" class="form-control mh-50 input-phone input-border" id="orderPhone" placeholder="" required>
+							</div>
+
+							<!-- Поле для комментария -->
+							<div class="form-group mb-4">
+								<label class="form-label" for="orderComment">Залишити коментар</label>
+								<textarea class="form-control mh-50 input-border" id="orderComment" placeholder=""></textarea>
+							</div>
+
+							<!-- Кнопка отправки формы -->
+							<button type="submit" class="btn btn-secondary btn-lg w-100 fw-semibold fs-5 text-uppercase">НАДІСЛАТИ</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Модальное окно авторизации -->
+		<div class="modal fade auth-modal" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<!-- Кнопка закрытия в правом верхнем углу -->
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть">
+						<img src="img/icons/close-offcanvas.svg" alt="Закрыть">
+					</button>
+
+					<!-- Заголовок модального окна -->
+					<div class="modal-header border-bottom-0">
+						<h2 class="modal-title text-primary fw-semibold w-100" id="authModalLabel">АВТОРИЗАЦИЯ</h2>
+					</div>
+
+					<!-- Тело модального окна с формой -->
+					<div class="modal-body">
+						<form id="authForm">
+							<!-- Поле Ваш e-mail -->
+							<div class="form-group mb-3">
+								<label class="form-label" for="authEmail">Ваш e-mail<span>*</span></label>
+								<input type="email" class="form-control mh-50 input-border" id="authEmail" required>
+							</div>
+
+							<!-- Поле Пароль -->
+							<div class="form-group mb-3">
+								<label class="form-label" for="authPassword">Пароль<span>*</span></label>
+								<input type="password" class="form-control mh-50 input-border" id="authPassword" required>
+							</div>
+
+							<!-- Ссылки Регистрация и Забыли пароль -->
+							<div class="d-flex flex-column gap-2 align-items-center justify-content-center mb-3">
+								<a href="#" class="text-decoration-none text-secondary fw-medium animate-hover hover-to-secondary">Реєстрація</a>
+								<a href="#" class="text-decoration-underline text-primary hover-to-secondary">Забули пароль?</a>
+							</div>
+
+							<!-- Кнопка входа -->
+							<button type="submit" class="btn btn-secondary btn-lg w-100 fw-semibold fs-5 text-white text-uppercase">ВХід</button>
 						</form>
 					</div>
 				</div>
@@ -1974,7 +2238,7 @@
 
 
 	</div>
-	<script src="js/app.min.js?_v=20250415150020"></script>
+	<script src="js/app.min.js?_v=20250417101915"></script>
 </body>
 
 </html>

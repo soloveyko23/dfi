@@ -14,10 +14,11 @@
 			opacity: 1;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20250415150020">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250417101915">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 </head>
 
 <body>
@@ -180,7 +181,7 @@
 												<a class="btn btn-outline btn-lg justify-content-start gap-2 text-gray fs-5" href="#"><i class="_icon-cart p-2 mw-30 mh-30"></i> ОБРАНІ ТОВАРИ</a>
 
 												<a class=" btn btn-orange btn-lg fs-4 text-center fw-bold" href="#">РЕЄСТРАЦІЯ</a>
-												<a class=" btn btn-secondary btn-lg fs-4 text-center fw-bold" href="#">ВВІЙТИ</a>
+												<a class=" btn btn-secondary btn-lg fs-4 text-center fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#authModal">ВВІЙТИ</a>
 											</div>
 										</div>
 									</div>
@@ -381,10 +382,10 @@
 			<div class="offcanvas-body">
 				<div class="user-actions-mobile mb-4 shadow-md p-2 rounded-4">
 					<div class="d-flex gap-2 mt-2 p-1">
-						<a class="btn btn-secondary btn-lg fs-6 w-50 text-center d-flex align-items-center text-center" href="#">
+						<a class="btn btn-secondary btn-lg fs-6 w-50 text-center d-flex align-items-center text-center text-primary" href="#" data-bs-toggle="modal" data-bs-target="#authModal" data-bs-dismiss="offcanvas">
 							УВІЙТИ
 						</a>
-						<a class="btn btn-outline-secondary btn-lg fs-6 w-50 text-center d-flex align-items-center text-center" href="#">
+						<a class="btn btn-outline-secondary btn-lg fs-6 w-50 text-center d-flex align-items-center text-center text-primary" href="#">
 							РЕЄСТРАЦІЯ
 						</a>
 					</div>
@@ -682,6 +683,8 @@
 				</div>
 			</div>
 		</div>
+
+
 
 
 		<main class="page">
@@ -1105,11 +1108,11 @@
 									<div id="collapseInfo" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
 										<div class="accordion-body px-0 pt-0 pb-3">
 											<nav class="nav flex-column">
-												<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Повернення товару</a>
-												<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Про нас</a>
-												<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Оплата та доставка</a>
-												<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Умови використання сайту</a>
-												<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Зв'язатися з нами</a>
+												<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Повернення товару</a>
+												<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Про нас</a>
+												<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Оплата та доставка</a>
+												<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Умови використання сайту</a>
+												<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Зв'язатися з нами</a>
 											</nav>
 										</div>
 									</div>
@@ -1126,9 +1129,9 @@
 									<div id="collapseAccount" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
 										<div class="accordion-body px-0 pt-0 pb-3">
 											<nav class="nav flex-column">
-												<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Особистий кабінет</a>
-												<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Історія замовлення</a>
-												<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Закладки</a>
+												<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Особистий кабінет</a>
+												<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Історія замовлення</a>
+												<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Закладки</a>
 											</nav>
 										</div>
 									</div>
@@ -1174,20 +1177,20 @@
 							<div class="col-md-4 d-none d-md-block">
 								<h5 class="text-uppercase fw-semibold mb-3 text-white letter-spacing-1">ІНФОРМАЦІЯ</h5>
 								<nav class="nav flex-column">
-									<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Повернення товару</a>
-									<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Про нас</a>
-									<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Оплата та доставка</a>
-									<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Умови використання сайту</a>
-									<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Зв'язатися з нами</a>
+									<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Повернення товару</a>
+									<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Про нас</a>
+									<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Оплата та доставка</a>
+									<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Умови використання сайту</a>
+									<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Зв'язатися з нами</a>
 								</nav>
 							</div>
 
 							<div class="col-md-4 d-none d-md-block">
 								<h5 class="text-uppercase fw-semibold mb-3 text-white">КАБІНЕТ ПОКУПЦЯ</h5>
 								<nav class="nav flex-column">
-									<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Особистий кабінет</a>
-									<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Історія замовлення</a>
-									<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Закладки</a>
+									<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Особистий кабінет</a>
+									<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Історія замовлення</a>
+									<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Закладки</a>
 								</nav>
 							</div>
 
@@ -1233,7 +1236,7 @@
 		</footer>
 
 	</div>
-	<script src="js/app.min.js?_v=20250415150020"></script>
+	<script src="js/app.min.js?_v=20250417101915"></script>
 </body>
 
 </html>

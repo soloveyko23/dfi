@@ -14,10 +14,11 @@
 			opacity: 1;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20250415150020">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250417101915">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 </head>
 
 <body>
@@ -180,7 +181,7 @@
 												<a class="btn btn-outline btn-lg justify-content-start gap-2 text-gray fs-5" href="#"><i class="_icon-cart p-2 mw-30 mh-30"></i> ОБРАНІ ТОВАРИ</a>
 
 												<a class=" btn btn-orange btn-lg fs-4 text-center fw-bold" href="#">РЕЄСТРАЦІЯ</a>
-												<a class=" btn btn-secondary btn-lg fs-4 text-center fw-bold" href="#">ВВІЙТИ</a>
+												<a class=" btn btn-secondary btn-lg fs-4 text-center fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#authModal">ВВІЙТИ</a>
 											</div>
 										</div>
 									</div>
@@ -381,10 +382,10 @@
 			<div class="offcanvas-body">
 				<div class="user-actions-mobile mb-4 shadow-md p-2 rounded-4">
 					<div class="d-flex gap-2 mt-2 p-1">
-						<a class="btn btn-secondary btn-lg fs-6 w-50 text-center d-flex align-items-center text-center" href="#">
+						<a class="btn btn-secondary btn-lg fs-6 w-50 text-center d-flex align-items-center text-center text-primary" href="#" data-bs-toggle="modal" data-bs-target="#authModal" data-bs-dismiss="offcanvas">
 							УВІЙТИ
 						</a>
-						<a class="btn btn-outline-secondary btn-lg fs-6 w-50 text-center d-flex align-items-center text-center" href="#">
+						<a class="btn btn-outline-secondary btn-lg fs-6 w-50 text-center d-flex align-items-center text-center text-primary" href="#">
 							РЕЄСТРАЦІЯ
 						</a>
 					</div>
@@ -684,6 +685,8 @@
 		</div>
 
 
+
+
 		<main class="page">
 			<section class="breadcrumb-section py-3">
 				<div class="container">
@@ -922,11 +925,11 @@
 									<div id="collapseInfo" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
 										<div class="accordion-body px-0 pt-0 pb-3">
 											<nav class="nav flex-column">
-												<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Повернення товару</a>
-												<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Про нас</a>
-												<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Оплата та доставка</a>
-												<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Умови використання сайту</a>
-												<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Зв'язатися з нами</a>
+												<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Повернення товару</a>
+												<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Про нас</a>
+												<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Оплата та доставка</a>
+												<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Умови використання сайту</a>
+												<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Зв'язатися з нами</a>
 											</nav>
 										</div>
 									</div>
@@ -943,9 +946,9 @@
 									<div id="collapseAccount" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
 										<div class="accordion-body px-0 pt-0 pb-3">
 											<nav class="nav flex-column">
-												<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Особистий кабінет</a>
-												<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Історія замовлення</a>
-												<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Закладки</a>
+												<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Особистий кабінет</a>
+												<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Історія замовлення</a>
+												<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Закладки</a>
 											</nav>
 										</div>
 									</div>
@@ -991,20 +994,20 @@
 							<div class="col-md-4 d-none d-md-block">
 								<h5 class="text-uppercase fw-semibold mb-3 text-white letter-spacing-1">ІНФОРМАЦІЯ</h5>
 								<nav class="nav flex-column">
-									<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Повернення товару</a>
-									<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Про нас</a>
-									<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Оплата та доставка</a>
-									<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Умови використання сайту</a>
-									<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Зв'язатися з нами</a>
+									<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Повернення товару</a>
+									<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Про нас</a>
+									<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Оплата та доставка</a>
+									<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Умови використання сайту</a>
+									<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Зв'язатися з нами</a>
 								</nav>
 							</div>
 
 							<div class="col-md-4 d-none d-md-block">
 								<h5 class="text-uppercase fw-semibold mb-3 text-white">КАБІНЕТ ПОКУПЦЯ</h5>
 								<nav class="nav flex-column">
-									<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Особистий кабінет</a>
-									<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Історія замовлення</a>
-									<a class="nav-link text-gray-3  animate-to-white text-decoration-none ps-0 pb-2" href="#">Закладки</a>
+									<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Особистий кабінет</a>
+									<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Історія замовлення</a>
+									<a class="nav-link text-gray-3  hover-to-secondary text-decoration-none ps-0 pb-2 d-inline-flex" href="#">Закладки</a>
 								</nav>
 							</div>
 
@@ -1090,7 +1093,7 @@
 							</div>
 
 							<!-- Кнопка отправки формы -->
-							<button type="submit" class="btn btn-secondary btn-lg w-100 fw-semibold fs-5">НАДІСЛАТИ ДАНІ</button>
+							<button type="submit" class="btn btn-secondary btn-lg w-100 fw-semibold fs-5 text-uppercase">НАДІСЛАТИ ДАНІ</button>
 						</form>
 					</div>
 				</div>
@@ -1210,7 +1213,231 @@
 							</div>
 
 							<!-- Кнопка отправки формы -->
-							<button type="submit" class="btn btn-secondary w-100 text-white py-2 fw-semibold">НАДІСЛАТИ ЗАПИТ</button>
+							<button type="submit" class="btn btn-secondary btn-lg w-100 text-white py-2 fw-semibold">НАДІСЛАТИ ЗАПИТ</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade found-cheaper-modal" id="foundCheaperModal" tabindex="-1" aria-labelledby="foundCheaperModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<!-- Кнопка закрытия в правом верхнем углу -->
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть">
+						<img src="img/icons/close-offcanvas.svg" alt="Закрыть">
+					</button>
+
+					<!-- Заголовок и описание модального окна -->
+					<div class="modal-header border-bottom-0">
+						<div>
+							<h2 class="modal-title text-primary fw-semibold" id="foundCheaperModalLabel">ЗНАЙШЛИ ДЕШЕВШЕ?</h2>
+							<p class="mb-2 text-primary fs-sm-4 fs-6">Знайшли в іншому магазині товар дешевше?<br>
+								Заишите заявку з посиланням на цей товар<br>
+								і ми запропонуємо вам аналогічну ціну.</p>
+						</div>
+					</div>
+
+					<!-- Тело модального окна с формой -->
+					<div class="modal-body">
+						<form id="foundCheaperForm">
+							<!-- Поле Ваше ім'я -->
+							<div class="form-group mb-3">
+								<label class="form-label" for="foundCheaperName">Ваше ім'я<span>*</span></label>
+								<input type="text" class="form-control mh-50 input-border" id="foundCheaperName" placeholder="" required>
+							</div>
+
+							<!-- Поле Ваш телефон -->
+							<div class="form-group mb-3">
+								<label class="form-label" for="foundCheaperPhone">Ваш телефон<span>*</span></label>
+								<input type="tel" class="form-control mh-50 input-phone input-border" id="foundCheaperPhone" placeholder="" required>
+							</div>
+
+							<!-- Поле Ваш e-mail -->
+							<div class="form-group mb-3">
+								<label class="form-label" for="foundCheaperEmail">Ваш e-mail</label>
+								<input type="email" class="form-control mh-50 input-email input-border" id="foundCheaperEmail" placeholder="">
+							</div>
+
+							<!-- Поле для ссылки -->
+							<div class="form-group mb-3">
+								<label class="form-label" for="foundCheaperLink">Посилання<span>*</span></label>
+								<input type="url" class="form-control mh-50 input-border" id="foundCheaperLink" placeholder="" required>
+							</div>
+
+							<!-- Поле для комментария -->
+							<div class="form-group mb-4">
+								<label class="form-label" for="foundCheaperComment">Залишити коментар</label>
+								<textarea class="form-control mh-50 input-border" id="foundCheaperComment" placeholder=""></textarea>
+							</div>
+
+							<!-- Кнопка отправки формы -->
+							<button type="submit" class="btn btn-secondary btn-lg w-100 fw-semibold fs-5 text-uppercase">НАДІСЛАТИ</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade contact-us-modal" id="contactUsModal" tabindex="-1" aria-labelledby="contactUsModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<!-- Кнопка закрытия в правом верхнем углу -->
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть">
+						<img src="img/icons/close-offcanvas.svg" alt="Закрыть">
+					</button>
+
+					<!-- Заголовок модального окна -->
+					<div class="modal-header border-bottom-0">
+						<h2 class="modal-title text-primary fw-semibold" id="contactUsModalLabel">ЗВ'ЯЗАТИСЯ З НАМИ</h2>
+					</div>
+
+					<!-- Тело модального окна с формой -->
+					<div class="modal-body">
+						<form id="contactUsForm">
+							<!-- Поле Ваш номер телефону -->
+							<div class="form-group mb-3">
+								<label class="form-label" for="contactUsPhone">Ваш номер телефону<span>*</span></label>
+								<input type="tel" class="form-control mh-50 input-phone input-border" id="contactUsPhone" placeholder="" required>
+							</div>
+
+							<!-- Поле Ваше ім'я -->
+							<div class="form-group mb-3">
+								<label class="form-label" for="contactUsName">Ваше ім'я<span>*</span></label>
+								<input type="text" class="form-control mh-50 input-border" id="contactUsName" placeholder="" required>
+							</div>
+
+							<!-- Поле Ваш e-mail -->
+							<div class="form-group mb-3">
+								<label class="form-label" for="contactUsEmail">Ваш e-mail</label>
+								<input type="email" class="form-control mh-50 input-email input-border" id="contactUsEmail" placeholder="">
+							</div>
+
+							<!-- Поле для комментария -->
+							<div class="form-group mb-4">
+								<label class="form-label" for="contactUsComment">Залишити коментар</label>
+								<textarea class="form-control mh-50 input-border" id="contactUsComment" placeholder=""></textarea>
+							</div>
+
+							<!-- Кнопка отправки формы -->
+							<button type="submit" class="btn btn-secondary btn-lg w-100 fw-semibold fs-5 text-uppercase">НАДІСЛАТИ</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade availability-notify-modal" id="availabilityNotifyModal" tabindex="-1" aria-labelledby="availabilityNotifyModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<!-- Кнопка закрытия в правом верхнем углу -->
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть">
+						<img src="img/icons/close-offcanvas.svg" alt="Закрыть">
+					</button>
+
+					<!-- Заголовок модального окна -->
+					<div class="modal-header border-bottom-0">
+						<h2 class="modal-title text-primary fw-semibold" id="availabilityNotifyModalLabel">ПОВІДОМИТИ ПРО НАЯВНІСТЬ</h2>
+					</div>
+
+					<!-- Тело модального окна с формой -->
+					<div class="modal-body">
+						<p class="mb-3 fs-sm-4 fs-6 text-primary">Залиште адресу своєї електронної пошти і ми повідомимо, коли товар буде в наявності</p>
+						<form id="availabilityNotifyForm">
+							<!-- Поле Ваш e-mail -->
+							<div class="form-group mb-4">
+								<label class="form-label" for="availabilityNotifyEmail">Ваш e-mail<span>*</span></label>
+								<input type="email" class="form-control mh-50 input-border" id="availabilityNotifyEmail" placeholder="" required>
+							</div>
+
+							<!-- Кнопка отправки формы -->
+							<button type="submit" class="btn btn-secondary btn-lg w-100 text-white py-2 fw-semibold text-uppercase">НАДІСЛАТИ ЗАПИТ</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Модальное окно оформления заказа -->
+		<div class="modal fade order-modal" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<!-- Кнопка закрытия в правом верхнем углу -->
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть">
+						<img src="img/icons/close-offcanvas.svg" alt="Закрыть">
+					</button>
+
+					<!-- Заголовок модального окна -->
+					<div class="modal-header border-bottom-0">
+						<h2 class="modal-title text-primary fw-semibold" id="orderModalLabel">ОФОРМИТИ ЗАМОВЛЕННЯ</h2>
+					</div>
+
+					<!-- Тело модального окна с формой -->
+					<div class="modal-body">
+						<form id="orderForm">
+							<!-- Поле Ваше ім'я -->
+							<div class="form-group mb-3">
+								<label class="form-label" for="orderName">Ваше ім'я<span>*</span></label>
+								<input type="text" class="form-control mh-50 input-border" id="orderName" placeholder="" required>
+							</div>
+
+							<!-- Поле Ваш телефон -->
+							<div class="form-group mb-3">
+								<label class="form-label" for="orderPhone">Ваш телефон<span>*</span></label>
+								<input type="tel" class="form-control mh-50 input-phone input-border" id="orderPhone" placeholder="" required>
+							</div>
+
+							<!-- Поле для комментария -->
+							<div class="form-group mb-4">
+								<label class="form-label" for="orderComment">Залишити коментар</label>
+								<textarea class="form-control mh-50 input-border" id="orderComment" placeholder=""></textarea>
+							</div>
+
+							<!-- Кнопка отправки формы -->
+							<button type="submit" class="btn btn-secondary btn-lg w-100 fw-semibold fs-5 text-uppercase">НАДІСЛАТИ</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Модальное окно авторизации -->
+		<div class="modal fade auth-modal" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<!-- Кнопка закрытия в правом верхнем углу -->
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть">
+						<img src="img/icons/close-offcanvas.svg" alt="Закрыть">
+					</button>
+
+					<!-- Заголовок модального окна -->
+					<div class="modal-header border-bottom-0">
+						<h2 class="modal-title text-primary fw-semibold w-100" id="authModalLabel">АВТОРИЗАЦИЯ</h2>
+					</div>
+
+					<!-- Тело модального окна с формой -->
+					<div class="modal-body">
+						<form id="authForm">
+							<!-- Поле Ваш e-mail -->
+							<div class="form-group mb-3">
+								<label class="form-label" for="authEmail">Ваш e-mail<span>*</span></label>
+								<input type="email" class="form-control mh-50 input-border" id="authEmail" required>
+							</div>
+
+							<!-- Поле Пароль -->
+							<div class="form-group mb-3">
+								<label class="form-label" for="authPassword">Пароль<span>*</span></label>
+								<input type="password" class="form-control mh-50 input-border" id="authPassword" required>
+							</div>
+
+							<!-- Ссылки Регистрация и Забыли пароль -->
+							<div class="d-flex flex-column gap-2 align-items-center justify-content-center mb-3">
+								<a href="#" class="text-decoration-none text-secondary fw-medium animate-hover hover-to-secondary">Реєстрація</a>
+								<a href="#" class="text-decoration-underline text-primary hover-to-secondary">Забули пароль?</a>
+							</div>
+
+							<!-- Кнопка входа -->
+							<button type="submit" class="btn btn-secondary btn-lg w-100 fw-semibold fs-5 text-white text-uppercase">ВХід</button>
 						</form>
 					</div>
 				</div>
@@ -1220,7 +1447,7 @@
 
 
 	</div>
-	<script src="js/app.min.js?_v=20250415150020"></script>
+	<script src="js/app.min.js?_v=20250417101915"></script>
 </body>
 
 </html>
